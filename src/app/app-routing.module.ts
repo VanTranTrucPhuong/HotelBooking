@@ -7,7 +7,8 @@ import { ExploreItemComponent } from './templates/explore-item/explore-item.comp
 import { HotelDetailComponent } from './pages/hotel-detail/hotel-detail.component';
 
 const routes: Routes = [
-  { path: '', component: HotelDetailComponent }
+  { path: '', component: HomeComponent },
+  { path: 'hotel-detail', component: HotelDetailComponent}
 ];
 
 @NgModule({
