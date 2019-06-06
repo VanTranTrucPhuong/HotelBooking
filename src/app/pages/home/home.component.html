@@ -11,8 +11,8 @@
                 <div class="input-group col-md-12">
                   <input type="text" class="form-control input-search" placeholder="NewYork" />
                   <span class="input-group-btn">
-                    <button class="btn btn-info btn-lg" type="button">
-                      <a href="#"><i class="fa fa-search"></i></a>
+                    <button class="btn btn-search btn-lg" type="button">
+                      <a href="#"><i class="fa fa-search icon-search"></i></a>
                     </button>
                   </span>
                 </div>
@@ -24,13 +24,13 @@
               <div class="row check-in">
                 <div class="col-8 col-md-6 p-0 form__date">
                   <label class="form__label"><i class="form__icon fa fa-calendar"></i>&nbsp;&nbsp;Check-in date</label>
-                  <input type="date" class="form-control input__date"/>
+                  <ejs-daterangepicker ></ejs-daterangepicker>
                 </div>
                 <div class="col-3 col-md-6 p-0 form__duration">
                   <label class="form__label">Duration</label>
-                  <input type="date" class="floatLabel form-control"/>
+                  <input type="text" class="form-control" />
                 </div>
-              </div>  
+              </div>
             </div>
           </div>
           <div class="col-1-4 col-1-4-sm">
@@ -78,16 +78,30 @@
   </div>
   <hr>
   <div class="explore">
-      <h5 class="title__recent-searches">Explore with QueenHotel</h5>
-      <div class="container-fluid">
-          <div class="explore__content">
-            <app-explore-item class="explore__item"></app-explore-item>
-            <app-explore-item class="explore__item"></app-explore-item>
-            <app-explore-item class="explore__item"></app-explore-item>
-            <app-explore-item class="explore__item"></app-explore-item>
-            <app-explore-item class="explore__item"></app-explore-item>
-            <app-explore-item class="explore__item"></app-explore-item>
-          </div>
+    <h5 class="title__recent-searches">Explore with QueenHotel</h5>
+    <div class="container-fluid">
+      <div class="explore__content">
+        <app-explore-item class="explore__item"></app-explore-item>
+        <app-explore-item class="explore__item"></app-explore-item>
+        <app-explore-item class="explore__item"></app-explore-item>
+        <app-explore-item class="explore__item"></app-explore-item>
+        <app-explore-item class="explore__item"></app-explore-item>
+        <app-explore-item class="explore__item"></app-explore-item>
       </div>
+    </div>
+  </div>
+
+  <div id="action-description">
+    <p>
+      The following sample demonstrates the default functionalities of the DateRangePicker. Today's date is always
+      highlighted in the popup calendar and it get focused if there's no selected date. Select a date range from the
+      popup calendar and the selected <code>date range</code> will be displayed in the DateRangePicker element.
+    </p>
+  </div>
+  <div class="control-section">
+    <div id="control_wrapper">
+      <ejs-daterangepicker></ejs-daterangepicker>
+      <!-- <ng-data-picker [data]="data" (change)="change($event)"></ng-data-picker> -->
+    </div>
   </div>
 </div>

@@ -11,6 +11,13 @@ import { HeaderComponent } from './templates/header/header.component';
 import { ExploreItemComponent } from './templates/explore-item/explore-item.component';
 import { HotelDetailComponent } from './pages/hotel-detail/hotel-detail.component';
 
+// Date range
+import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
+import { DropDownButtonModule } from '@syncfusion/ej2-angular-splitbuttons';
+
+// Wheel Selector
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +31,11 @@ import { HotelDetailComponent } from './pages/hotel-detail/hotel-detail.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DateRangePickerModule,
+    DropDownListModule,
+    DropDownButtonModule,
+    // Wheel Selector
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+
 #custom-search-input{
     border: solid 1px #E4E4E4;
     border-radius: 6px;
@@ -26,6 +27,10 @@
 
 #custom-search-input .glyphicon-search{
     font-size: 23px;
+}
+
+.icon-search{
+    color: #a8a8a8;
 }
 
 .form{
@@ -117,4 +122,19 @@ h2.heading{
 .explore__item{
     display: inline-block;
     /* margin: 0 0.5rem; */
+}
+
+/* Date */
+#control_wrapper {
+    max-width: 246px;
+    margin: 30px auto;
+    padding-top: 50px;
+}
+
+.control-section {
+    margin: 25px auto;
+}
+
+.e-date-range-wrapper{
+    border: unset;
 }

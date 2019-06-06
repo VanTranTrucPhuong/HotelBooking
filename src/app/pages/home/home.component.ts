@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DateRangePicker } from '@syncfusion/ej2-calendars';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +12,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }
