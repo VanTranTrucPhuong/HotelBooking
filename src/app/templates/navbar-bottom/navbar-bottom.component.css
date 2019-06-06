@@ -1,0 +1,38 @@
+.navbar {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: unset;
+    overflow: hidden;
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+}
+
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: rgb(83, 83, 83);
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+}
+
+.navbar__icon{
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    
+}
+
+.active {
+
+}
+
+@media screen and (max-width: 500px) {
+.navbar a {
+    float: none;
+    display: block;
+    }
+}

@@ -1,0 +1,42 @@
+.card{
+    border: unset;
+}
+
+.card-body{
+    padding: 1.25rem 0;
+}
+
+.card-title{
+    margin-bottom: 0.5rem;
+}
+
+.item_image{
+    border-radius: calc(0.75rem - 0.5px);
+}
+
+/* checked star */
+.checked{
+    color: orange;
+}
+
+.unchecked{
+
+}
+
+.item__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 0.5rem; 
+}   
+
+.item__info .price{
+    color: orange;  
+    font-size: 15px;
+    margin: unset;
+}
+
+.item__info .fa-star{
+    font-size: 12px;
+}
