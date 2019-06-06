@@ -151,3 +151,17 @@ hr.line{
     margin: 0;
 }
 /* End Amenities */
+
+/* Description Hotel */
+.description__text{
+    color: rgb(150, 150, 150);
+}
+/* End Descripttion Hotel */
+
+/* Contact */
+#map {
+    width: 100%;
+    height: 250px;
+    background-color: grey;
+  }
+/* End Contact */
