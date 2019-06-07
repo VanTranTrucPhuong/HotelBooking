@@ -154,3 +154,8 @@ h2.heading{
 .e-input-group-icon.e-range-icon, .e-control-wrapper .e-input-group-icon.e-range-icon {
     padding: 4px;
 }
+
+.e-input-group input.e-input:focus, .e-input-group.e-control-wrapper input.e-input:focus, .e-input-group textarea.e-input:focus, .e-input-group.e-control-wrapper textarea.e-input:focus {
+    padding: 4px 0px 8px;
+    margin: 4px 0 4px 13px;
+}

@@ -3,9 +3,21 @@ a{
 }
 
 .signup-card{
-    margin:50px 0 auto;
-    /* max-width: 80%; */
+    padding-top: 20px;
 }
+
+/* Icon back */
+.signup-header{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    color: #545dff;
+}
+
+.signup-title{
+    margin: 0;
+}
+/* End Icon back */
 
 /* Form */
 .mat-card-header-text{

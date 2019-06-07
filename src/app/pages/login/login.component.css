@@ -7,6 +7,10 @@ a{
     /* max-width: 80%; */
 }
 
+.login-title{
+    color: #545dff;
+}
+
 .mat-card-header-text{
     margin: 0 auto !important;
 }
