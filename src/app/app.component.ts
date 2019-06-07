@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UtilityService } from './services/utility.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'HotelBooking';
 
+  constructor(protected utility: UtilityService) {
+    utility.setDisplayHeader(true);
+  }
+
+  public isDisplayHeader(): boolean {
+    return this.utility.isDisplayHeader();
+  }
 }

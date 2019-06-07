@@ -1,0 +1,60 @@
+a{
+    text-decoration: none;
+}
+
+.login-card{
+    margin:50px 0 auto;
+    /* max-width: 80%; */
+}
+
+.mat-card-header-text{
+    margin: 0 auto !important;
+}
+
+.login-header {
+    text-align: center;
+    margin: 0 auto!important;
+}
+
+.btn-login{
+    width: 100%;
+    outline: none;
+    background-color: #545dff;
+}
+
+.login-field{
+    width: 100%;
+}
+
+/* Text Field  */
+.mat-form-field {
+    font-size: 14px;
+    line-height: 2.125;
+    margin-bottom: 1rem;
+}
+
+/* End Text Field */
+
+/* Forgot Password */
+.forgot-password{
+    float: right;
+    margin: 1rem 0;
+}
+
+.forgotpw-text{
+    font-size: 14px;
+    text-decoration: none;
+}
+/* End Forgot Password */
+
+/* Signup */
+.sign-up-text{
+    text-align: center;
+    margin: 1rem 0
+}
+/* End Signup */
+
+/* Placeholder */
+input[type="email"]::-webkit-input-placeholder {
+    color: orange;
+}

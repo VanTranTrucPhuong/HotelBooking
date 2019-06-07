@@ -15,8 +15,16 @@ import { HotelDetailComponent } from './pages/hotel-detail/hotel-detail.componen
 import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
 import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 import { DropDownButtonModule } from '@syncfusion/ej2-angular-splitbuttons';
+import { LoginComponent } from './pages/login/login.component';
+import { MaterialModule } from './material-module';
+
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 // Wheel Selector
+
+// Material
+
 
 @NgModule({
   declarations: [
@@ -26,7 +34,9 @@ import { DropDownButtonModule } from '@syncfusion/ej2-angular-splitbuttons';
     NavbarBottomComponent,
     HeaderComponent,
     ExploreItemComponent,
-    HotelDetailComponent
+    HotelDetailComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +45,9 @@ import { DropDownButtonModule } from '@syncfusion/ej2-angular-splitbuttons';
     DateRangePickerModule,
     DropDownListModule,
     DropDownButtonModule,
-    // Wheel Selector
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

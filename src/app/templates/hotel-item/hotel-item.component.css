@@ -10,6 +10,10 @@
     margin-bottom: 0.5rem;
 }
 
+.card-img-top{
+    height: 115px;
+}
+
 .item_image{
     border-radius: calc(0.75rem - 0.5px);
 }

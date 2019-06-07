@@ -1,0 +1,42 @@
+a{
+    text-decoration: none;
+}
+
+.signup-card{
+    margin:50px 0 auto;
+    /* max-width: 80%; */
+}
+
+/* Form */
+.mat-card-header-text{
+    margin: 0 auto !important;
+}
+
+.signup-field{
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.firstname, .surname{
+    width: 48%;
+}
+
+.name-field{
+    display: flex;
+    justify-content: space-between;
+}
+/* End Form */
+
+/* Button */
+.btn-signup{
+    width: 100%;
+    outline: none;
+    margin: 1rem 0;
+    background-color: #545dff;
+}
+/* End Button */
+
+/* login-text */
+.login-text{
+    text-align: center;
+}

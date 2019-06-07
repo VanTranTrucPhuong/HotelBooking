@@ -94,10 +94,12 @@ h2.heading{
 }
 
 .btn-find-hotel{
+    outline: none;
     background-color: #545dff;
-    border-color: #545dff;
+    /* border-color: #545dff; */
+    font-size: 16px;
     margin-top: 10%;
-    padding: 10px 0;
+    padding: 5px 0;
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -106,8 +108,14 @@ h2.heading{
     padding: 1rem;
 }
 
-.item{
-    padding: 0 0.5rem;
+.col-6.col-md-6.item:nth-child(odd){
+    padding-right: .5rem;
+    padding-left: 2px;
+}
+
+.col-6.col-md-6.item:nth-child(even){
+    padding-left: .5rem;
+    padding-right: 2px;
 }
 
 .explore{

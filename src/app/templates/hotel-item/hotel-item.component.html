@@ -1,12 +1,10 @@
 <div class="card">
-  <img class="card-img-top item_image"
-    src="./assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg"
-    alt="Card image">
+  <img class="card-img-top item_image" [src]="hotel.image" alt="Card image">
   <div class="card-body">
-    <h5 class="card-title">Charlotte Hotel</h5>
+    <h5 class="card-title">{{hotel.name}}</h5>
     <div class="item__info">
       <div class="price__item">
-        <p class="price">200.000 USD</p>
+        <p class="price">{{hotel.price}}</p>
       </div>
       <div class="item__rating">
         <span class="fa fa-star checked"></span>
@@ -16,6 +14,6 @@
         <span class="fa fa-star unchecked"></span>
       </div>
     </div>
-    <p class="card-text">Some example text.</p>
+    <p class="card-text">Some example text.{{hotel.descrition}}</p>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="home container mx-auto">
+<div class="home container mx-auto container-custom">
   <div class="card home__find-hotel">
     <form action="" class="form">
       <!--  Details -->
@@ -50,7 +50,7 @@
           </div>
           <div class="col-1-4 col-1-4-sm">
             <div class="controls">
-              <button class="btn btn-primary btn-find-hotel">Find hotel</button>
+              <button mat-raised-button color="primary" class="btn-find-hotel">Find hotel</button>
             </div>
           </div>
         </div>
@@ -61,17 +61,8 @@
     <h5 class="title__recent-searches">Recent Researches</h5>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-6 col-md-6 item">
-          <app-hotel-item></app-hotel-item>
-        </div>
-        <div class="col-6 col-md-6 item">
-          <app-hotel-item></app-hotel-item>
-        </div>
-        <div class="col-6 col-md-6 item">
-          <app-hotel-item></app-hotel-item>
-        </div>
-        <div class="col-6 col-md-6 item">
-          <app-hotel-item></app-hotel-item>
+        <div class="col-6 col-md-6 item " *ngFor='let item of hotelListRecent'>
+          <app-hotel-item [hotel]='item' (click)='goToDetail()'></app-hotel-item>
         </div>
       </div>
     </div>
@@ -79,29 +70,14 @@
   <hr>
   <div class="explore">
     <h5 class="title__recent-searches">Explore with QueenHotel</h5>
-    <div class="container-fluid">
-      <div class="explore__content">
-        <app-explore-item class="explore__item"></app-explore-item>
-        <app-explore-item class="explore__item"></app-explore-item>
-        <app-explore-item class="explore__item"></app-explore-item>
-        <app-explore-item class="explore__item"></app-explore-item>
-        <app-explore-item class="explore__item"></app-explore-item>
-        <app-explore-item class="explore__item"></app-explore-item>
-      </div>
+    <div class="explore__content">
+      <app-explore-item class="explore__item"></app-explore-item>
+      <app-explore-item class="explore__item"></app-explore-item>
+      <app-explore-item class="explore__item"></app-explore-item>
+      <app-explore-item class="explore__item"></app-explore-item>
+      <app-explore-item class="explore__item"></app-explore-item>
+      <app-explore-item class="explore__item"></app-explore-item>
     </div>
   </div>
 
-  <div id="action-description">
-    <p>
-      The following sample demonstrates the default functionalities of the DateRangePicker. Today's date is always
-      highlighted in the popup calendar and it get focused if there's no selected date. Select a date range from the
-      popup calendar and the selected <code>date range</code> will be displayed in the DateRangePicker element.
-    </p>
-  </div>
-  <div class="control-section">
-    <div id="control_wrapper">
-      <ejs-daterangepicker></ejs-daterangepicker>
-      <!-- <ng-data-picker [data]="data" (change)="change($event)"></ng-data-picker> -->
-    </div>
-  </div>
 </div>
