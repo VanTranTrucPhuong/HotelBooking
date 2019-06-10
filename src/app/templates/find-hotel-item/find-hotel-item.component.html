@@ -1,5 +1,5 @@
 <mat-card class="find-hotel-card">
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <img mat-card-image src="./assets/images/room33.jpg" alt="hotel">
   <mat-card-content>
     <h6>
       Standard Double room with view
@@ -7,8 +7,12 @@
     <mat-card-subtitle>2 guests/room</mat-card-subtitle>
     <mat-card-subtitle>1 double bed</mat-card-subtitle>
     <hr>
-    <mat-card-subtitle>Breakfast not included</mat-card-subtitle>
+    <div class="amenities__item">
+      <i class="material-icons icon">restaurant</i>
+      <mat-card-subtitle>Breakfast not included</mat-card-subtitle>
+  </div>
     <mat-card-subtitle>Non re-fundable</mat-card-subtitle>
+    <p> <i class="material-icons"> wifi </i> Free wifi</p>
   </mat-card-content>
   <hr>
   <mat-card-actions class="item-footer">
@@ -18,24 +22,3 @@
     <div><button mat-raised-button color="primary">Choose</button></div>
   </mat-card-actions>
 </mat-card>
-
-<mat-card class="find-hotel-card">
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <h6>
-        Standard Double room with view
-      </h6>
-      <mat-card-subtitle>2 guests/room</mat-card-subtitle>
-      <mat-card-subtitle>1 double bed</mat-card-subtitle>
-      <hr>
-      <mat-card-subtitle>Breakfast not included</mat-card-subtitle>
-      <mat-card-subtitle>Non re-fundable</mat-card-subtitle>
-    </mat-card-content>
-    <hr>
-    <mat-card-actions class="item-footer">
-      <div class="price">
-        <p>$119</p>
-      </div>
-      <div><button mat-raised-button color="primary">Choose</button></div>
-    </mat-card-actions>
-  </mat-card>
