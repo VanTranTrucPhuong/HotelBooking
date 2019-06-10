@@ -1,0 +1,19 @@
+.find-hotel-card {
+    max-width: 345px;
+    margin: 1rem;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    height: 100px;
+}
+
+.item-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.price{
+    color: orange;
+}

@@ -20,6 +20,8 @@ import { MaterialModule } from './material-module';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { FooterComponent } from './templates/footer/footer.component';
+import { FindHotelItemComponent } from './templates/find-hotel-item/find-hotel-item.component';
 
 // Wheel Selector
 
@@ -36,7 +38,9 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     ExploreItemComponent,
     HotelDetailComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    FooterComponent,
+    FindHotelItemComponent
   ],
   imports: [
     BrowserModule,

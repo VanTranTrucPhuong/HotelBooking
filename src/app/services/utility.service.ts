@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class UtilityService {
   private _displayHeader = true;
+  private _displayFooter = true;
+  private _isDisplayNavbar = true;
 
   constructor() { }
 
@@ -13,5 +15,17 @@ export class UtilityService {
   }
   public isDisplayHeader() {
     return this._displayHeader;
+  }
+  public setDisplayFooter(isShow: boolean) {
+    this._displayFooter = isShow;
+  }
+  public isDisplayFooter() {
+    return this._displayFooter;
+  }
+  public setDisplayNavbar(isShow: boolean){
+    this._isDisplayNavbar = isShow;
+  }
+  public isDisplayNavbar(){
+    return this._isDisplayNavbar;
   }
 }

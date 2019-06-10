@@ -11,9 +11,14 @@ export class AppComponent {
 
   constructor(protected utility: UtilityService) {
     utility.setDisplayHeader(true);
+    utility.setDisplayNavbar(true);
   }
 
   public isDisplayHeader(): boolean {
     return this.utility.isDisplayHeader();
+  }
+
+  public isDisplayNavbar(): boolean {
+    return this.utility.isDisplayNavbar();
   }
 }

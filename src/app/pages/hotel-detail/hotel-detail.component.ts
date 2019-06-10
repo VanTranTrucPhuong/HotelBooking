@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilityService } from 'src/app/services/utility.service';
 
 @Component({
   selector: 'app-hotel-detail',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotelDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ultility: UtilityService) { 
+    this.ultility.setDisplayNavbar(false);
+  }
 
   ngOnInit() {
+  }
+
+  ngDestroy(){
+    this.ultility.setDisplayNavbar(true);
   }
 
 }
