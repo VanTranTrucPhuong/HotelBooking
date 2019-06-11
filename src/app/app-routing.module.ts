@@ -13,7 +13,7 @@ import { ContactDetailsComponent } from './pages/contact-details/contact-details
 import { CheckoutDetailComponent } from './pages/checkout-detail/checkout-detail.component';
 
 const routes: Routes = [
-  { path: '', component: BookDetailComponent },
+  { path: '', component: CheckoutDetailComponent },
   { path: 'find-hotel', component: FindHotelItemComponent},
   { path: 'hotel-detail', component: HotelDetailComponent},
   { path: 'login', component: LoginComponent},

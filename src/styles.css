@@ -36,6 +36,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 /* End button in form */
 
+/* Header */
 /* General Header */
 .general-header{
     background-color: #545dff;
@@ -56,6 +57,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .active{
     color: white!important;
 }
+
+.active .circle{
+    background-color: white!important;
+}
+
 
 ul.processbar{
     display: flex;
@@ -81,6 +87,8 @@ ul.processbar li p.circle{
     border: 1px solid #b4b4fb;
     border-radius: 50%;
     margin-right: .75rem;
+    background: #b4b4fb;
+    color: #545dff;
     /* padding: 2rem; */
 }
 
@@ -92,8 +100,13 @@ ul.processbar li p.line{
 }
 /* End Processbar */
 
+/* End Header */
+
 /* Price */
 .price{
     color: orange;
 }
 /* End price */
+
+/* Dot in book of fill in details */
+/* End dot in book of fill in details*/
