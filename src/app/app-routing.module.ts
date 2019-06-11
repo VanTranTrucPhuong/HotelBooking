@@ -7,9 +7,14 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { FindHotelItemComponent } from './templates/find-hotel-item/find-hotel-item.component';
+import { BookDetailComponent } from './pages/book-detail/book-detail.component';
+import { HeaderComponent } from './templates/header/header.component';
+import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
+import { CheckoutDetailComponent } from './pages/checkout-detail/checkout-detail.component';
 
 const routes: Routes = [
-  { path: '', component: FindHotelItemComponent },
+  { path: '', component: BookDetailComponent },
+  { path: 'find-hotel', component: FindHotelItemComponent},
   { path: 'hotel-detail', component: HotelDetailComponent},
   { path: 'login', component: LoginComponent},
   { path: 'sign-up', component: SignUpComponent}

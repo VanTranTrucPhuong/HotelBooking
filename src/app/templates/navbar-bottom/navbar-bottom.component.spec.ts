@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from 'src/app/templates/navbar-bottom/node_modules/@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavbarBottomComponent } from './navbar-bottom.component';
 

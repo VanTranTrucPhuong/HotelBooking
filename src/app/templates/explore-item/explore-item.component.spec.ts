@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from 'src/app/templates/explore-item/node_modules/@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExploreItemComponent } from './explore-item.component';
 

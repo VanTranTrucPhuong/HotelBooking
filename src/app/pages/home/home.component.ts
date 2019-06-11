@@ -32,7 +32,11 @@ export class HomeComponent implements OnInit {
     return this.utility.isDisplayHeader();
   }
 
-  goToDetail() {
+  public goToFindHotel() {
+    this.router.navigate(['/find-hotel']);
+  }
+
+  public goToDetail() {
     this.router.navigate(['/hotel-detail']);
   }
 }

@@ -8,15 +8,11 @@ import { UtilityService } from 'src/app/services/utility.service';
 })
 export class HotelDetailComponent implements OnInit {
 
-  constructor(private ultility: UtilityService) { 
+  constructor(private ultility: UtilityService) {
     this.ultility.setDisplayNavbar(false);
   }
 
   ngOnInit() {
-  }
-
-  ngDestroy(){
-    this.ultility.setDisplayNavbar(true);
   }
 
 }

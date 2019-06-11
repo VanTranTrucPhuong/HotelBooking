@@ -22,6 +22,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { FindHotelItemComponent } from './templates/find-hotel-item/find-hotel-item.component';
+import { FindHotelComponent } from './pages/find-hotel/find-hotel.component';
+import { BookDetailComponent } from './pages/book-detail/book-detail.component';
+import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
+import { CheckoutDetailComponent } from './pages/checkout-detail/checkout-detail.component';
 
 // Wheel Selector
 
@@ -40,7 +44,11 @@ import { FindHotelItemComponent } from './templates/find-hotel-item/find-hotel-i
     LoginComponent,
     SignUpComponent,
     FooterComponent,
-    FindHotelItemComponent
+    FindHotelItemComponent,
+    FindHotelComponent,
+    BookDetailComponent,
+    ContactDetailsComponent,
+    CheckoutDetailComponent
   ],
   imports: [
     BrowserModule,
