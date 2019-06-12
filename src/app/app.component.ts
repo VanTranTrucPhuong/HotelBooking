@@ -7,18 +7,36 @@ import { UtilityService } from './services/utility.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'HotelBooking';
 
-  constructor(protected utility: UtilityService) {
-    utility.setDisplayHeader(true);
-    utility.setDisplayNavbar(true);
+  constructor(protected ultility: UtilityService) {
+    ultility.setDisplayHeader(true);
+    ultility.setDisplayHomeHeader(true);
+    ultility.setDisplayInnerHeader(false);
+    ultility.setDisplayNavbar(true);
   }
 
   public isDisplayHeader(): boolean {
-    return this.utility.isDisplayHeader();
+    return this.ultility.isDisplayHeader();
+  }
+
+  public isDisplayHomeHeader(): boolean {
+    return this.ultility.isDisplayHomeHeader();
+  }
+
+  public isDisplayInnerHeader(): boolean {
+    return this.ultility.isDisplayInnerHeader();
   }
 
   public isDisplayNavbar(): boolean {
-    return this.utility.isDisplayNavbar();
+    return this.ultility.isDisplayNavbar();
   }
+
+  public isDisplayProcessBar(): boolean {
+    return this.ultility.isDisplayProcessBar();
+  }
+
+  public getTitle() {
+    return this.ultility.getTitle();
+  }
+
 }

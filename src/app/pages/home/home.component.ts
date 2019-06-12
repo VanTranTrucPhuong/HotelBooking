@@ -23,14 +23,24 @@ export class HomeComponent implements OnInit {
     protected router: Router
   ) {
     utility.setDisplayHeader(true);
+    utility.setDisplayHomeHeader(true);
+    utility.setDisplayInnerHeader(false);
   }
 
   ngOnInit() {
   }
 
-  public isDisplayHeader(): boolean {
-    return this.utility.isDisplayHeader();
-  }
+  // public isDisplayHeader(): boolean {
+  //   return this.utility.isDisplayHeader();
+  // }
+
+  // public isDisplayHomeHeader(): boolean {
+  //   return this.utility.isDisplayHomeHeader();
+  // }
+
+  // public isDisplayInnerHeader(): boolean {
+  //   return this.utility.isDisplayInnerHeader();
+  // }
 
   public goToFindHotel() {
     this.router.navigate(['/find-hotel']);

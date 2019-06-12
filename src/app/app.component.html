@@ -1,5 +1,10 @@
 <div class="page">
-    <!-- <app-header class="header" [isDisplayHeader]="isDisplayHeader()"></app-header> -->
+    <app-header class="header" 
+    [title] = "getTitle()"
+    [isDisplayHeader]="isDisplayHeader()"
+    [isDisplayHomeHeader]="isDisplayHomeHeader()"
+    [isDisplayInnerHeader]="isDisplayInnerHeader()"
+    [isDisplayProcessBar]="isDisplayProcessBar()"></app-header>
 
     <div class="main">
         <router-outlet></router-outlet>

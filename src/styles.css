@@ -31,76 +31,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* End fields in form */
 
 /* Button in form */
-.btn{
+.btn-common{
     width: 100%;
 }
 /* End button in form */
 
-/* Header */
-/* General Header */
-.general-header{
-    background-color: #545dff;
-    height: 150px;
-    padding: 1rem;
-}
-
-.header-title{
-    display: flex;
-}
-
-/* Processbar */
-.header-processbar{
-    margin-right: 1rem;
-    color: #b4b4fb!important;
-}
-
-.active{
-    color: white!important;
-}
-
-.active .circle{
-    background-color: white!important;
-}
-
-
-ul.processbar{
-    display: flex;
-    justify-content: flex-end;
-    text-decoration: none;
-    list-style-type: none;
-    padding: unset;
-    font-size: 12px;
-}
-
-ul.processbar > li{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: .5rem;
-}
-
-ul.processbar li p.circle{
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    border: 1px solid #b4b4fb;
-    border-radius: 50%;
-    margin-right: .75rem;
-    background: #b4b4fb;
-    color: #545dff;
-    /* padding: 2rem; */
-}
-
-ul.processbar li p.line{
-    width: 30px;
-    height: 2px;
-    background-color: #b4b4fb;
-    margin-left: .25rem;
-}
-/* End Processbar */
-
-/* End Header */
 
 /* Price */
 .price{
@@ -110,3 +45,16 @@ ul.processbar li p.line{
 
 /* Dot in book of fill in details */
 /* End dot in book of fill in details*/
+
+/* Fill in details */
+.fill-in-content{
+    margin-top: 20px;
+    margin-bottom: 5rem;
+}
+/* End fill in details */
+
+/* Title-text (common) */
+.title-text {
+    color: rgba(0,0,0,.54);
+}
+/* End title-text */

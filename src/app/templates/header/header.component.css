@@ -3,12 +3,8 @@ img{
     display: block;
 }
 
-.header__image{
+.home-header{
     position: relative; 
-}
-
-.header__image img{
-
 }
 
 #overlay {
@@ -23,21 +19,83 @@ img{
     cursor: pointer;
 }
 
-.header__icon, .header__text{
+.header-icon, .header-text{
     position: absolute;
     top: 5%;
     z-index: 5;
 }
 
-.header__icon{
+.header-icon{
     right: 5%;
 }
 
-.header__icon .fa-bars{
+.header-icon .fa-bars{
     font-size: 2rem;
 }
 
-.header__text{
+.header-text{
     left: 5%;
 }
 
+/* Inner Header */
+.inner-header{
+    background-color: #545dff;
+    height: 150px;
+    padding: 1.5rem 1rem 1rem 1rem;
+}
+
+.header-title{
+    display: flex;
+}
+
+/* Processbar */
+.header-processbar{
+    margin-right: 1rem;
+    color: #b4b4fb!important;
+}
+
+.active-fill-in-details{
+    color: white!important;
+}
+
+.active .circle{
+    background-color: white!important;
+}
+
+
+ul.processbar{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    list-style-type: none;
+    padding: unset;
+    font-size: 12px;
+}
+
+ul.processbar > li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: .5rem;
+}
+
+ul.processbar li p.circle{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #b4b4fb;
+    border-radius: 50%;
+    margin-right: .75rem;
+    background: #b4b4fb;
+    color: #545dff;
+    /* padding: 2rem; */
+}
+
+ul.processbar li p.line{
+    width: 30px;
+    height: 2px;
+    background-color: #b4b4fb;
+    margin-left: .25rem;
+}
+/* End Processbar */

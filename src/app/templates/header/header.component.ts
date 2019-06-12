@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { UtilityService } from 'src/app/services/utility.service';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Input() isDisplayHeader: Boolean;
+  @Input() isDisplayHomeHeader: Boolean; // Header In Home Screen
+  @Input() isDisplayInnerHeader: Boolean; // Header In Another Screen
+  @Input() isDisplayProcessBar: Boolean;
+  // Set Title
+  @Input() title: string;
 
-  constructor() { }
+  constructor(private ultility: UtilityService) {
+    /**Setting Default Value **/
+    this.title = '';
+  }
 
   ngOnInit() {
   }

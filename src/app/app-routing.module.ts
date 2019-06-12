@@ -11,13 +11,16 @@ import { BookDetailComponent } from './pages/book-detail/book-detail.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { CheckoutDetailComponent } from './pages/checkout-detail/checkout-detail.component';
+import { FindHotelComponent } from './pages/find-hotel/find-hotel.component';
 
 const routes: Routes = [
-  { path: '', component: CheckoutDetailComponent },
-  { path: 'find-hotel', component: FindHotelItemComponent},
+  { path: '', component: HomeComponent },
+  { path: 'find-hotel', component: FindHotelComponent},
   { path: 'hotel-detail', component: HotelDetailComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'sign-up', component: SignUpComponent}
+  { path: 'sign-up', component: SignUpComponent},
+  { path: 'book-hotel', component: BookDetailComponent},
+  { path: 'check-out', component: CheckoutDetailComponent}
 ];
 
 @NgModule({

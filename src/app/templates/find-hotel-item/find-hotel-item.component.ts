@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-find-hotel-item',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./find-hotel-item.component.css']
 })
 export class FindHotelItemComponent implements OnInit {
+  @Output() chooseHotel: EventEmitter <any> = new EventEmitter();
 
   constructor() { }
 
