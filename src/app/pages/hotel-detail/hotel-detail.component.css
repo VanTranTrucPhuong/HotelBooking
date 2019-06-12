@@ -154,8 +154,11 @@ hr.line{
 /* End Amenities */
 
 /* Description Hotel */
-.description__text{
+.description-text{
     color: rgb(150, 150, 150);
+    font-size: 14px;
+    line-height: 1.75rem;
+    letter-spacing: .5px;
 }
 /* End Descripttion Hotel */
 

@@ -13,6 +13,7 @@ export class AppComponent {
     ultility.setDisplayHomeHeader(true);
     ultility.setDisplayInnerHeader(false);
     ultility.setDisplayNavbar(true);
+    ultility.setDisplayStarRating(false);
   }
 
   public isDisplayHeader(): boolean {
@@ -39,4 +40,7 @@ export class AppComponent {
     return this.ultility.getTitle();
   }
 
+  public isDisplayStarRating(): boolean {
+    return this.ultility.isDisplayStarRating();
+  }
 }

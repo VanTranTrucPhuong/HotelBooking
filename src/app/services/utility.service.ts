@@ -12,6 +12,7 @@ export class UtilityService {
   private _displayInnerHeader = true;
   private _isShowProcessBar =  true;
   private _title: string;
+  private _displayStarRating = true;
 
   constructor() { }
 
@@ -65,12 +66,21 @@ export class UtilityService {
     this._title = title;
   }
 
-  // Processbar
+  // Set Display Processbar
   public isDisplayProcessBar() {
     return this._isShowProcessBar;
   }
 
   public setDisplayProcessBar(isShow: boolean) {
     this._isShowProcessBar = isShow;
+  }
+
+  // Set Display Star Rating
+  public isDisplayStarRating() {
+    return this._displayStarRating;
+  }
+
+  public setDisplayStarRating(isShow: boolean) {
+    this._displayStarRating = isShow;
   }
 }

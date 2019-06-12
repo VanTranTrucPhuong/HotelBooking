@@ -48,6 +48,10 @@ img{
     display: flex;
 }
 
+i.header-back-icon{
+    font-size: 30px;
+}
+
 /* Processbar */
 .header-processbar{
     margin-right: 1rem;

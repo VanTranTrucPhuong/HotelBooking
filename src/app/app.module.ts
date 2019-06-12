@@ -18,7 +18,7 @@ import { DropDownButtonModule } from '@syncfusion/ej2-angular-splitbuttons';
 import { LoginComponent } from './pages/login/login.component';
 import { MaterialModule } from './material-module';
 
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { FindHotelItemComponent } from './templates/find-hotel-item/find-hotel-item.component';
@@ -26,6 +26,7 @@ import { FindHotelComponent } from './pages/find-hotel/find-hotel.component';
 import { BookDetailComponent } from './pages/book-detail/book-detail.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { CheckoutDetailComponent } from './pages/checkout-detail/checkout-detail.component';
+import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.component';
 
 // Wheel Selector
 
@@ -48,7 +49,8 @@ import { CheckoutDetailComponent } from './pages/checkout-detail/checkout-detail
     FindHotelComponent,
     BookDetailComponent,
     ContactDetailsComponent,
-    CheckoutDetailComponent
+    CheckoutDetailComponent,
+    FillInDetailsComponent
   ],
   imports: [
     BrowserModule,

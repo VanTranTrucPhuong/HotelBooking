@@ -12,6 +12,11 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.main{
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
 .container-custom{
     margin-top: -20%;
     margin-bottom: 100px;
@@ -33,7 +38,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* Button in form */
 .btn-common{
     width: 100%;
-    
+
 }
 /* End button in form */
 
@@ -81,3 +86,21 @@ ul li.dot-room::before{
     color: rgba(0,0,0,.54);
 }
 /* End title-text */
+
+/* Star */
+/* checked star */
+.header-star{
+    margin-left: 2.5rem;
+}
+
+.header-star span.fa.fa-star {
+    padding-right: .5rem;
+}
+.checked{
+    color: orange;
+}
+
+.unchecked{
+
+}
+/* End Star */

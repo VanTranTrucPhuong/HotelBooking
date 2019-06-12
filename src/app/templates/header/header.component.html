@@ -16,11 +16,18 @@
   <div class="inner-header" *ngIf="isDisplayInnerHeader">
     <div class="header-title text-white">
       <div>
-        <i class="material-icons">keyboard_backspace</i>
+        <i class="material-icons header-back-icon">keyboard_backspace</i>
       </div>
       <div>
-        <h4 class="mb-4">&nbsp;&nbsp;{{title}}</h4>
+        <h4>&nbsp;&nbsp;{{title}}</h4>
       </div>
+    </div>
+    <div class="header-star" *ngIf="isDisplayStarRating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star unchecked"></span>
+      <span class="fa fa-star unchecked"></span>
     </div>
     <div class="header-processbar" *ngIf="isDisplayProcessBar">
       <ul class="processbar">

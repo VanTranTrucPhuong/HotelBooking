@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit {
   @Input() isDisplayHomeHeader: Boolean; // Header In Home Screen
   @Input() isDisplayInnerHeader: Boolean; // Header In Another Screen
   @Input() isDisplayProcessBar: Boolean;
+  @Input() isDisplayStarRating: Boolean;
+
   // Set Title
   @Input() title: string;
 

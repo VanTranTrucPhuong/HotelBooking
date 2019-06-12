@@ -35,12 +35,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _pages_hotel_detail_hotel_detail_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/hotel-detail/hotel-detail.component */ "./src/app/pages/hotel-detail/hotel-detail.component.ts");
-/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _pages_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/sign-up/sign-up.component */ "./src/app/pages/sign-up/sign-up.component.ts");
-/* harmony import */ var _templates_find_hotel_item_find_hotel_item_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./templates/find-hotel-item/find-hotel-item.component */ "./src/app/templates/find-hotel-item/find-hotel-item.component.ts");
-/* harmony import */ var _pages_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/contact-details/contact-details.component */ "./src/app/pages/contact-details/contact-details.component.ts");
+/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _pages_hotel_detail_hotel_detail_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/hotel-detail/hotel-detail.component */ "./src/app/pages/hotel-detail/hotel-detail.component.ts");
+/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _pages_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/sign-up/sign-up.component */ "./src/app/pages/sign-up/sign-up.component.ts");
+/* harmony import */ var _pages_book_detail_book_detail_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/book-detail/book-detail.component */ "./src/app/pages/book-detail/book-detail.component.ts");
+/* harmony import */ var _pages_checkout_detail_checkout_detail_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/checkout-detail/checkout-detail.component */ "./src/app/pages/checkout-detail/checkout-detail.component.ts");
+/* harmony import */ var _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/find-hotel/find-hotel.component */ "./src/app/pages/find-hotel/find-hotel.component.ts");
+/* harmony import */ var _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/fill-in-details/fill-in-details.component */ "./src/app/pages/fill-in-details/fill-in-details.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -55,12 +58,18 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
 var routes = [
-    { path: '', component: _pages_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_7__["ContactDetailsComponent"] },
-    { path: 'find-hotel', component: _templates_find_hotel_item_find_hotel_item_component__WEBPACK_IMPORTED_MODULE_6__["FindHotelItemComponent"] },
-    { path: 'hotel-detail', component: _pages_hotel_detail_hotel_detail_component__WEBPACK_IMPORTED_MODULE_3__["HotelDetailComponent"] },
-    { path: 'login', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"] },
-    { path: 'sign-up', component: _pages_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_5__["SignUpComponent"] }
+    { path: '', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
+    { path: 'find-hotel', component: _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_9__["FindHotelComponent"] },
+    { path: 'hotel-detail', component: _pages_hotel_detail_hotel_detail_component__WEBPACK_IMPORTED_MODULE_4__["HotelDetailComponent"] },
+    { path: 'login', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"] },
+    { path: 'sign-up', component: _pages_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_6__["SignUpComponent"] },
+    { path: 'fill-in-details', component: _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_10__["FillInDetailsComponent"] },
+    { path: 'book-hotel', component: _pages_book_detail_book_detail_component__WEBPACK_IMPORTED_MODULE_7__["BookDetailComponent"] },
+    { path: 'check-out', component: _pages_checkout_detail_checkout_detail_component__WEBPACK_IMPORTED_MODULE_8__["CheckoutDetailComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -69,10 +78,10 @@ var AppRoutingModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)
+                _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(routes)
             ],
             exports: [
-                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]
+                _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]
             ],
             declarations: []
         })
@@ -102,7 +111,7 @@ module.exports = ".main{\n    /* position: absolute;\n    top: 20%; */\n    /* z
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page\">\n    <!-- <app-header class=\"header\" [isDisplayHeader]=\"isDisplayHeader()\"></app-header> -->\n\n    <div class=\"main\">\n        <router-outlet></router-outlet>\n    </div>\n\n    <app-navbar-bottom [isDisplayNavbar]=\"isDisplayNavbar()\"></app-navbar-bottom>\n\n</div>\n"
+module.exports = "<div class=\"page\">\n    <app-header class=\"header\" \n    [title] = \"getTitle()\"\n    [isDisplayHeader]=\"isDisplayHeader()\"\n    [isDisplayHomeHeader]=\"isDisplayHomeHeader()\"\n    [isDisplayInnerHeader]=\"isDisplayInnerHeader()\"\n    [isDisplayProcessBar]=\"isDisplayProcessBar()\"\n    [isDisplayStarRating]=\"isDisplayStarRating()\"></app-header>\n\n    <div class=\"main\">\n        <router-outlet></router-outlet>\n    </div>\n\n    <app-navbar-bottom [isDisplayNavbar]=\"isDisplayNavbar()\"></app-navbar-bottom>\n\n</div>\n"
 
 /***/ }),
 
@@ -130,17 +139,34 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent(utility) {
-        this.utility = utility;
-        this.title = 'HotelBooking';
-        utility.setDisplayHeader(true);
-        utility.setDisplayNavbar(true);
+    function AppComponent(ultility) {
+        this.ultility = ultility;
+        ultility.setDisplayHeader(true);
+        ultility.setDisplayHomeHeader(true);
+        ultility.setDisplayInnerHeader(false);
+        ultility.setDisplayNavbar(true);
+        ultility.setDisplayStarRating(false);
     }
     AppComponent.prototype.isDisplayHeader = function () {
-        return this.utility.isDisplayHeader();
+        return this.ultility.isDisplayHeader();
+    };
+    AppComponent.prototype.isDisplayHomeHeader = function () {
+        return this.ultility.isDisplayHomeHeader();
+    };
+    AppComponent.prototype.isDisplayInnerHeader = function () {
+        return this.ultility.isDisplayInnerHeader();
     };
     AppComponent.prototype.isDisplayNavbar = function () {
-        return this.utility.isDisplayNavbar();
+        return this.ultility.isDisplayNavbar();
+    };
+    AppComponent.prototype.isDisplayProcessBar = function () {
+        return this.ultility.isDisplayProcessBar();
+    };
+    AppComponent.prototype.getTitle = function () {
+        return this.ultility.getTitle();
+    };
+    AppComponent.prototype.isDisplayStarRating = function () {
+        return this.ultility.isDisplayStarRating();
     };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -190,6 +216,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/find-hotel/find-hotel.component */ "./src/app/pages/find-hotel/find-hotel.component.ts");
 /* harmony import */ var _pages_book_detail_book_detail_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/book-detail/book-detail.component */ "./src/app/pages/book-detail/book-detail.component.ts");
 /* harmony import */ var _pages_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/contact-details/contact-details.component */ "./src/app/pages/contact-details/contact-details.component.ts");
+/* harmony import */ var _pages_checkout_detail_checkout_detail_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/checkout-detail/checkout-detail.component */ "./src/app/pages/checkout-detail/checkout-detail.component.ts");
+/* harmony import */ var _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pages/fill-in-details/fill-in-details.component */ "./src/app/pages/fill-in-details/fill-in-details.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -208,6 +236,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 // Date range
+
+
 
 
 
@@ -241,7 +271,9 @@ var AppModule = /** @class */ (function () {
                 _templates_find_hotel_item_find_hotel_item_component__WEBPACK_IMPORTED_MODULE_19__["FindHotelItemComponent"],
                 _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_20__["FindHotelComponent"],
                 _pages_book_detail_book_detail_component__WEBPACK_IMPORTED_MODULE_21__["BookDetailComponent"],
-                _pages_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_22__["ContactDetailsComponent"]
+                _pages_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_22__["ContactDetailsComponent"],
+                _pages_checkout_detail_checkout_detail_component__WEBPACK_IMPORTED_MODULE_23__["CheckoutDetailComponent"],
+                _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_24__["FillInDetailsComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -364,7 +396,7 @@ var MaterialModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".book-content{\n    margin-top: 1rem;\n    margin-bottom: 5rem;\n}\n\n/* Icon */\n\n.dot-icon{\n    font-size: 8px;\n}\n\n/* End Icon */\n\n.title-text{\n    color: rgba(0,0,0,.54);\n}\n\n/* Button */\n\n.btn-continue{\n    width: 100%;\n}\n\n/* End button */\n\n/* Header */\n\n/* General Header */\n\n.general-header{\n    background-color: #545dff;\n    height: 150px;\n    padding: 1rem;\n}\n\n.header-title{\n    display: flex;\n}\n\n/* Processbar */\n\n.header-processbar{\n    margin-right: 1rem;\n    color: #b4b4fb!important;\n}\n\n.active{\n    color: white!important;\n}\n\n.active .circle{\n    background-color: white!important;\n}\n\nul.processbar{\n    display: flex;\n    justify-content: flex-end;\n    text-decoration: none;\n    list-style-type: none;\n    padding: unset;\n    font-size: 12px;\n}\n\nul.processbar > li{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-left: .5rem;\n}\n\nul.processbar li p.circle{\n    width: 30px;\n    height: 30px;\n    line-height: 30px;\n    text-align: center;\n    border: 1px solid #b4b4fb;\n    border-radius: 50%;\n    margin-right: .75rem;\n    background: #b4b4fb;\n    color: #545dff;\n    /* padding: 2rem; */\n}\n\nul.processbar li p.line{\n    width: 30px;\n    height: 2px;\n    background-color: #b4b4fb;\n    margin-left: .25rem;\n}\n\n/* End Processbar */\n\n/* End Header */"
+module.exports = ".book-content{\n    margin-top: 1rem;\n    margin-bottom: 5rem;\n}\n\n/* Icon */\n\n.dot-icon{\n    font-size: 8px;\n}\n\n/* End Icon */\n\n.title-text{\n    color: rgba(0,0,0,.54);\n}\n\n/* Button */\n\n.btn-continue{\n    width: 100%;\n}\n\n/* End button */\n\n/* Header */\n\n/* General Header */\n\n.general-header{\n    background-color: #545dff;\n    height: 150px;\n    padding: 1rem;\n}\n\n.header-title{\n    display: flex;\n}\n\n/* Processbar */\n\n.header-processbar{\n    margin-right: 1rem;\n    color: #b4b4fb!important;\n}\n\n.active-fill-in-details{\n    color: white!important;\n}\n\n.active .circle{\n    background-color: white!important;\n}\n\nul.processbar{\n    display: flex;\n    justify-content: flex-end;\n    text-decoration: none;\n    list-style-type: none;\n    padding: unset;\n    font-size: 12px;\n}\n\nul.processbar > li{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-left: .5rem;\n}\n\nul.processbar li p.circle{\n    width: 30px;\n    height: 30px;\n    line-height: 30px;\n    text-align: center;\n    border: 1px solid #b4b4fb;\n    border-radius: 50%;\n    margin-right: .75rem;\n    background: #b4b4fb;\n    color: #545dff;\n    /* padding: 2rem; */\n}\n\nul.processbar li p.line{\n    width: 30px;\n    height: 2px;\n    background-color: #b4b4fb;\n    margin-left: .25rem;\n}\n\n/* End Processbar */\n\n/* End Header */"
 
 /***/ }),
 
@@ -375,7 +407,7 @@ module.exports = ".book-content{\n    margin-top: 1rem;\n    margin-bottom: 5rem
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"general-header\">\n    <div class=\"header-title text-white\">\n      <div>\n        <i class=\"material-icons\">keyboard_backspace</i>\n      </div>\n      <div>\n        <h4 class=\"mb-4\">&nbsp;&nbsp;Fill in Details</h4>\n      </div>\n    </div>\n    <div class=\"header-processbar\">\n      <ul class=\"processbar\">\n        <li class=\"active\">\n          <p class=\"circle\">01</p>\n          <p class=\"label\">Book</p>\n          <p class=\"line\"></p>\n        </li>\n        <li class=\"\">\n          <p class=\"circle\">02</p>\n          <p class=\"label\">Check out</p>\n          <p class=\"line\"></p>\n        </li>\n        <li class=\"\">\n          <p class=\"circle\">03</p>\n          <p class=\"label\">Pay</p>\n        </li>\n      </ul>\n    </div>\n  </div>\n\n<div class=\"book-content container-fluid\">\n  <!-- Your Booking -->\n  <div>\n    <p class=\"title-text\">Your booking</p>\n    <div class=\"row\">\n      <div class=\"col\">\n        <p>Marriotte NY city</p>\n      </div>\n      <div class=\"col text-right\">\n        <button mat-stroked-button color=\"primary\">Details</button>\n      </div>\n    </div>\n  </div>\n  <!-- End Your Booking -->\n\n  <hr>\n\n  <!-- Information Booking -->\n  <div>\n    <div class=\"infor-book-item\">\n      <ul>\n        <li>\n          <p class=\"title-text\">Check-in-day</p>\n          <p>Thur, 06 August 2018</p>\n        </li>\n        <li>\n          <p class=\"title-text\">Check-out-day</p>\n          <p>Sat, 10 August 2018</p>\n        </li>\n        <li>\n          <p class=\"title-text\">Room</p>\n          <p>Standard Double Room with view</p>\n        </li>\n      </ul>\n    </div>\n    <!-- End Information Booking -->\n\n    <hr>\n\n    <!-- Contact Details -->\n    <div class=\"contact-detail\">\n      <p class=\"title-text\">Contact Details</p>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Please fill in contact details</p>\n        </div>\n        <div class=\"col text-right\">\n          <button mat-stroked-button color=\"primary\">Fill in</button>\n        </div>\n      </div>\n    </div>\n\n    <!-- End Contact Details -->\n\n    <hr>\n\n    <!-- Total price -->\n    <div class=\"total-price\">\n      <p class=\"title-text\">Your Price</p>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Total Price</p>\n        </div>\n        <div class=\"col text-right\">\n          <p>$119</p>\n        </div>\n      </div>\n    </div>\n    <!-- End total price -->\n\n    <!-- Button  -->\n    <button mat-raised-button color=\"primary\" class=\"btn-continue\">Continue</button>\n    <!-- End Button -->\n  </div>"
+module.exports = "<div class=\"book-content container-fluid\">\n  <!-- Your Booking -->\n  <div>\n    <p class=\"title-text\">Your booking</p>\n    <div class=\"row\">\n      <div class=\"col\">\n        <p>Marriotte NY city</p>\n      </div>\n      <div class=\"col text-right\">\n        <button mat-stroked-button color=\"primary\">Details</button>\n      </div>\n    </div>\n  </div>\n  <!-- End Your Booking -->\n\n  <hr>\n\n  <!-- Information Booking -->\n  <div>\n    <div class=\"infor-book-item\">\n      <ul>\n        <li class=\"dot-check-in\">\n          <span class=\"title-text\">&nbsp;&nbsp;Check-in-day</span>\n          <p>Thur, 06 August 2018</p>\n        </li>\n        <li class=\"dot-check-out\">\n          <span class=\"title-text\">&nbsp;&nbsp;Check-out-day</span>\n          <p>Sat, 10 August 2018</p>\n        </li>\n        <li class=\"dot-room\">\n          <span class=\"title-text room-type\">&nbsp;&nbsp;Room</span>\n          <p>Standard Double Room with view</p>\n        </li>\n      </ul>\n    </div>\n    <!-- End Information Booking -->\n\n    <hr>\n\n    <!-- Contact Details -->\n    <div class=\"contact-detail\">\n      <p class=\"title-text\">Contact Details</p>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Please fill in contact details</p>\n        </div>\n        <div class=\"col text-right\">\n          <button mat-stroked-button color=\"primary\">Fill in</button>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Any special request?</p>\n        </div>\n        <div class=\"col text-right\">\n          <button mat-stroked-button color=\"primary\">Add more</button>\n        </div>\n      </div>\n    </div>\n\n    <!-- End Contact Details -->\n\n    <hr>\n\n    <!-- Total price -->\n    <div class=\"total-price\">\n      <p class=\"title-text\">Your Price</p>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Total Price</p>\n        </div>\n        <div class=\"col text-right\">\n          <p>$119</p>\n        </div>\n      </div>\n    </div>\n    <!-- End total price -->\n\n    <!-- Button  -->\n    <button mat-raised-button color=\"primary\" class=\"btn-common\" routerLink=\"/check-out\">Continue</button>\n    <!-- End Button -->\n  </div>"
 
 /***/ }),
 
@@ -414,6 +446,69 @@ var BookDetailComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], BookDetailComponent);
     return BookDetailComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/checkout-detail/checkout-detail.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/pages/checkout-detail/checkout-detail.component.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* The container */\n.container {\n    display: block;\n    position: relative;\n    padding-left: 35px;\n    margin-bottom: 12px;\n    cursor: pointer;\n    font-size: 16px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n}\n/* Hide the browser's default radio button */\n.container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n}\n/* Create a custom radio button */\n.checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 20px;\n    width: 20px;\n    background-color: #eee;\n    border-radius: 50%;\n    border: 1px solid #545dff;\n}\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n    background-color: #ccc;\n}\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n    background-color: white;\n}\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n    content: \"\";\n    position: absolute;\n    display: none;\n}\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n    display: block;\n}\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background:  #545dff;\n}"
+
+/***/ }),
+
+/***/ "./src/app/pages/checkout-detail/checkout-detail.component.html":
+/*!**********************************************************************!*\
+  !*** ./src/app/pages/checkout-detail/checkout-detail.component.html ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"fill-in-content container-fluid\">\n  <!-- Your Booking -->\n  <div>\n    <p class=\"title-text\">Your booking</p>\n    <div class=\"row\">\n      <div class=\"col\">\n        <p>Marriotte NY city</p>\n      </div>\n      <div class=\"col text-right\">\n        <button mat-stroked-button color=\"primary\">Details</button>\n      </div>\n    </div>\n  </div>\n  <!-- End Your Booking -->\n\n  <hr>\n\n  <!-- Information Booking -->\n  <div>\n    <div class=\"infor-book-item\">\n      <ul>\n        <li class=\"dot-check-in\">\n          <p class=\"title-text\">Check-in-day</p>\n          <p>Thur, 06 August 2018</p>\n        </li>\n        <li class=\"dot-check-out\">\n          <p class=\"title-text\">Check-out-day</p>\n          <p>Sat, 10 August 2018</p>\n        </li>\n        <li class=\"dot-room\">\n          <p class=\"title-text\">Room</p>\n          <p>Standard Double Room with view</p>\n        </li>\n      </ul>\n    </div>\n    <!-- End Information Booking -->\n\n    <hr>\n\n    <!-- Contact Details -->\n    <div class=\"contact-detail\">\n      <p class=\"title-text\">Contact Details</p>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Guest's name</p>\n        </div>\n        <div class=\"col text-right\">\n          <button mat-stroked-button color=\"primary\">Fill in</button>\n        </div>\n      </div>\n      <p>+ 037 9999 999 / gmail@gmail.com</p>\n      <div class=\"select-form\">\n        <label class=\"container\">I'm booking for myself\n          <input type=\"radio\" checked=\"checked\" name=\"radio\">\n          <span class=\"checkmark\"></span>\n        </label>\n        <label class=\"container\">I'm booking for another person\n          <input type=\"radio\" name=\"radio\">\n          <span class=\"checkmark\"></span>\n        </label>\n      </div>\n    </div>\n\n    <!-- End Contact Details -->\n\n    <hr>\n\n    <!-- Special request-->\n    <div>\n      <p class=\"title-text\">Special request</p>\n      <div class=\"row\">\n        <div class=\"col\">\n          <p>High Floor</p>\n        </div>\n        <div class=\"col text-right\">\n          <button mat-stroked-button color=\"primary\">Change/Add</button>\n        </div>\n      </div>\n    </div>\n    <!-- End special request -->\n\n    <hr>\n\n    <!-- Total price -->\n    <div class=\"total-price\">\n      <p class=\"title-text\">Your Price</p>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Total Price</p>\n        </div>\n        <div class=\"col text-right\">\n          <p class=\"price\">$1190</p>\n        </div>\n      </div>\n    </div>\n    <!-- End total price -->\n\n    <hr>\n\n    <!-- Button  -->\n    <button mat-raised-button color=\"primary\" class=\"btn-common\">Continue</button>\n    <!-- End Button -->\n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/pages/checkout-detail/checkout-detail.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/pages/checkout-detail/checkout-detail.component.ts ***!
+  \********************************************************************/
+/*! exports provided: CheckoutDetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckoutDetailComponent", function() { return CheckoutDetailComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CheckoutDetailComponent = /** @class */ (function () {
+    function CheckoutDetailComponent() {
+    }
+    CheckoutDetailComponent.prototype.ngOnInit = function () {
+    };
+    CheckoutDetailComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-checkout-detail',
+            template: __webpack_require__(/*! ./checkout-detail.component.html */ "./src/app/pages/checkout-detail/checkout-detail.component.html"),
+            styles: [__webpack_require__(/*! ./checkout-detail.component.css */ "./src/app/pages/checkout-detail/checkout-detail.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], CheckoutDetailComponent);
+    return CheckoutDetailComponent;
 }());
 
 
@@ -489,6 +584,78 @@ var ContactDetailsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pages/fill-in-details/fill-in-details.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/pages/fill-in-details/fill-in-details.component.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".fill-details-content{\n    margin-top: 1rem;\n    margin-bottom: 5rem;\n    font-size: 14px;\n}"
+
+/***/ }),
+
+/***/ "./src/app/pages/fill-in-details/fill-in-details.component.html":
+/*!**********************************************************************!*\
+  !*** ./src/app/pages/fill-in-details/fill-in-details.component.html ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"fill-details-content\">\n  <!-- Book detail -->\n  <div class=\"book-content container-fluid\">\n    <!-- Your Booking -->\n    <div>\n      <p class=\"title-text\">Your booking</p>\n      <div class=\"row\">\n        <div class=\"col\">\n          <p>Marriotte NY city</p>\n        </div>\n        <div class=\"col text-right\">\n          <button mat-stroked-button color=\"primary\">Details</button>\n        </div>\n      </div>\n    </div>\n    <!-- End Your Booking -->\n\n    <hr>\n\n    <!-- Information Booking -->\n    <div>\n      <div class=\"infor-book-item\">\n        <ul>\n          <li class=\"dot-check-in\">\n            <span class=\"title-text\">&nbsp;&nbsp;Check-in-day</span>\n            <p>Thur, 06 August 2018</p>\n          </li>\n          <li class=\"dot-check-out\">\n            <span class=\"title-text\">&nbsp;&nbsp;Check-out-day</span>\n            <p>Sat, 10 August 2018</p>\n          </li>\n          <li class=\"dot-room\">\n            <span class=\"title-text room-type\">&nbsp;&nbsp;Room</span>\n            <p>Standard Double Room with view</p>\n          </li>\n        </ul>\n      </div>\n      <!-- End Information Booking -->\n\n      <hr>\n\n      <!-- Contact Details -->\n      <div class=\"contact-detail\">\n        <p class=\"title-text\">Contact Details</p>\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <p>Please fill in contact details</p>\n          </div>\n          <div class=\"col text-right\">\n            <button mat-stroked-button color=\"primary\">Fill in</button>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <p>Any special request?</p>\n          </div>\n          <div class=\"col text-right\">\n            <button mat-stroked-button color=\"primary\">Add more</button>\n          </div>\n        </div>\n      </div>\n\n      <!-- End Contact Details -->\n\n      <hr>\n\n      <!-- Total price -->\n      <div class=\"total-price\">\n        <p class=\"title-text\">Your Price</p>\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <p>Total Price</p>\n          </div>\n          <div class=\"col text-right\">\n            <p>$119</p>\n          </div>\n        </div>\n      </div>\n      <!-- End total price -->\n\n      <!-- Button  -->\n      <button mat-raised-button color=\"primary\" class=\"btn-common\" routerLink=\"/check-out\">Continue</button>\n      <!-- End Button -->\n    </div>\n    <!-- End book detail -->\n\n    <!-- Check-Out -->\n    <!-- End Check Out -->\n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/pages/fill-in-details/fill-in-details.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/pages/fill-in-details/fill-in-details.component.ts ***!
+  \********************************************************************/
+/*! exports provided: FillInDetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FillInDetailsComponent", function() { return FillInDetailsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FillInDetailsComponent = /** @class */ (function () {
+    function FillInDetailsComponent(ultility) {
+        this.ultility = ultility;
+        this.ultility.setDisplayHeader(true);
+        this.ultility.setDisplayHomeHeader(false);
+        this.ultility.setDisplayInnerHeader(true);
+        this.ultility.setDisplayProcessBar(true);
+        this.ultility.setDisplayStarRating(false);
+        this.ultility.setTitle('Fill In Details');
+    }
+    FillInDetailsComponent.prototype.ngOnInit = function () {
+    };
+    FillInDetailsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-fill-in-details',
+            template: __webpack_require__(/*! ./fill-in-details.component.html */ "./src/app/pages/fill-in-details/fill-in-details.component.html"),
+            styles: [__webpack_require__(/*! ./fill-in-details.component.css */ "./src/app/pages/fill-in-details/fill-in-details.component.css")]
+        }),
+        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"]])
+    ], FillInDetailsComponent);
+    return FillInDetailsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/find-hotel/find-hotel.component.css":
 /*!***********************************************************!*\
   !*** ./src/app/pages/find-hotel/find-hotel.component.css ***!
@@ -507,7 +674,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n"
+module.exports = "<div class=\"find-hotel-content container-fluid\">\n    <div class=\"title\">\n        <p>ALL ROOM (Sum)</p>\n    </div>\n    <div class=\"item\">\n        <div class=\"row\">\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -522,6 +689,7 @@ module.exports = "\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FindHotelComponent", function() { return FindHotelComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -532,10 +700,27 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var FindHotelComponent = /** @class */ (function () {
-    function FindHotelComponent() {
+    function FindHotelComponent(ultility) {
+        this.ultility = ultility;
+        this.ultility.setDisplayHeader(true);
+        this.ultility.setDisplayHomeHeader(false);
+        this.ultility.setDisplayInnerHeader(true);
+        this.ultility.setDisplayProcessBar(false);
+        this.ultility.setDisplayStarRating(true);
+        this.ultility.setTitle('Marriote NewYork City');
     }
     FindHotelComponent.prototype.ngOnInit = function () {
+    };
+    FindHotelComponent.prototype.isDisplayHeader = function () {
+        return this.ultility.isDisplayHeader();
+    };
+    FindHotelComponent.prototype.isDisplayHomeHeader = function () {
+        return this.ultility.isDisplayHomeHeader();
+    };
+    FindHotelComponent.prototype.isDisplayInnerHeader = function () {
+        return this.ultility.isDisplayInnerHeader();
     };
     FindHotelComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -543,7 +728,7 @@ var FindHotelComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./find-hotel.component.html */ "./src/app/pages/find-hotel/find-hotel.component.html"),
             styles: [__webpack_require__(/*! ./find-hotel.component.css */ "./src/app/pages/find-hotel/find-hotel.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"]])
     ], FindHotelComponent);
     return FindHotelComponent;
 }());
@@ -612,12 +797,20 @@ var HomeComponent = /** @class */ (function () {
             { name: 'White Palace', price: '150 000 USD', description: 'Some example text', image: './assets/images/tivkumb_0.jpg' }
         ];
         utility.setDisplayHeader(true);
+        utility.setDisplayHomeHeader(true);
+        utility.setDisplayInnerHeader(false);
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
-    HomeComponent.prototype.isDisplayHeader = function () {
-        return this.utility.isDisplayHeader();
-    };
+    // public isDisplayHeader(): boolean {
+    //   return this.utility.isDisplayHeader();
+    // }
+    // public isDisplayHomeHeader(): boolean {
+    //   return this.utility.isDisplayHomeHeader();
+    // }
+    // public isDisplayInnerHeader(): boolean {
+    //   return this.utility.isDisplayInnerHeader();
+    // }
     HomeComponent.prototype.goToFindHotel = function () {
         this.router.navigate(['/find-hotel']);
     };
@@ -647,7 +840,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*Slide */\n.container-slide{\n    padding-right: 25px;\n    padding-left: 25px;\n}\n.carousel-inner {\n    border-radius: 0.5em;\n}\n.carousel-inner img {\n    width: 100%;\n    height: 315px;\n}\n.carousel-indicators li{\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n}\n/* End Slide */\n/* Deals */\n.heading{\n    margin: 2rem 0;\n}\n.deals__content, .rating{\n    display: flex;\n    justify-content: space-between;\n    /* align-items: center; */\n}\n.sub-title, .pernight{\n    font-size: 14px;\n    color: rgb(150, 150, 150);\n}\n.title{\n    color: #4D4DC7;\n}\n.price{\n    color: rgb(255, 116, 66);\n}\n.btn-see{\n    float: right;\n    background-color: rgb(195, 195, 238);\n    font-size: 14px;\n    color: #4c4cc6;\n}\nhr.line{\n    margin-top: 4rem;\n    border-top: 2px solid #f5bec5;\n}\n/* End Deals */\n/* Rating & Reviews */\n.rating__point{\n    width: 50px;\n    height: 50px;\n    background-color: #4D4DC7;\n    border-radius: 5px;\n    position: relative;\n    margin-right: 0.5rem;\n}\n.point{\n    position: absolute;\n    left: 50%;\n    top: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n}\n.bar__content{\n    padding-right: 15px;\n    margin: 10px 0;\n}\n.bar__content:nth-child(odd){\n    padding-left: 0;\n}\n/* .bar__content:nth-child(even){\n    padding-right: 0;\n} */\n.bar__content p{\n    margin-bottom: 1rem;\n    letter-spacing: 0.5;\n}\n/* The bar container */\n.bar-container {\n    width: 85%;\n    background-color: rgb(247, 209, 138);\n    text-align: center;\n    color: white;\n    border-radius: 10px;\n}\n/* Individual bars */\n.bar{\n    width: 60%; \n    height: 4px; \n    background-color: rgb(255, 175, 25);\n    border-radius: 10px;\n    position: relative;\n}\n.rating__bars{\n    display: flex;\n    flex-wrap: wrap;\n}\n.bar__point{\n    position: absolute;\n    color: rgb(255, 175, 25);\n    top: 1.5rem;\n    right: 5px;\n}\n/* End Rating & Reviews */\n/* Amenities */\n.amenites__content{\n    display: flex;\n    justify-content: space-between;\n    margin-bottom: 2rem;\n}\n.amenities__item{\n    padding-top: 20px;\n    text-align: center;\n    width: 80px;\n    height: 80px;\n    border: 1px solid rgb(70, 70, 70);\n}\n.icon, .icon-name{\n    color: #4D4DC7;\n}\n.icon{\n    font-size: 25px;\n}\n.icon-name{\n    font-size: 14px;\n    margin: 0;\n}\n/* End Amenities */\n/* Description Hotel */\n.description__text{\n    color: rgb(150, 150, 150);\n}\n/* End Descripttion Hotel */\n/* Contact */\n#map {\n    width: 100%;\n    height: 250px;\n    background-color: grey;\n  }\n/* End Contact */"
+module.exports = "/*Slide */\n.container-slide{\n    padding-right: 25px;\n    padding-left: 25px;\n}\n.carousel-inner {\n    border-radius: 0.5em;\n}\n.carousel-inner img {\n    width: 100%;\n    height: 315px;\n}\n.carousel-indicators li{\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n}\n/* End Slide */\n/* Deals */\n.heading{\n    margin: 2rem 0;\n}\n.deals__content, .rating{\n    display: flex;\n    justify-content: space-between;\n    /* align-items: center; */\n}\n.sub-title, .pernight{\n    font-size: 14px;\n    color: rgb(150, 150, 150);\n}\n.title{\n    color: #4D4DC7;\n}\n.price{\n    color: rgb(255, 116, 66);\n}\n.btn-see{\n    float: right;\n    background-color: rgb(195, 195, 238);\n    font-size: 14px;\n    color: #4c4cc6;\n}\nhr.line{\n    margin-top: 4rem;\n    border-top: 2px solid #f5bec5;\n}\n/* End Deals */\n/* Rating & Reviews */\n.rating__point{\n    width: 50px;\n    height: 50px;\n    background-color: #4D4DC7;\n    border-radius: 5px;\n    position: relative;\n    margin-right: 0.5rem;\n}\n.point{\n    position: absolute;\n    left: 50%;\n    top: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n}\n.bar__content{\n    padding-right: 15px;\n    margin: 10px 0;\n}\n.bar__content:nth-child(odd){\n    padding-left: 0;\n}\n/* .bar__content:nth-child(even){\n    padding-right: 0;\n} */\n.bar__content p{\n    margin-bottom: 1rem;\n    letter-spacing: 0.5;\n}\n/* The bar container */\n.bar-container {\n    width: 85%;\n    background-color: rgb(247, 209, 138);\n    text-align: center;\n    color: white;\n    border-radius: 10px;\n}\n/* Individual bars */\n.bar{\n    width: 60%; \n    height: 4px; \n    background-color: rgb(255, 175, 25);\n    border-radius: 10px;\n    position: relative;\n}\n.rating__bars{\n    display: flex;\n    flex-wrap: wrap;\n}\n.bar__point{\n    position: absolute;\n    color: rgb(255, 175, 25);\n    top: 1.5rem;\n    right: 5px;\n}\n/* End Rating & Reviews */\n/* Amenities */\n.amenites__content{\n    display: flex;\n    justify-content: space-between;\n    margin-bottom: 2rem;\n}\n.amenities__item{\n    padding-top: 20px;\n    text-align: center;\n    width: 80px;\n    height: 80px;\n    border: 1px solid rgb(70, 70, 70);\n}\n.icon, .icon-name{\n    color: #4D4DC7;\n}\n.icon{\n    font-size: 25px;\n}\n.icon-name{\n    font-size: 14px;\n    margin: 0;\n}\n/* End Amenities */\n/* Description Hotel */\n.description-text{\n    color: rgb(150, 150, 150);\n    font-size: 14px;\n    line-height: 1.75rem;\n    letter-spacing: .5px;\n}\n/* End Descripttion Hotel */\n/* Contact */\n#map {\n    width: 100%;\n    height: 250px;\n    background-color: grey;\n  }\n/* End Contact */"
 
 /***/ }),
 
@@ -658,7 +851,7 @@ module.exports = "/*Slide */\n.container-slide{\n    padding-right: 25px;\n    p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"hotel-detail container-custom\">\n  <!-- Carousel -->\n  <div class=\"container-fluid container-slide\">\n    <div class=\"carousel slide\" data-ride=\"carousel\">\n      <!-- Indicators -->\n      <ul class=\"carousel-indicators\">\n        <li data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>\n        <li data-target=\"#demo\" data-slide-to=\"1\"></li>\n        <li data-target=\"#demo\" data-slide-to=\"2\"></li>\n      </ul>\n      <!-- The slideshow -->\n      <div class=\"carousel-inner\">\n        <div class=\"carousel-item active\">\n          <img src=\"./assets/images/HaLong.jpg\" alt=\"Los Angeles\">\n        </div>\n        <div class=\"carousel-item\">\n          <img\n            src=\"./assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg\"\n            alt=\"Chicago\">\n        </div>\n        <div class=\"carousel-item\">\n          <img src=\"./assets/images/tivkumb_0.jpg\" alt=\"New York\">\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- End Carousel  -->\n\n  <div class=\"container-fluid\">\n\n    <!-- Deals -->\n    <div class=\"deals\">\n      <h6 class=\"deals__heading heading\">Deals</h6>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <button class=\"btn btn-see\">See more</button>\n    </div>\n    <!-- End Deals -->\n\n    <hr class=\"line\">\n\n    <!-- Rating & Reviews -->\n    <div class=\"rating-review\">\n      <h6 class=\"rating-review__heading heading\">Rating & Reviews</h6>\n      <div class=\"rating\">\n        <div class=\"rating__point\">\n          <p class=\"point text-white\">8.4</p>\n        </div>\n        <div class=\"rating__text\">\n          <h6 class=\"rating__title title\">Impressive</h6>\n          <p class=\"sub-title\">Rating based on 6969 reviews across the web</p>\n        </div>\n      </div>\n      <div class=\"rating__bars\">\n        <!-- with using property binding -->\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Comfort</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-comfort\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Service</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-service\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Cleanliness</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-cleanliness\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Food</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-food\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Location</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-location\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n      </div>\n      <button class=\"btn btn-see\">See more</button>\n    </div>\n    <!-- End Rating & Reviews -->\n\n    <hr class=\"line\">\n\n    <!-- Amenities -->\n    <div class=\"amenities\">\n      <h6 class=\"heading\">Main Amenities</h6>\n      <div class=\"amenites__content\">\n        <div class=\"amenities__item\">\n            <i class=\"fa fa-wifi icon\"></i>\n            <p class=\"icon-name\">Free Wifi</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">restaurant</i>\n            <p class=\"icon-name\">Breakfast</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">local_hotel</i>\n            <p class=\"icon-name\">Spa</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">pool</i>\n            <p class=\"icon-name\">Swimming</p>\n        </div>\n      </div>\n      <button class=\"btn btn-see\">See all amenities</button>\n    </div>\n    <!-- End Amenities -->\n\n    <hr class=\"line\">\n\n    <!-- Hotel Description -->\n    <div class=\"description\">\n      <h6 class=\"heading\">Hotel Description</h6>\n      <p class=\"description__text\">\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit aut et sint accusantium blanditiis tempore repellendus incidunt doloremque quas?\n      </p>\n    </div>\n    <!-- End Hotel Description -->\n\n    <hr class=\"line mt-4\">\n\n    <!-- Contact -->\n    <div class=\"contact\">\n      <h6 class=\"heading\">Contact</h6>\n      <div id=\"map\">\n        <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1214396311398!2d106.6391917153343!3d10.8020099616734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294fe7593643%3A0x75fc2555a7f3e79!2zRXRvd24sIEPhu5luZyBIw7JhLCBQaMaw4budbmcgMTMsIFTDom4gQsOsbmgsIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1559788558354!5m2!1sen!2s\" frameborder=\"0\" style=\"border:0\" width=\"100%\" height=\"100%\"></iframe>\n      </div>\n    </div>\n    <!-- End Contact -->\n  </div>\n\n  <!-- Footer -->\n  <app-footer></app-footer>\n  <!-- End Footer -->\n</div>"
+module.exports = "<div class=\"hotel-detail container-custom\">\n  <!-- Carousel -->\n  <div class=\"container-fluid container-slide\">\n    <div class=\"carousel slide\" data-ride=\"carousel\">\n      <!-- Indicators -->\n      <ul class=\"carousel-indicators\">\n        <li data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>\n        <li data-target=\"#demo\" data-slide-to=\"1\"></li>\n        <li data-target=\"#demo\" data-slide-to=\"2\"></li>\n      </ul>\n      <!-- The slideshow -->\n      <div class=\"carousel-inner\">\n        <div class=\"carousel-item active\">\n          <img src=\"./assets/images/HaLong.jpg\" alt=\"Los Angeles\">\n        </div>\n        <div class=\"carousel-item\">\n          <img\n            src=\"./assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg\"\n            alt=\"Chicago\">\n        </div>\n        <div class=\"carousel-item\">\n          <img src=\"./assets/images/tivkumb_0.jpg\" alt=\"New York\">\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- End Carousel  -->\n\n  <div class=\"container-fluid\">\n\n    <!-- Deals -->\n    <div class=\"deals\">\n      <h6 class=\"deals__heading heading\">Deals</h6>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <button class=\"btn btn-see\">See more</button>\n    </div>\n    <!-- End Deals -->\n\n    <hr class=\"line\">\n\n    <!-- Rating & Reviews -->\n    <div class=\"rating-review\">\n      <h6 class=\"rating-review__heading heading\">Rating & Reviews</h6>\n      <div class=\"rating\">\n        <div class=\"rating__point\">\n          <p class=\"point text-white\">8.4</p>\n        </div>\n        <div class=\"rating__text\">\n          <h6 class=\"rating__title title\">Impressive</h6>\n          <p class=\"sub-title\">Rating based on 6969 reviews across the web</p>\n        </div>\n      </div>\n      <div class=\"rating__bars\">\n        <!-- with using property binding -->\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Comfort</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-comfort\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Service</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-service\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Cleanliness</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-cleanliness\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Food</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-food\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Location</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-location\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n      </div>\n      <button class=\"btn btn-see\">See more</button>\n    </div>\n    <!-- End Rating & Reviews -->\n\n    <hr class=\"line\">\n\n    <!-- Amenities -->\n    <div class=\"amenities\">\n      <h6 class=\"heading\">Main Amenities</h6>\n      <div class=\"amenites__content\">\n        <div class=\"amenities__item\">\n            <i class=\"fa fa-wifi icon\"></i>\n            <p class=\"icon-name\">Free Wifi</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">restaurant</i>\n            <p class=\"icon-name\">Breakfast</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">local_hotel</i>\n            <p class=\"icon-name\">Spa</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">pool</i>\n            <p class=\"icon-name\">Swimming</p>\n        </div>\n      </div>\n      <button class=\"btn btn-see\">See all amenities</button>\n    </div>\n    <!-- End Amenities -->\n\n    <hr class=\"line\">\n\n    <!-- Hotel Description -->\n    <div class=\"description\">\n      <h6 class=\"heading\">Hotel Description</h6>\n      <p class=\"description-text\">\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit aut et sint accusantium blanditiis tempore repellendus incidunt doloremque quas?\n      </p>\n    </div>\n    <!-- End Hotel Description -->\n\n    <hr class=\"line mt-4\">\n\n    <!-- Contact -->\n    <div class=\"contact\">\n      <h6 class=\"heading\">Contact</h6>\n      <div id=\"map\">\n        <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1214396311398!2d106.6391917153343!3d10.8020099616734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294fe7593643%3A0x75fc2555a7f3e79!2zRXRvd24sIEPhu5luZyBIw7JhLCBQaMaw4budbmcgMTMsIFTDom4gQsOsbmgsIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1559788558354!5m2!1sen!2s\" frameborder=\"0\" style=\"border:0\" width=\"100%\" height=\"100%\"></iframe>\n      </div>\n    </div>\n    <!-- End Contact -->\n  </div>\n\n  <!-- Footer -->\n  <app-footer></app-footer>\n  <!-- End Footer -->\n</div>"
 
 /***/ }),
 
@@ -879,24 +1072,71 @@ var UtilityService = /** @class */ (function () {
         this._displayHeader = true;
         this._displayFooter = true;
         this._isDisplayNavbar = true;
+        this._isShowHeaderButtonBack = true;
+        this._displayHomeHeader = true;
+        this._displayInnerHeader = true;
+        this._isShowProcessBar = true;
+        this._displayStarRating = true;
     }
+    // Set Display Header
     UtilityService.prototype.setDisplayHeader = function (isShow) {
         this._displayHeader = isShow;
     };
     UtilityService.prototype.isDisplayHeader = function () {
         return this._displayHeader;
     };
+    UtilityService.prototype.setDisplayHomeHeader = function (isShow) {
+        this._displayHomeHeader = isShow;
+    };
+    UtilityService.prototype.isDisplayHomeHeader = function () {
+        return this._displayHomeHeader;
+    };
+    UtilityService.prototype.setDisplayInnerHeader = function (isShow) {
+        this._displayInnerHeader = isShow;
+    };
+    UtilityService.prototype.isDisplayInnerHeader = function () {
+        return this._displayInnerHeader;
+    };
+    // Set Display Footer
     UtilityService.prototype.setDisplayFooter = function (isShow) {
         this._displayFooter = isShow;
     };
     UtilityService.prototype.isDisplayFooter = function () {
         return this._displayFooter;
     };
+    // Set Display Navbar(~ Navigation)
     UtilityService.prototype.setDisplayNavbar = function (isShow) {
         this._isDisplayNavbar = isShow;
     };
     UtilityService.prototype.isDisplayNavbar = function () {
         return this._isDisplayNavbar;
+    };
+    UtilityService.prototype.isShowHeaderButton = function () {
+        return this._isShowHeaderButtonBack;
+    };
+    UtilityService.prototype.setShowHeaderButtonBack = function (isShow) {
+        this._isShowHeaderButtonBack = isShow;
+    };
+    // Set Title
+    UtilityService.prototype.getTitle = function () {
+        return this._title;
+    };
+    UtilityService.prototype.setTitle = function (title) {
+        this._title = title;
+    };
+    // Set Display Processbar
+    UtilityService.prototype.isDisplayProcessBar = function () {
+        return this._isShowProcessBar;
+    };
+    UtilityService.prototype.setDisplayProcessBar = function (isShow) {
+        this._isShowProcessBar = isShow;
+    };
+    // Set Display Star Rating
+    UtilityService.prototype.isDisplayStarRating = function () {
+        return this._displayStarRating;
+    };
+    UtilityService.prototype.setDisplayStarRating = function (isShow) {
+        this._displayStarRating = isShow;
     };
     UtilityService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -981,7 +1221,7 @@ var ExploreItemComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".find-hotel-card {\n    margin: 1rem;\n    margin-bottom: 5rem;\n}\n\n.item-heading{\n    margin: 1rem 0;\n}\n\n.item-footer{\n    display: flex;\n    justify-content: space-between;\n}\n\n.item-content{\n    display: flex;\n    color: rgba(0,0,0,.54);\n}\n\n.text-color{\n    color: orange;\n}\n\n.find-hotel-card .mat-card-image{\n    height: 175px;\n}\n\n/* Carousel */\n\n.carousel-inner{\n    overflow: hidden;\n}\n\n.carousel-inner .carousel-item img{\n    width: 100%;\n    display: inline-block;\n    height: 175px;\n    border-top-left-radius: 5px;\n    border-top-right-radius: 5px;\n}\n\n.carousel-indicators li{\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n\n/* End carousel */"
+module.exports = ".find-hotel-card {\n    margin: 1rem;\n}\n\n.item-heading{\n    margin: 1rem 0;\n}\n\n.item-footer{\n    display: flex;\n    justify-content: space-between;\n}\n\n.item-content{\n    display: flex;\n    color: rgba(0,0,0,.54);\n}\n\n.text-color{\n    color: orange;\n}\n\n.find-hotel-card .mat-card-image{\n    height: 175px;\n}\n\n/* Carousel */\n\n.carousel-inner{\n    overflow: hidden;\n}\n\n.carousel-inner .carousel-item img{\n    width: 100%;\n    display: inline-block;\n    height: 175px;\n    border-top-left-radius: 5px;\n    border-top-right-radius: 5px;\n}\n\n.carousel-indicators li{\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n\n/* End carousel */"
 
 /***/ }),
 
@@ -992,7 +1232,7 @@ module.exports = ".find-hotel-card {\n    margin: 1rem;\n    margin-bottom: 5rem
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"find-hotel-card\">\n  <!-- <img mat-card-image src=\"./assets/images/room33.jpg\" alt=\"hotel\"> -->\n\n  <div id=\"demo\" class=\"carousel slide\" data-ride=\"carousel\" mat-card-image >\n    <!-- Indicators -->\n    <ul class=\"carousel-indicators\">\n      <li data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>\n      <li data-target=\"#demo\" data-slide-to=\"1\"></li>\n      <li data-target=\"#demo\" data-slide-to=\"2\"></li>\n    </ul>\n\n    <!-- The slideshow -->\n    <div class=\"carousel-inner\">\n      <div class=\"carousel-item active\">\n        <img src=\"./assets/images/room33.jpg\" alt=\"hotel\">\n      </div>\n      <div class=\"carousel-item\">\n        <img src=\"./assets/images/room.jpg\" alt=\"hotel\">\n      </div>\n      <div class=\"carousel-item\">\n        <img src=\"./assets/images/room33.jpg\" alt=\"hotel\">\n      </div>\n    </div>\n\n    <!-- Left and right controls -->\n    <a class=\"carousel-control-prev\" href=\"#demo\" data-slide=\"prev\">\n      <span class=\"carousel-control-prev-icon\"></span>\n    </a>\n    <a class=\"carousel-control-next\" href=\"#demo\" data-slide=\"next\">\n      <span class=\"carousel-control-next-icon\"></span>\n    </a>\n  </div>\n\n  <mat-card-content>\n    <h6 class=\"item-heading\">\n      Standard Double room with view\n    </h6>\n    <mat-card-subtitle>2 guests/room</mat-card-subtitle>\n    <mat-card-subtitle>1 double bed</mat-card-subtitle>\n    <hr>\n    <div class=\"item-content\">\n      <i class=\"material-icons\">restaurant</i>\n      <p>&nbsp;&nbsp;Breakfast not included</p>\n    </div>\n    <div class=\"item-content\">\n      <i class=\"material-icons\">attach_money</i>\n      <p>&nbsp;&nbsp;Non-refundable</p>\n    </div>\n    <div class=\"row\">\n      <div class=\"col item-content text-color\">\n        <i class=\"material-icons\">wifi</i>\n        <p>&nbsp;&nbsp;Free wifi</p>\n      </div>\n      <div class=\"col text-right\">\n        <p class=\"text-danger\">&nbsp;&nbsp;2 room(s) left !</p>\n      </div>\n    </div>\n  </mat-card-content>\n  <hr>\n  <div class=\"row\">\n    <div class=\"col\">\n      <p class=\"price text-color\">$119</p>\n    </div>\n    <div class=\"col text-right\">\n      <button mat-raised-button color=\"primary\">Choose</button>\n    </div>\n  </div>\n</mat-card>"
+module.exports = "<mat-card class=\"find-hotel-card\">\n  <!-- <img mat-card-image src=\"./assets/images/room33.jpg\" alt=\"hotel\"> -->\n\n  <div id=\"demo\" class=\"carousel slide\" data-ride=\"carousel\" mat-card-image >\n    <!-- Indicators -->\n    <ul class=\"carousel-indicators\">\n      <li data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>\n      <li data-target=\"#demo\" data-slide-to=\"1\"></li>\n      <li data-target=\"#demo\" data-slide-to=\"2\"></li>\n    </ul>\n\n    <!-- The slideshow -->\n    <div class=\"carousel-inner\">\n      <div class=\"carousel-item active\">\n        <img src=\"./assets/images/room33.jpg\" alt=\"hotel\">\n      </div>\n      <div class=\"carousel-item\">\n        <img src=\"./assets/images/room.jpg\" alt=\"hotel\">\n      </div>\n      <div class=\"carousel-item\">\n        <img src=\"./assets/images/room33.jpg\" alt=\"hotel\">\n      </div>\n    </div>\n\n    <!-- Left and right controls -->\n    <a class=\"carousel-control-prev\" href=\"#demo\" data-slide=\"prev\">\n      <span class=\"carousel-control-prev-icon\"></span>\n    </a>\n    <a class=\"carousel-control-next\" href=\"#demo\" data-slide=\"next\">\n      <span class=\"carousel-control-next-icon\"></span>\n    </a>\n  </div>\n\n  <mat-card-content>\n    <h6 class=\"item-heading\">\n      Standard Double room with view\n    </h6>\n    <mat-card-subtitle>2 guests/room</mat-card-subtitle>\n    <mat-card-subtitle>1 double bed</mat-card-subtitle>\n    <hr>\n    <div class=\"item-content\">\n      <i class=\"material-icons\">restaurant</i>\n      <p>&nbsp;&nbsp;Breakfast not included</p>\n    </div>\n    <div class=\"item-content\">\n      <i class=\"material-icons\">attach_money</i>\n      <p>&nbsp;&nbsp;Non-refundable</p>\n    </div>\n    <div class=\"row\">\n      <div class=\"col item-content text-color\">\n        <i class=\"material-icons\">wifi</i>\n        <p>&nbsp;&nbsp;Free wifi</p>\n      </div>\n      <div class=\"col text-right\">\n        <p class=\"text-danger\">&nbsp;&nbsp;2 room(s) left !</p>\n      </div>\n    </div>\n  </mat-card-content>\n  <hr>\n  <div class=\"row\">\n    <div class=\"col\">\n      <p class=\"price text-color\">$119</p>\n    </div>\n    <div class=\"col text-right\">\n      <button mat-raised-button color=\"primary\" routerLink=\"/fill-in-details\">Choose</button>\n    </div>\n  </div>\n</mat-card>"
 
 /***/ }),
 
@@ -1019,9 +1259,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var FindHotelItemComponent = /** @class */ (function () {
     function FindHotelItemComponent() {
+        this.chooseHotel = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     FindHotelItemComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], FindHotelItemComponent.prototype, "chooseHotel", void 0);
     FindHotelItemComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-find-hotel-item',
@@ -1107,7 +1352,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "img{\n    max-width: 100%;\n    display: block;\n}\n\n.header__image{\n    position: relative; \n}\n\n.header__image img{\n\n}\n\n#overlay {\n    position: absolute;    \n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(86, 58, 109, 0.418);\n    cursor: pointer;\n}\n\n.header__icon, .header__text{\n    position: absolute;\n    top: 5%;\n    z-index: 5;\n}\n\n.header__icon{\n    right: 5%;\n}\n\n.header__icon .fa-bars{\n    font-size: 2rem;\n}\n\n.header__text{\n    left: 5%;\n}\n\n/* General Header */\n\n.general-header{\n    background-color: #545dff;\n    height: 150px;\n    padding: 1rem;\n}\n\n.header-title{\n    display: flex;\n}\n\n/* Processbar */\n\n.header-processbar{\n    margin-right: 1rem;\n    color: #b4b4fb!important;\n}\n\n.active{\n    color: white!important;\n}\n\nul.processbar{\n    display: flex;\n    justify-content: flex-end;\n    text-decoration: none;\n    list-style-type: none;\n    padding: unset;\n    font-size: 12px;\n}\n\nul.processbar > li{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-left: .5rem;\n}\n\nul.processbar li p.circle{\n    width: 30px;\n    height: 30px;\n    line-height: 30px;\n    text-align: center;\n    border: 1px solid #b4b4fb;\n    border-radius: 50%;\n    margin-right: .75rem;\n    /* padding: 2rem; */\n}\n\nul.processbar li p.line{\n    width: 30px;\n    height: 2px;\n    background-color: #b4b4fb;\n    margin-left: .25rem;\n}\n\n/* End Processbar */"
+module.exports = "img{\n    max-width: 100%;\n    display: block;\n}\n\n.home-header{\n    position: relative; \n}\n\n#overlay {\n    position: absolute;    \n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(86, 58, 109, 0.418);\n    cursor: pointer;\n}\n\n.header-icon, .header-text{\n    position: absolute;\n    top: 5%;\n    z-index: 5;\n}\n\n.header-icon{\n    right: 5%;\n}\n\n.header-icon .fa-bars{\n    font-size: 2rem;\n}\n\n.header-text{\n    left: 5%;\n}\n\n/* Inner Header */\n\n.inner-header{\n    background-color: #545dff;\n    height: 150px;\n    padding: 1.5rem 1rem 1rem 1rem;\n}\n\n.header-title{\n    display: flex;\n}\n\ni.header-back-icon{\n    font-size: 30px;\n}\n\n/* Processbar */\n\n.header-processbar{\n    margin-right: 1rem;\n    color: #b4b4fb!important;\n}\n\n.active-fill-in-details{\n    color: white!important;\n}\n\n.active .circle{\n    background-color: white!important;\n}\n\nul.processbar{\n    display: flex;\n    justify-content: flex-end;\n    text-decoration: none;\n    list-style-type: none;\n    padding: unset;\n    font-size: 12px;\n}\n\nul.processbar > li{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-left: .5rem;\n}\n\nul.processbar li p.circle{\n    width: 30px;\n    height: 30px;\n    line-height: 30px;\n    text-align: center;\n    border: 1px solid #b4b4fb;\n    border-radius: 50%;\n    margin-right: .75rem;\n    background: #b4b4fb;\n    color: #545dff;\n    /* padding: 2rem; */\n}\n\nul.processbar li p.line{\n    width: 30px;\n    height: 2px;\n    background-color: #b4b4fb;\n    margin-left: .25rem;\n}\n\n/* End Processbar */\n"
 
 /***/ }),
 
@@ -1118,7 +1363,7 @@ module.exports = "img{\n    max-width: 100%;\n    display: block;\n}\n\n.header_
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div *ngIf=\"isDisplayHeader\">\n  <div class=\"header__image\">\n    <div id=\"overlay\"></div>\n    <img src=\"./assets/images/tivkumb_0.jpg\" alt=\"\" class=\"\">\n  </div>\n  <div class=\"header__text text-white\">\n    <h5>NEC Hotel</h5>\n  </div>\n  <div class=\"header__icon\">\n    <i class=\"fa fa-bars text-white\"></i>\n  </div> -->\n\n  <div class=\"general-header\">\n    <div class=\"header-title text-white\">\n      <div>\n        <i class=\"material-icons\">keyboard_backspace</i>\n      </div>\n      <div>\n        <h4>&nbsp;&nbsp;Fill in Details</h4>\n      </div>\n    </div>\n    <div class=\"header-processbar\">\n      <ul class=\"processbar\">\n        <li class=\"active\">\n          <p class=\"circle\">01</p>\n          <p class=\"label\">Book</p>\n          <p class=\"line\"></p>\n        </li>\n        <li class=\"\">\n          <p class=\"circle\">02</p>\n          <p class=\"label\">Check out</p>\n          <p class=\"line\"></p>\n        </li>\n        <li class=\"\">\n          <p class=\"circle\">03</p>\n          <p class=\"label\">Pay</p>\n        </li>\n      </ul>\n    </div>\n  </div>\n<!-- </div> -->"
+module.exports = "<div *ngIf=\"isDisplayHeader\">\n  <div *ngIf=\"isDisplayHomeHeader\">\n    <div class=\"home-header\">\n      <div id=\"overlay\"></div>\n      <img src=\"./assets/images/tivkumb_0.jpg\" alt=\"\" class=\"\">\n    </div>\n    <div class=\"header-text text-white\">\n      <h5>NEC Hotel</h5>\n    </div>\n    <div class=\"header-icon\">\n      <i class=\"fa fa-bars text-white\"></i>\n    </div>\n  </div>\n\n\n  <div class=\"inner-header\" *ngIf=\"isDisplayInnerHeader\">\n    <div class=\"header-title text-white\">\n      <div>\n        <i class=\"material-icons header-back-icon\">keyboard_backspace</i>\n      </div>\n      <div>\n        <h4>&nbsp;&nbsp;{{title}}</h4>\n      </div>\n    </div>\n    <div class=\"header-star\" *ngIf=\"isDisplayStarRating\">\n      <span class=\"fa fa-star checked\"></span>\n      <span class=\"fa fa-star checked\"></span>\n      <span class=\"fa fa-star checked\"></span>\n      <span class=\"fa fa-star unchecked\"></span>\n      <span class=\"fa fa-star unchecked\"></span>\n    </div>\n    <div class=\"header-processbar\" *ngIf=\"isDisplayProcessBar\">\n      <ul class=\"processbar\">\n        <li class=\"active\">\n          <p class=\"circle\">01</p>\n          <p class=\"label\">Book</p>\n          <p class=\"line\"></p>\n        </li>\n        <li class=\"\">\n          <p class=\"circle\">02</p>\n          <p class=\"label\">Check out</p>\n          <p class=\"line\"></p>\n        </li>\n        <li class=\"\">\n          <p class=\"circle\">03</p>\n          <p class=\"label\">Pay</p>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1133,6 +1378,7 @@ module.exports = "<!-- <div *ngIf=\"isDisplayHeader\">\n  <div class=\"header__i
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1143,8 +1389,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent() {
+    function HeaderComponent(ultility) {
+        this.ultility = ultility;
+        /**Setting Default Value **/
+        this.title = '';
     }
     HeaderComponent.prototype.ngOnInit = function () {
     };
@@ -1152,13 +1402,33 @@ var HeaderComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Boolean)
     ], HeaderComponent.prototype, "isDisplayHeader", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], HeaderComponent.prototype, "isDisplayHomeHeader", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], HeaderComponent.prototype, "isDisplayInnerHeader", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], HeaderComponent.prototype, "isDisplayProcessBar", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], HeaderComponent.prototype, "isDisplayStarRating", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], HeaderComponent.prototype, "title", void 0);
     HeaderComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-header',
             template: __webpack_require__(/*! ./header.component.html */ "./src/app/templates/header/header.component.html"),
             styles: [__webpack_require__(/*! ./header.component.css */ "./src/app/templates/header/header.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"]])
     ], HeaderComponent);
     return HeaderComponent;
 }());

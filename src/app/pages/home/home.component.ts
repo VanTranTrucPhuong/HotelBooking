@@ -49,4 +49,7 @@ export class HomeComponent implements OnInit {
   public goToDetail() {
     this.router.navigate(['/hotel-detail']);
   }
+
+  // ngOnDestroy() {
+  // }
 }
