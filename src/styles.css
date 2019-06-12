@@ -33,6 +33,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* Button in form */
 .btn-common{
     width: 100%;
+    
 }
 /* End button in form */
 
@@ -44,6 +45,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* End price */
 
 /* Dot in book of fill in details */
+ul{
+    list-style-type: none;
+}
+
+ul li.dot-check-in::before, ul li.dot-check-out::before, ul li.dot-room::before  {
+    content: "•"; 
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1.5em;
+}
+
+ul li.dot-check-in::before {
+    color: #545dff;
+}
+
+ul li.dot-check-out::before{
+    color: #666dfc;
+}
+
+ul li.dot-room::before{
+    color: #8f94fc;
+}
 /* End dot in book of fill in details*/
 
 /* Fill in details */
