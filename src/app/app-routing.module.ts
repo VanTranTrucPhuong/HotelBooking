@@ -7,10 +7,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { FindHotelItemComponent } from './templates/find-hotel-item/find-hotel-item.component';
-import { BookDetailComponent } from './pages/book-detail/book-detail.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
-import { CheckoutDetailComponent } from './pages/checkout-detail/checkout-detail.component';
 import { FindHotelComponent } from './pages/find-hotel/find-hotel.component';
 import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.component';
 
@@ -21,8 +19,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'sign-up', component: SignUpComponent},
   { path: 'fill-in-details', component: FillInDetailsComponent},
-  { path: 'book-hotel', component: BookDetailComponent},
-  { path: 'check-out', component: CheckoutDetailComponent}
+  { path: 'contact', component: ContactDetailsComponent}
 ];
 
 @NgModule({

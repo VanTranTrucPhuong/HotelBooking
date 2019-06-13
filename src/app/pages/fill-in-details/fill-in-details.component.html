@@ -1,89 +1,138 @@
-<div class="fill-details-content">
-  <!-- Book detail -->
-  <div class="book-content container-fluid">
-    <!-- Your Booking -->
-    <div>
-      <p class="title-text">Your booking</p>
-      <div class="row">
-        <div class="col">
-          <p>Marriotte NY city</p>
+<div class="fill-details-content" *ngIf="bookCheckoutStatus; else Payment">
+    <!-- Book detail -->
+    <div class="book-content container-fluid">
+        <!-- Your Booking -->
+        <div>
+            <p class="title-text">Your booking</p>
+            <div class="row">
+                <div class="col">
+                    <p>Marriotte NY city</p>
+                </div>
+                <div class="col text-right">
+                    <button mat-stroked-button color="primary">Details</button>
+                </div>
+            </div>
         </div>
-        <div class="col text-right">
-          <button mat-stroked-button color="primary">Details</button>
+        <!-- End Your Booking -->
+
+        <hr>
+
+        <!-- Information Booking -->
+        <div>
+            <div class="infor-book-item">
+                <ul>
+                    <li class="dot-check-in">
+                        <span class="title-text">&nbsp;&nbsp;Check-in-day</span>
+                        <p>Thur, 06 August 2018</p>
+                    </li>
+                    <li class="dot-check-out">
+                        <span class="title-text">&nbsp;&nbsp;Check-out-day</span>
+                        <p>Sat, 10 August 2018</p>
+                    </li>
+                    <li class="dot-room">
+                        <span class="title-text room-type">&nbsp;&nbsp;Room</span>
+                        <p>Standard Double Room with view</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Information Booking -->
+
+            <hr>
+
+            <!-- Contact Details -->
+            <div class="contact-detail" *ngIf="contactStatus; else CheckOutDetail">
+                <p class="title-text">Contact Details</p>
+                <div class="row">
+                    <div class="col-8">
+                        <p>Please fill in contact details</p>
+                    </div>
+                    <div class="col text-right">
+                        <button mat-stroked-button color="primary" data-toggle="modal" data-target="#fullHeightModalRight">Fill in</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <p>Any special request?</p>
+                    </div>
+                    <div class="col text-right">
+                        <button mat-stroked-button color="primary">Add more</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Contact Details -->
+
+            <hr>
+
+            <!-- Total price -->
+            <div class="total-price">
+                <p class="title-text">Your Price</p>
+                <div class="row">
+                    <div class="col-8">
+                        <p>Total Price</p>
+                    </div>
+                    <div class="col text-right">
+                        <p>$119</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End total price -->
+
+            <!-- Button  -->
+            <button mat-raised-button color="primary" class="btn-common" (click)="FillInContinue()">Continue</button>
+            <!-- End Button -->
         </div>
-      </div>
+        <!-- End book detail -->
+
+        <!-- Check-Out -->
+        <ng-template #CheckOutDetail>
+            <!-- Contact Check-Out Details -->
+            <div class="contact-detail">
+                <p class="title-text">Contact Details</p>
+                <div class="row">
+                    <div class="col-8">
+                        <p>Guest's name</p>
+                    </div>
+                </div>
+                <p>+ 037 9999 999 / gmail@gmail.com</p>
+                <div class="select-form">
+                    <label class="container">I'm booking for myself
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+                    <label class="container">I'm booking for another person
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+                </div>
+            </div>
+
+            <!-- End Contact Check-Out Details -->
+
+            <hr>
+
+            <!-- Special request-->
+            <div>
+                <p class="title-text">Special request</p>
+                <div class="row">
+                    <div class="col">
+                        <p>High Floor</p>
+                    </div>
+                    <div class="col text-right">
+                        <button mat-stroked-button color="primary">Change / Add</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End special request -->
+        </ng-template>
+        <!-- End Check Out -->
+
+        <!-- Contact Form -->
+        <ng-template #Payment>
+
+        </ng-template>
+        <!-- End contact form -->
+
+        <!-- Popup Contact -->
+
+        <!-- End popup Contact -->
     </div>
-    <!-- End Your Booking -->
-
-    <hr>
-
-    <!-- Information Booking -->
-    <div>
-      <div class="infor-book-item">
-        <ul>
-          <li class="dot-check-in">
-            <span class="title-text">&nbsp;&nbsp;Check-in-day</span>
-            <p>Thur, 06 August 2018</p>
-          </li>
-          <li class="dot-check-out">
-            <span class="title-text">&nbsp;&nbsp;Check-out-day</span>
-            <p>Sat, 10 August 2018</p>
-          </li>
-          <li class="dot-room">
-            <span class="title-text room-type">&nbsp;&nbsp;Room</span>
-            <p>Standard Double Room with view</p>
-          </li>
-        </ul>
-      </div>
-      <!-- End Information Booking -->
-
-      <hr>
-
-      <!-- Contact Details -->
-      <div class="contact-detail">
-        <p class="title-text">Contact Details</p>
-        <div class="row">
-          <div class="col-8">
-            <p>Please fill in contact details</p>
-          </div>
-          <div class="col text-right">
-            <button mat-stroked-button color="primary">Fill in</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-8">
-            <p>Any special request?</p>
-          </div>
-          <div class="col text-right">
-            <button mat-stroked-button color="primary">Add more</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- End Contact Details -->
-
-      <hr>
-
-      <!-- Total price -->
-      <div class="total-price">
-        <p class="title-text">Your Price</p>
-        <div class="row">
-          <div class="col-8">
-            <p>Total Price</p>
-          </div>
-          <div class="col text-right">
-            <p>$119</p>
-          </div>
-        </div>
-      </div>
-      <!-- End total price -->
-
-      <!-- Button  -->
-      <button mat-raised-button color="primary" class="btn-common" routerLink="/check-out">Continue</button>
-      <!-- End Button -->
-    </div>
-    <!-- End book detail -->
-
-    <!-- Check-Out -->
-    <!-- End Check Out -->
-  </div>

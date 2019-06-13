@@ -1,51 +1,58 @@
 <div *ngIf="isDisplayHeader">
-  <div *ngIf="isDisplayHomeHeader">
-    <div class="home-header">
-      <div id="overlay"></div>
-      <img src="./assets/images/tivkumb_0.jpg" alt="" class="">
+    <div *ngIf="isDisplayHomeHeader">
+        <div class="home-header">
+            <div id="overlay"></div>
+            <img src="./assets/images/tivkumb_0.jpg" alt="" class="">
+        </div>
+        <div class="header-text text-white">
+            <h5>NEC Hotel</h5>
+        </div>
+        <div class="header-icon">
+            <i class="fa fa-bars text-white"></i>
+        </div>
     </div>
-    <div class="header-text text-white">
-      <h5>NEC Hotel</h5>
-    </div>
-    <div class="header-icon">
-      <i class="fa fa-bars text-white"></i>
-    </div>
-  </div>
 
 
-  <div class="inner-header" *ngIf="isDisplayInnerHeader">
-    <div class="header-title text-white">
-      <div>
-        <i class="material-icons header-back-icon">keyboard_backspace</i>
-      </div>
-      <div>
-        <h4>&nbsp;&nbsp;{{title}}</h4>
-      </div>
+    <div class="inner-header" *ngIf="isDisplayInnerHeader">
+        <div class="header-title text-white">
+            <div>
+                <button type="button" (click)="btnBack_click()"><i class="material-icons header-back-icon">keyboard_backspace</i>
+        </button>
+            </div>
+            <div>
+                <h4>&nbsp;&nbsp;{{title}}</h4>
+            </div>
+        </div>
+        <div class="header-star" *ngIf="isDisplayStarRating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <span class="fa fa-star unchecked"></span>
+        </div>
+        <div class="header-processbar" *ngIf="isDisplayProcessBar">
+            <ul class="processbar">
+                <li class="active-fill-in-details">
+                    <div class="processbar-text text-center">
+                        <p class="circle">01</p>
+                        <p class="label">Book</p>
+                    </div>
+                </li>
+                <p class="line"></p>
+                <li class="">
+                    <div class="processbar-text">
+                        <p class="circle">02</p>
+                        <p class="label">Check out</p>
+                    </div>
+                </li>
+                <p class="line"></p>
+                <li class="">
+                    <div class="processbar-text">
+                        <p class="circle">03</p>
+                        <p class="label">Pay</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="header-star" *ngIf="isDisplayStarRating">
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star unchecked"></span>
-      <span class="fa fa-star unchecked"></span>
-    </div>
-    <div class="header-processbar" *ngIf="isDisplayProcessBar">
-      <ul class="processbar">
-        <li class="active">
-          <p class="circle">01</p>
-          <p class="label">Book</p>
-          <p class="line"></p>
-        </li>
-        <li class="">
-          <p class="circle">02</p>
-          <p class="label">Check out</p>
-          <p class="line"></p>
-        </li>
-        <li class="">
-          <p class="circle">03</p>
-          <p class="label">Pay</p>
-        </li>
-      </ul>
-    </div>
-  </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UtilityService } from 'src/app/services/utility.service';
+import { PAGE_CODE } from 'src/app/ultilities/system.constants';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,12 @@ export class HeaderComponent implements OnInit {
   @Input() isDisplayProcessBar: Boolean;
   @Input() isDisplayStarRating: Boolean;
 
+  private readonly BACK_PAGE_TYPE = {
+    CONFIRM_POPUP: 1,
+    DEFINED: 2,
+    STACK: 3
+  };
+
   // Set Title
   @Input() title: string;
 
@@ -22,6 +29,25 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  public btnBack_click() {
+    alert ('click');
+    const currentPage = this.ultility.getLastPageOfStack();
+    console.log(currentPage);
+    if (!currentPage) {
+      return;
+    }
+    // tslint:disable-next-line:prefer-const
+    let isCheck = true;
+    // tslint:disable-next-line:prefer-const
+    let _page;
+    const backType = this.BACK_PAGE_TYPE.DEFINED;
+    switch (currentPage) {
+      case PAGE_CODE.DEFAULT:
+      case PAGE_CODE.FINDHOTEL:
+        _page = PAGE_CODE.DEFAULT;
+    }
   }
 
 }

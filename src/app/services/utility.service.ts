@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { PAGE_CODE } from '../ultilities/system.constants';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class UtilityService {
   private _isShowProcessBar =  true;
   private _title: string;
   private _displayStarRating = true;
+  private stackPage: PAGE_CODE[] = [PAGE_CODE.DEFAULT];
 
   constructor() { }
 
@@ -82,5 +84,19 @@ export class UtilityService {
 
   public setDisplayStarRating(isShow: boolean) {
     this._displayStarRating = isShow;
+  }
+
+  public getLastPageOfStack(): PAGE_CODE {
+    if (this.stackPage && this.stackPage.length > 1) {
+      return this.stackPage[this.stackPage.length--];
+    }
+    return null;
+  }
+
+  public getPreviousLastPageOfStack(): PAGE_CODE {
+    if (this.stackPage && this.stackPage.length > 1) {
+      return this.stackPage[this.stackPage.length - 2];
+    }
+    return null;
   }
 }
