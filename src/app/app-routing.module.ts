@@ -8,7 +8,6 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { FindHotelItemComponent } from './templates/find-hotel-item/find-hotel-item.component';
 import { HeaderComponent } from './templates/header/header.component';
-import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { FindHotelComponent } from './pages/find-hotel/find-hotel.component';
 import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.component';
 
@@ -19,7 +18,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'sign-up', component: SignUpComponent},
   { path: 'fill-in-details', component: FillInDetailsComponent},
-  { path: 'contact', component: ContactDetailsComponent}
 ];
 
 @NgModule({

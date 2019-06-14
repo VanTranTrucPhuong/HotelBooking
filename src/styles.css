@@ -5,58 +5,88 @@
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+
 /* @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css'; */
+
 @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-angular-calendars/styles/material.css';
+html,
+body {
+    height: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-.main{
+.main {
     margin-top: 1rem;
     margin-bottom: 5rem;
 }
 
-.container-custom{
+.container-custom {
     margin-top: -20%;
     margin-bottom: 100px;
 }
 
+
 /* icon back */
-.back-icon{
+
+.back-icon {
     font-size: 20px;
 }
+
+
 /* End icon back */
 
+
 /* Fields in form */
-.field{
+
+.field {
     width: 100%;
     margin-bottom: .5rem;
 }
+
+
 /* End fields in form */
 
-/* Button in form */
-.btn-common{
-    width: 100%;
 
+/* Button in form */
+
+button.mat-stroked-button.mat-primary:focus {
+    outline: none;
 }
+
+.btn-common {
+    width: 100%;
+}
+
+
 /* End button in form */
 
 
 /* Price */
-.price{
+
+.price {
     color: orange;
 }
+
+
 /* End price */
 
+
 /* Dot in book of fill in details */
-ul{
+
+ul {
     list-style-type: none;
 }
 
-ul li.dot-check-in::before, ul li.dot-check-out::before, ul li.dot-room::before  {
-    content: "•"; 
-    display: inline-block; 
+ul li.dot-check-in::before,
+ul li.dot-check-out::before,
+ul li.dot-room::before {
+    content: "•";
+    display: inline-block;
     width: 1em;
     margin-left: -1.5em;
 }
@@ -65,42 +95,57 @@ ul li.dot-check-in::before {
     color: #545dff;
 }
 
-ul li.dot-check-out::before{
+ul li.dot-check-out::before {
     color: #666dfc;
 }
 
-ul li.dot-room::before{
+ul li.dot-room::before {
     color: #8f94fc;
 }
+
+
 /* End dot in book of fill in details*/
 
+
 /* Fill in details */
-.fill-in-content{
+
+.fill-in-content {
     margin-top: 20px;
     margin-bottom: 5rem;
 }
+
+
 /* End fill in details */
 
+
 /* Title-text (common) */
+
 .title-text {
-    color: rgba(0,0,0,.54);
+    color: rgba(0, 0, 0, .54);
 }
+
+
 /* End title-text */
 
+
 /* Star */
+
+
 /* checked star */
-.header-star{
+
+.header-star {
     margin-left: 2.5rem;
 }
 
 .header-star span.fa.fa-star {
     padding-right: .5rem;
 }
-.checked{
+
+.checked {
     color: orange;
 }
 
-.unchecked{
+.unchecked {}
 
-}
+
 /* End Star */

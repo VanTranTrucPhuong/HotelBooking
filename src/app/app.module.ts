@@ -23,15 +23,12 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { FindHotelItemComponent } from './templates/find-hotel-item/find-hotel-item.component';
 import { FindHotelComponent } from './pages/find-hotel/find-hotel.component';
-import { BookDetailComponent } from './pages/book-detail/book-detail.component';
-import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
-import { CheckoutDetailComponent } from './pages/checkout-detail/checkout-detail.component';
 import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.component';
 
 // Wheel Selector
 
 // Material
-
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 
 @NgModule({
   declarations: [
@@ -47,9 +44,6 @@ import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.
     FooterComponent,
     FindHotelItemComponent,
     FindHotelComponent,
-    BookDetailComponent,
-    ContactDetailsComponent,
-    CheckoutDetailComponent,
     FillInDetailsComponent
   ],
   imports: [
@@ -61,7 +55,8 @@ import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.
     DropDownButtonModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxDaterangepickerMd.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

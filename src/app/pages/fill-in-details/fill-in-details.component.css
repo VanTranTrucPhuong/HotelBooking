@@ -86,4 +86,72 @@
 }
 
 
-/* Modal */
+/* Modal contact*/
+
+.modal {
+    position: fixed;
+    bottom: 0;
+}
+
+.modal-header {
+    justify-content: unset;
+}
+
+.modal-body {
+    padding: 1rem;
+}
+
+.modal-dialog {
+    position: fixed;
+    bottom: 0;
+    margin: unset;
+    width: 100%;
+}
+
+.modal-content {
+    border: unset;
+    border-radius: unset;
+}
+
+i.material-icons.modal-back-icon {
+    margin-top: 0.15rem;
+}
+
+.country-code,
+.telephone {
+    width: 48%;
+}
+
+h6.contact-title {
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.field {
+    margin-bottom: .75rem;
+}
+
+
+/* End modal contact */
+
+
+/* .modal.fade .modal-dialog {
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    transform: scale(0.1);
+    top: 300px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.modal.fade.in .modal-dialog {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: translate3d(0, -300px, 0);
+    transform: translate3d(0, -300px, 0);
+    opacity: 1;
+} */

@@ -1,5 +1,293 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-SG": "./node_modules/moment/locale/en-SG.js",
+	"./en-SG.js": "./node_modules/moment/locale/en-SG.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	var module = __webpack_require__(id);
+	return module;
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -40,9 +328,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_hotel_detail_hotel_detail_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/hotel-detail/hotel-detail.component */ "./src/app/pages/hotel-detail/hotel-detail.component.ts");
 /* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
 /* harmony import */ var _pages_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/sign-up/sign-up.component */ "./src/app/pages/sign-up/sign-up.component.ts");
-/* harmony import */ var _pages_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/contact-details/contact-details.component */ "./src/app/pages/contact-details/contact-details.component.ts");
-/* harmony import */ var _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/find-hotel/find-hotel.component */ "./src/app/pages/find-hotel/find-hotel.component.ts");
-/* harmony import */ var _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/fill-in-details/fill-in-details.component */ "./src/app/pages/fill-in-details/fill-in-details.component.ts");
+/* harmony import */ var _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/find-hotel/find-hotel.component */ "./src/app/pages/find-hotel/find-hotel.component.ts");
+/* harmony import */ var _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/fill-in-details/fill-in-details.component */ "./src/app/pages/fill-in-details/fill-in-details.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,15 +345,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 var routes = [
     { path: '', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
-    { path: 'find-hotel', component: _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_8__["FindHotelComponent"] },
+    { path: 'find-hotel', component: _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_7__["FindHotelComponent"] },
     { path: 'hotel-detail', component: _pages_hotel_detail_hotel_detail_component__WEBPACK_IMPORTED_MODULE_4__["HotelDetailComponent"] },
     { path: 'login', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"] },
     { path: 'sign-up', component: _pages_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_6__["SignUpComponent"] },
-    { path: 'fill-in-details', component: _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_9__["FillInDetailsComponent"] },
-    { path: 'contact', component: _pages_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_7__["ContactDetailsComponent"] }
+    { path: 'fill-in-details', component: _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_8__["FillInDetailsComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -211,10 +496,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _templates_footer_footer_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./templates/footer/footer.component */ "./src/app/templates/footer/footer.component.ts");
 /* harmony import */ var _templates_find_hotel_item_find_hotel_item_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./templates/find-hotel-item/find-hotel-item.component */ "./src/app/templates/find-hotel-item/find-hotel-item.component.ts");
 /* harmony import */ var _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/find-hotel/find-hotel.component */ "./src/app/pages/find-hotel/find-hotel.component.ts");
-/* harmony import */ var _pages_book_detail_book_detail_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/book-detail/book-detail.component */ "./src/app/pages/book-detail/book-detail.component.ts");
-/* harmony import */ var _pages_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/contact-details/contact-details.component */ "./src/app/pages/contact-details/contact-details.component.ts");
-/* harmony import */ var _pages_checkout_detail_checkout_detail_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/checkout-detail/checkout-detail.component */ "./src/app/pages/checkout-detail/checkout-detail.component.ts");
-/* harmony import */ var _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pages/fill-in-details/fill-in-details.component */ "./src/app/pages/fill-in-details/fill-in-details.component.ts");
+/* harmony import */ var _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/fill-in-details/fill-in-details.component */ "./src/app/pages/fill-in-details/fill-in-details.component.ts");
+/* harmony import */ var ngx_daterangepicker_material__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ngx-daterangepicker-material */ "./node_modules/ngx-daterangepicker-material/fesm5/ngx-daterangepicker-material.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -244,11 +527,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-
-
 // Wheel Selector
 // Material
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -267,10 +548,7 @@ var AppModule = /** @class */ (function () {
                 _templates_footer_footer_component__WEBPACK_IMPORTED_MODULE_18__["FooterComponent"],
                 _templates_find_hotel_item_find_hotel_item_component__WEBPACK_IMPORTED_MODULE_19__["FindHotelItemComponent"],
                 _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_20__["FindHotelComponent"],
-                _pages_book_detail_book_detail_component__WEBPACK_IMPORTED_MODULE_21__["BookDetailComponent"],
-                _pages_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_22__["ContactDetailsComponent"],
-                _pages_checkout_detail_checkout_detail_component__WEBPACK_IMPORTED_MODULE_23__["CheckoutDetailComponent"],
-                _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_24__["FillInDetailsComponent"]
+                _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_21__["FillInDetailsComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -281,7 +559,8 @@ var AppModule = /** @class */ (function () {
                 _syncfusion_ej2_angular_splitbuttons__WEBPACK_IMPORTED_MODULE_13__["DropDownButtonModule"],
                 _material_module__WEBPACK_IMPORTED_MODULE_15__["MaterialModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"],
+                ngx_daterangepicker_material__WEBPACK_IMPORTED_MODULE_22__["NgxDaterangepickerMd"].forRoot()
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
@@ -386,201 +665,6 @@ var MaterialModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/pages/book-detail/book-detail.component.css":
-/*!*************************************************************!*\
-  !*** ./src/app/pages/book-detail/book-detail.component.css ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".book-content{\n    margin-top: 1rem;\n    margin-bottom: 5rem;\n}\n\n/* Icon */\n\n.dot-icon{\n    font-size: 8px;\n}\n\n/* End Icon */\n\n.title-text{\n    color: rgba(0,0,0,.54);\n}\n\n/* Button */\n\n.btn-continue{\n    width: 100%;\n}\n\n/* End button */\n\n/* Header */\n\n/* General Header */\n\n.general-header{\n    background-color: #545dff;\n    height: 150px;\n    padding: 1rem;\n}\n\n.header-title{\n    display: flex;\n}\n\n/* Processbar */\n\n.header-processbar{\n    margin-right: 1rem;\n    color: #b4b4fb!important;\n}\n\n.active-fill-in-details{\n    color: white!important;\n}\n\n.active .circle{\n    background-color: white!important;\n}\n\nul.processbar{\n    display: flex;\n    justify-content: flex-end;\n    text-decoration: none;\n    list-style-type: none;\n    padding: unset;\n    font-size: 12px;\n}\n\nul.processbar > li{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-left: .5rem;\n}\n\nul.processbar li p.circle{\n    width: 30px;\n    height: 30px;\n    line-height: 30px;\n    text-align: center;\n    border: 1px solid #b4b4fb;\n    border-radius: 50%;\n    margin-right: .75rem;\n    background: #b4b4fb;\n    color: #545dff;\n    /* padding: 2rem; */\n}\n\nul.processbar li p.line{\n    width: 30px;\n    height: 2px;\n    background-color: #b4b4fb;\n    margin-left: .25rem;\n}\n\n/* End Processbar */\n\n/* End Header */"
-
-/***/ }),
-
-/***/ "./src/app/pages/book-detail/book-detail.component.html":
-/*!**************************************************************!*\
-  !*** ./src/app/pages/book-detail/book-detail.component.html ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"book-content container-fluid\">\n  <!-- Your Booking -->\n  <div>\n    <p class=\"title-text\">Your booking</p>\n    <div class=\"row\">\n      <div class=\"col\">\n        <p>Marriotte NY city</p>\n      </div>\n      <div class=\"col text-right\">\n        <button mat-stroked-button color=\"primary\">Details</button>\n      </div>\n    </div>\n  </div>\n  <!-- End Your Booking -->\n\n  <hr>\n\n  <!-- Information Booking -->\n  <div>\n    <div class=\"infor-book-item\">\n      <ul>\n        <li class=\"dot-check-in\">\n          <span class=\"title-text\">&nbsp;&nbsp;Check-in-day</span>\n          <p>Thur, 06 August 2018</p>\n        </li>\n        <li class=\"dot-check-out\">\n          <span class=\"title-text\">&nbsp;&nbsp;Check-out-day</span>\n          <p>Sat, 10 August 2018</p>\n        </li>\n        <li class=\"dot-room\">\n          <span class=\"title-text room-type\">&nbsp;&nbsp;Room</span>\n          <p>Standard Double Room with view</p>\n        </li>\n      </ul>\n    </div>\n    <!-- End Information Booking -->\n\n    <hr>\n\n    <!-- Contact Details -->\n    <div class=\"contact-detail\">\n      <p class=\"title-text\">Contact Details</p>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Please fill in contact details</p>\n        </div>\n        <div class=\"col text-right\">\n          <button mat-stroked-button color=\"primary\">Fill in</button>\n        </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Any special request?</p>\n        </div>\n        <div class=\"col text-right\">\n          <button mat-stroked-button color=\"primary\">Add more</button>\n        </div>\n      </div>\n    </div>\n\n    <!-- End Contact Details -->\n\n    <hr>\n\n    <!-- Total price -->\n    <div class=\"total-price\">\n      <p class=\"title-text\">Your Price</p>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Total Price</p>\n        </div>\n        <div class=\"col text-right\">\n          <p>$119</p>\n        </div>\n      </div>\n    </div>\n    <!-- End total price -->\n\n    <!-- Button  -->\n    <button mat-raised-button color=\"primary\" class=\"btn-common\" routerLink=\"/check-out\">Continue</button>\n    <!-- End Button -->\n  </div>"
-
-/***/ }),
-
-/***/ "./src/app/pages/book-detail/book-detail.component.ts":
-/*!************************************************************!*\
-  !*** ./src/app/pages/book-detail/book-detail.component.ts ***!
-  \************************************************************/
-/*! exports provided: BookDetailComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookDetailComponent", function() { return BookDetailComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var BookDetailComponent = /** @class */ (function () {
-    function BookDetailComponent() {
-    }
-    BookDetailComponent.prototype.ngOnInit = function () {
-    };
-    BookDetailComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-book-detail',
-            template: __webpack_require__(/*! ./book-detail.component.html */ "./src/app/pages/book-detail/book-detail.component.html"),
-            styles: [__webpack_require__(/*! ./book-detail.component.css */ "./src/app/pages/book-detail/book-detail.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], BookDetailComponent);
-    return BookDetailComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/pages/checkout-detail/checkout-detail.component.css":
-/*!*********************************************************************!*\
-  !*** ./src/app/pages/checkout-detail/checkout-detail.component.css ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/* The container */\n.container {\n    display: block;\n    position: relative;\n    padding-left: 35px;\n    margin-bottom: 12px;\n    cursor: pointer;\n    font-size: 16px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n}\n/* Hide the browser's default radio button */\n.container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n}\n/* Create a custom radio button */\n.checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 20px;\n    width: 20px;\n    background-color: #eee;\n    border-radius: 50%;\n    border: 1px solid #545dff;\n}\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n    background-color: #ccc;\n}\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n    background-color: white;\n}\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n    content: \"\";\n    position: absolute;\n    display: none;\n}\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n    display: block;\n}\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background:  #545dff;\n}"
-
-/***/ }),
-
-/***/ "./src/app/pages/checkout-detail/checkout-detail.component.html":
-/*!**********************************************************************!*\
-  !*** ./src/app/pages/checkout-detail/checkout-detail.component.html ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"fill-in-content container-fluid\" >\n  <!-- Your Booking -->\n  <div>\n    <p class=\"title-text\">Your booking</p>\n    <div class=\"row\">\n      <div class=\"col\">\n        <p>Marriotte NY city</p>\n      </div>\n      <div class=\"col text-right\">\n        <button mat-stroked-button color=\"primary\">Details</button>\n      </div>\n    </div>\n  </div>\n  <!-- End Your Booking -->\n\n  <hr>\n\n  <!-- Information Booking -->\n  <div>\n    <div class=\"infor-book-item\">\n      <ul>\n        <li class=\"dot-check-in\">\n          <p class=\"title-text\">Check-in-day</p>\n          <p>Thur, 06 August 2018</p>\n        </li>\n        <li class=\"dot-check-out\">\n          <p class=\"title-text\">Check-out-day</p>\n          <p>Sat, 10 August 2018</p>\n        </li>\n        <li class=\"dot-room\">\n          <p class=\"title-text\">Room</p>\n          <p>Standard Double Room with view</p>\n        </li>\n      </ul>\n    </div>\n    <!-- End Information Booking -->\n\n    <hr>\n\n    <!-- Contact Check-Out Details -->\n    <div class=\"contact-detail\">\n      <p class=\"title-text\">Contact Details</p>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Guest's name</p>\n        </div>\n        <div class=\"col text-right\">\n          <button mat-stroked-button color=\"primary\">Fill in</button>\n        </div>\n      </div>\n      <p>+ 037 9999 999 / gmail@gmail.com</p>\n      <div class=\"select-form\">\n        <label class=\"container\">I'm booking for myself\n          <input type=\"radio\" checked=\"checked\" name=\"radio\">\n          <span class=\"checkmark\"></span>\n        </label>\n        <label class=\"container\">I'm booking for another person\n          <input type=\"radio\" name=\"radio\">\n          <span class=\"checkmark\"></span>\n        </label>\n      </div>\n    </div>\n\n    <!-- End Contact Check-Out Details -->\n\n    <hr>\n\n    <!-- Special request-->\n    <div>\n      <p class=\"title-text\">Special request</p>\n      <div class=\"row\">\n        <div class=\"col\">\n          <p>High Floor</p>\n        </div>\n        <div class=\"col text-right\">\n          <button mat-stroked-button color=\"primary\">Change/Add</button>\n        </div>\n      </div>\n    </div>\n    <!-- End special request -->\n\n    <hr>\n\n    <!-- Total price -->\n    <div class=\"total-price\">\n      <p class=\"title-text\">Your Price</p>\n      <div class=\"row\">\n        <div class=\"col-8\">\n          <p>Total Price</p>\n        </div>\n        <div class=\"col text-right\">\n          <p class=\"price\">$1190</p>\n        </div>\n      </div>\n    </div>\n    <!-- End total price -->\n\n    <hr>\n\n    <!-- Button  -->\n    <button mat-raised-button color=\"primary\" class=\"btn-common\">Continue</button>\n    <!-- End Button -->\n  </div>"
-
-/***/ }),
-
-/***/ "./src/app/pages/checkout-detail/checkout-detail.component.ts":
-/*!********************************************************************!*\
-  !*** ./src/app/pages/checkout-detail/checkout-detail.component.ts ***!
-  \********************************************************************/
-/*! exports provided: CheckoutDetailComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckoutDetailComponent", function() { return CheckoutDetailComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var CheckoutDetailComponent = /** @class */ (function () {
-    function CheckoutDetailComponent() {
-    }
-    CheckoutDetailComponent.prototype.ngOnInit = function () {
-    };
-    CheckoutDetailComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-checkout-detail',
-            template: __webpack_require__(/*! ./checkout-detail.component.html */ "./src/app/pages/checkout-detail/checkout-detail.component.html"),
-            styles: [__webpack_require__(/*! ./checkout-detail.component.css */ "./src/app/pages/checkout-detail/checkout-detail.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], CheckoutDetailComponent);
-    return CheckoutDetailComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/pages/contact-details/contact-details.component.css":
-/*!*********************************************************************!*\
-  !*** ./src/app/pages/contact-details/contact-details.component.css ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".country-code, .telephone{\n    width: 48%;\n}"
-
-/***/ }),
-
-/***/ "./src/app/pages/contact-details/contact-details.component.html":
-/*!**********************************************************************!*\
-  !*** ./src/app/pages/contact-details/contact-details.component.html ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"contact-content container mt-5\">\n  <h6>Where to send you booking details?</h6>\n  <form action=\"\">\n    <!-- Name -->\n    <div class=\"name-field\">\n      <mat-form-field class=\"field\">\n        <input matInput placeholder=\"Contact name\">\n      </mat-form-field>\n    </div>\n    <!-- End name -->\n\n    <!-- Country code & telephone -->\n    <div class=\"country-tel-field d-flex justify-content-between\">\n        <mat-form-field class=\"country-code\">\n          <input matInput placeholder=\"Country code\">\n        </mat-form-field>\n        <mat-form-field class=\"telephone\">\n          <input matInput placeholder=\"Telephone\">\n        </mat-form-field>\n      </div>\n    <!-- End code & telephone -->\n\n    <!-- Email -->\n    <mat-form-field class=\"field\">\n      <input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\">\n      <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n        Please enter a valid email address\n      </mat-error>\n      <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n        Email is <strong>required</strong>\n      </mat-error>\n    </mat-form-field>\n    <!-- End email -->\n  </form>\n  <!-- Button done -->\n  <div class=\"\">\n    <button mat-raised-button color=\"primary\" class=\"btn\">Done</button>\n  </div>\n  <!-- End button done -->\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/pages/contact-details/contact-details.component.ts":
-/*!********************************************************************!*\
-  !*** ./src/app/pages/contact-details/contact-details.component.ts ***!
-  \********************************************************************/
-/*! exports provided: ContactDetailsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactDetailsComponent", function() { return ContactDetailsComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var ContactDetailsComponent = /** @class */ (function () {
-    function ContactDetailsComponent() {
-        this.emailFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [
-            _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].email,
-        ]);
-    }
-    ContactDetailsComponent.prototype.ngOnInit = function () {
-    };
-    ContactDetailsComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-contact-details',
-            template: __webpack_require__(/*! ./contact-details.component.html */ "./src/app/pages/contact-details/contact-details.component.html"),
-            styles: [__webpack_require__(/*! ./contact-details.component.css */ "./src/app/pages/contact-details/contact-details.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], ContactDetailsComponent);
-    return ContactDetailsComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/pages/fill-in-details/fill-in-details.component.css":
 /*!*********************************************************************!*\
   !*** ./src/app/pages/fill-in-details/fill-in-details.component.css ***!
@@ -588,7 +672,7 @@ var ContactDetailsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".fill-details-content{\n    margin-top: 1rem;\n    font-size: 14px;\n}\n\n/* The container */\n\n.container {\n    display: block;\n    position: relative;\n    padding-left: 35px;\n    margin-bottom: 12px;\n    cursor: pointer;\n    font-size: 14px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n}\n\n/* Hide the browser's default radio button */\n\n.container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n}\n\n/* Create a custom radio button */\n\n.checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 20px;\n    width: 20px;\n    background-color: #eee;\n    border-radius: 50%;\n    border: 1px solid #545dff;\n}\n\n/* On mouse-over, add a grey background color */\n\n.container:hover input ~ .checkmark {\n    background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n\n.container input:checked ~ .checkmark {\n    background-color: white;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n\n.checkmark:after {\n    content: \"\";\n    position: absolute;\n    display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n\n.container input:checked ~ .checkmark:after {\n    display: block;\n}\n\n/* Style the indicator (dot/circle) */\n\n.container .checkmark:after {\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background:  #545dff;\n}"
+module.exports = ".fill-details-content {\n    margin-top: 1rem;\n    font-size: 14px;\n}\n\n\n/* The container */\n\n\n.container {\n    display: block;\n    position: relative;\n    padding-left: 35px;\n    margin-bottom: 12px;\n    cursor: pointer;\n    font-size: 14px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n}\n\n\n/* Hide the browser's default radio button */\n\n\n.container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n}\n\n\n/* Create a custom radio button */\n\n\n.checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 20px;\n    width: 20px;\n    background-color: #eee;\n    border-radius: 50%;\n    border: 1px solid #545dff;\n}\n\n\n/* On mouse-over, add a grey background color */\n\n\n.container:hover input~.checkmark {\n    background-color: #ccc;\n}\n\n\n/* When the radio button is checked, add a blue background */\n\n\n.container input:checked~.checkmark {\n    background-color: white;\n}\n\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n\n\n.checkmark:after {\n    content: \"\";\n    position: absolute;\n    display: none;\n}\n\n\n/* Show the indicator (dot/circle) when checked */\n\n\n.container input:checked~.checkmark:after {\n    display: block;\n}\n\n\n/* Style the indicator (dot/circle) */\n\n\n.container .checkmark:after {\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background: #545dff;\n}\n\n\n/* Modal contact*/\n\n\n.modal {\n    position: fixed;\n    bottom: 0;\n}\n\n\n.modal-header {\n    justify-content: unset;\n}\n\n\n.modal-body {\n    padding: 1rem;\n}\n\n\n.modal-dialog {\n    position: fixed;\n    bottom: 0;\n    margin: unset;\n    width: 100%;\n}\n\n\n.modal-content {\n    border: unset;\n    border-radius: unset;\n}\n\n\ni.material-icons.modal-back-icon {\n    margin-top: 0.15rem;\n}\n\n\n.country-code,\n.telephone {\n    width: 48%;\n}\n\n\nh6.contact-title {\n    margin: 1.5rem 0 1.5rem 0;\n}\n\n\n.field {\n    margin-bottom: .75rem;\n}\n\n\n/* End modal contact */\n\n\n/* .modal.fade .modal-dialog {\n    -webkit-transform: scale(0.1);\n    -moz-transform: scale(0.1);\n    -ms-transform: scale(0.1);\n    transform: scale(0.1);\n    top: 300px;\n    opacity: 0;\n    -webkit-transition: all 0.3s;\n    -moz-transition: all 0.3s;\n    transition: all 0.3s;\n}\n\n.modal.fade.in .modal-dialog {\n    -webkit-transform: scale(1);\n    -moz-transform: scale(1);\n    -ms-transform: scale(1);\n    transform: scale(1);\n    -webkit-transform: translate3d(0, -300px, 0);\n    transform: translate3d(0, -300px, 0);\n    opacity: 1;\n} */"
 
 /***/ }),
 
@@ -599,7 +683,7 @@ module.exports = ".fill-details-content{\n    margin-top: 1rem;\n    font-size: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"fill-details-content\" *ngIf=\"bookCheckoutStatus; else Payment\">\n  <!-- Book detail -->\n  <div class=\"book-content container-fluid\">\n    <!-- Your Booking -->\n    <div>\n      <p class=\"title-text\">Your booking</p>\n      <div class=\"row\">\n        <div class=\"col\">\n          <p>Marriotte NY city</p>\n        </div>\n        <div class=\"col text-right\">\n          <button mat-stroked-button color=\"primary\">Details</button>\n        </div>\n      </div>\n    </div>\n    <!-- End Your Booking -->\n\n    <hr>\n\n    <!-- Information Booking -->\n    <div>\n      <div class=\"infor-book-item\">\n        <ul>\n          <li class=\"dot-check-in\">\n            <span class=\"title-text\">&nbsp;&nbsp;Check-in-day</span>\n            <p>Thur, 06 August 2018</p>\n          </li>\n          <li class=\"dot-check-out\">\n            <span class=\"title-text\">&nbsp;&nbsp;Check-out-day</span>\n            <p>Sat, 10 August 2018</p>\n          </li>\n          <li class=\"dot-room\">\n            <span class=\"title-text room-type\">&nbsp;&nbsp;Room</span>\n            <p>Standard Double Room with view</p>\n          </li>\n        </ul>\n      </div>\n      <!-- End Information Booking -->\n\n      <hr>\n\n      <!-- Contact Details -->\n      <div class=\"contact-detail\" *ngIf=\"contactStatus; else CheckOutDetail\">\n        <p class=\"title-text\">Contact Details</p>\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <p>Please fill in contact details</p>\n          </div>\n          <div class=\"col text-right\">\n            <button mat-stroked-button color=\"primary\" routerLink=\"/contact\">Fill in</button>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <p>Any special request?</p>\n          </div>\n          <div class=\"col text-right\">\n            <button mat-stroked-button color=\"primary\">Add more</button>\n          </div>\n        </div>\n      </div>\n      <!-- End Contact Details -->\n\n      <hr>\n\n      <!-- Total price -->\n      <div class=\"total-price\">\n        <p class=\"title-text\">Your Price</p>\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <p>Total Price</p>\n          </div>\n          <div class=\"col text-right\">\n            <p>$119</p>\n          </div>\n        </div>\n      </div>\n      <!-- End total price -->\n\n      <!-- Button  -->\n      <button mat-raised-button color=\"primary\" class=\"btn-common\" (click)=\"FillInContinue()\">Continue</button>\n      <!-- End Button -->\n    </div>\n    <!-- End book detail -->\n\n    <!-- Check-Out -->\n    <ng-template #CheckOutDetail>\n      <!-- Contact Check-Out Details -->\n      <div class=\"contact-detail\">\n        <p class=\"title-text\">Contact Details</p>\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <p>Guest's name</p>\n          </div>\n        </div>\n        <p>+ 037 9999 999 / gmail@gmail.com</p>\n        <div class=\"select-form\">\n          <label class=\"container\">I'm booking for myself\n            <input type=\"radio\" checked=\"checked\" name=\"radio\">\n            <span class=\"checkmark\"></span>\n          </label>\n          <label class=\"container\">I'm booking for another person\n            <input type=\"radio\" name=\"radio\">\n            <span class=\"checkmark\"></span>\n          </label>\n        </div>\n      </div>\n\n      <!-- End Contact Check-Out Details -->\n\n      <hr>\n\n      <!-- Special request-->\n      <div>\n        <p class=\"title-text\">Special request</p>\n        <div class=\"row\">\n          <div class=\"col\">\n            <p>High Floor</p>\n          </div>\n          <div class=\"col text-right\">\n            <button mat-stroked-button color=\"primary\">Change / Add</button>\n          </div>\n        </div>\n      </div>\n      <!-- End special request -->\n    </ng-template>\n    <!-- End Check Out -->\n\n    <!-- Contact Form -->\n    <ng-template #Payment>\n      \n    </ng-template>\n    <!-- End contact form -->\n  </div>"
+module.exports = "<div class=\"fill-details-content\" *ngIf=\"bookCheckoutStatus; else Payment\">\n    <!-- Book detail -->\n    <div class=\"book-content container-fluid\">\n        <!-- Your Booking -->\n        <div>\n            <p class=\"title-text\">Your booking</p>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <p>Marriotte NY city</p>\n                </div>\n                <div class=\"col text-right\">\n                    <button mat-stroked-button color=\"primary\">Details</button>\n                </div>\n            </div>\n        </div>\n        <!-- End Your Booking -->\n\n        <hr>\n\n        <!-- Information Booking -->\n        <div>\n            <div class=\"infor-book-item\">\n                <ul>\n                    <li class=\"dot-check-in\">\n                        <span class=\"title-text\">&nbsp;&nbsp;Check-in-day</span>\n                        <p>Thur, 06 August 2018</p>\n                    </li>\n                    <li class=\"dot-check-out\">\n                        <span class=\"title-text\">&nbsp;&nbsp;Check-out-day</span>\n                        <p>Sat, 10 August 2018</p>\n                    </li>\n                    <li class=\"dot-room\">\n                        <span class=\"title-text room-type\">&nbsp;&nbsp;Room</span>\n                        <p>Standard Double Room with view</p>\n                    </li>\n                </ul>\n            </div>\n            <!-- End Information Booking -->\n\n            <hr>\n\n            <!-- Contact Details -->\n            <div class=\"contact-detail\" *ngIf=\"originContactStatus; else CheckOutDetail\">\n                <p class=\"title-text\">Contact Details</p>\n                <div class=\"row\">\n                    <div class=\"col-8\">\n                        <p>Please fill in contact details</p>\n                    </div>\n                    <div class=\"col text-right\">\n                        <button mat-stroked-button color=\"primary\" data-toggle=\"modal\" data-target=\"#myModal\">Fill\n                            in</button>\n                    </div>\n                </div>\n                <div class=\"row mt-2\">\n                    <div class=\"col-8\">\n                        <p>Any special request?</p>\n                    </div>\n                    <div class=\"col text-right\">\n                        <button mat-stroked-button color=\"primary\">Add more</button>\n                    </div>\n                </div>\n            </div>\n            <!-- End Contact Details -->\n\n            <hr>\n\n            <!-- Total price -->\n            <div class=\"total-price\">\n                <p class=\"title-text\">Your Price</p>\n                <div class=\"row\">\n                    <div class=\"col-8\">\n                        <p>Total Price</p>\n                    </div>\n                    <div class=\"col text-right\">\n                        <p>$119</p>\n                    </div>\n                </div>\n            </div>\n            <!-- End total price -->\n\n            <!-- Button  -->\n            <button mat-raised-button color=\"primary\" class=\"btn-common\" (click)=\"FillInContinue()\">Continue</button>\n            <!-- End Button -->\n        </div>\n        <!-- End book detail -->\n    </div>\n</div>\n<!-- Check-Out -->\n<ng-template #CheckOutDetail>\n    <!-- Contact Check-Out Details -->\n    <div class=\"contact-detail\">\n        <p class=\"title-text\">Contact Details</p>\n        <div class=\"row\">\n            <div class=\"col-8\">\n                <p>Guest's name</p>\n            </div>\n            <div class=\"col-8\">\n                <p style=\"font-weight: 700;\">{{_fullName}}</p>\n            </div>\n        </div>\n        <p>{{_telephone}} / {{_email}}</p>\n        <div class=\"select-form\">\n            <label class=\"container\">I'm booking for myself\n                <input type=\"radio\" checked=\"checked\" name=\"radio\">\n                <span class=\"checkmark\"></span>\n            </label>\n            <label class=\"container\">I'm booking for another person\n                <input type=\"radio\" name=\"radio\">\n                <span class=\"checkmark\"></span>\n            </label>\n        </div>\n    </div>\n    <!-- End Contact Check-Out Details -->\n\n    <hr>\n\n    <!-- Special request-->\n    <div>\n        <p class=\"title-text\">Special request</p>\n        <div class=\"row\">\n            <div class=\"col\">\n                <p>High Floor</p>\n            </div>\n            <div class=\"col text-right\">\n                <button mat-stroked-button color=\"primary\">Change / Add</button>\n            </div>\n        </div>\n    </div>\n    <!-- End special request -->\n</ng-template>\n<!-- End Check Out -->\n\n<!-- Contact Form -->\n<ng-template #Payment>\n\n</ng-template>\n<!-- End contact form -->\n\n<!-- Popup Contact -->\n<div class=\"modal fade\" id=\"myModal\">\n    <div class=\"modal-dialog\">\n        <div class=\"modal-content\">\n\n            <!-- Modal Header -->\n            <div class=\"modal-header\">\n                <span data-dismiss=\"modal\"><i class=\"material-icons modal-back-icon\">keyboard_backspace</i></span>\n                <h4 class=\"modal-title\">&nbsp;&nbsp;Contact</h4>\n            </div>\n\n            <!-- Modal body -->\n            <div class=\"modal-body\">\n                <h6 class=\"contact-title\">Where to send you booking details?</h6>\n                <form action=\"\">\n                    <!-- Name -->\n                    <mat-form-field class=\"field\">\n                        <input matInput placeholder=\"Contact name\" #fullName>\n                    </mat-form-field>\n                    <!-- End name -->\n\n                    <!-- Country code & telephone -->\n                    <div class=\"field d-flex justify-content-between\">\n                        <mat-form-field class=\"country-code\">\n                            <input matInput placeholder=\"Country code\" #countryCode>\n                        </mat-form-field>\n                        <mat-form-field class=\"telephone\">\n                            <input matInput placeholder=\"Telephone\" #telephone>\n                        </mat-form-field>\n                    </div>\n                    <!-- End code & telephone -->\n\n                    <!-- Email -->\n                    <mat-form-field class=\"field\">\n                        <input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\" #email>\n                        <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n                            Please enter a valid email address\n                        </mat-error>\n                        <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n                            Email is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                    <!-- End email -->\n                </form>\n            </div>\n\n            <!-- Modal footer -->\n            <div class=\"modal-footer\">\n                <button mat-raised-button color=\"primary\" class=\"btn\" (click)=\"getInformationGuest(fullName, countryCode, telephone, email)\" data-dismiss=\"modal\">Done</button>\n                <button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">Close</button>\n            </div>\n\n        </div>\n    </div>\n</div>\n<!-- End popup Contact -->"
 
 /***/ }),
 
@@ -615,6 +699,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FillInDetailsComponent", function() { return FillInDetailsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -626,12 +711,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var FillInDetailsComponent = /** @class */ (function () {
     function FillInDetailsComponent(ultility) {
         this.ultility = ultility;
-        this.contactStatus = true;
+        this.originContactStatus = true;
         this.bookCheckoutStatus = true;
         this.countContinueBtnClick = 0;
+        this.emailFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email,
+        ]);
         this.ultility.setDisplayHeader(true);
         this.ultility.setDisplayHomeHeader(false);
         this.ultility.setDisplayInnerHeader(true);
@@ -645,12 +735,21 @@ var FillInDetailsComponent = /** @class */ (function () {
     FillInDetailsComponent.prototype.FillInContinue = function () {
         this.countContinueBtnClick++;
         if (this.countContinueBtnClick === 1) {
-            this.contactStatus = false;
+            this.originContactStatus = false;
         }
         else if (this.countContinueBtnClick === 2) {
             this.bookCheckoutStatus = false;
         }
         // console.log(this.countContinueBtnClick);
+    };
+    FillInDetailsComponent.prototype.getInformationGuest = function (fullName, countryCode, telephone, email) {
+        this._fullName = fullName.value;
+        this._telephone = '+' + countryCode.value + ' ' + telephone.value;
+        this._email = email.value;
+        if (this._fullName && this._telephone && this._email) {
+            this.originContactStatus = false;
+        }
+        console.log(this._fullName + ' ' + this._telephone + ' ' + this._email);
     };
     FillInDetailsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -685,7 +784,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"find-hotel-content container-fluid\">\n    <div class=\"title\">\n        <p>ALL ROOM (Sum)</p>\n    </div>\n    <div class=\"item\">\n        <div class=\"row\">\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n        </div>\n    </div>\n</div>\n"
+module.exports = "<div class=\"find-hotel-content container-fluid\">\n    <div class=\"title\">\n        <span>All room (9)</span>\n    </div>\n    <div class=\"item\">\n        <div class=\"row\">\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -766,7 +865,7 @@ module.exports = "\n#custom-search-input{\n    border: solid 1px #E4E4E4;\n    b
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"home container mx-auto container-custom\">\n  <div class=\"card home__find-hotel\">\n    <form action=\"\" class=\"form\">\n      <!--  Details -->\n      <div class=\"form-group\">\n        <div class=\"grid\">\n          <div class=\"col-1-4 col-1-4-sm\">\n            <div class=\"controls\">\n              <label class=\"form__label\"><i class=\"form__icon fa fa-map-pin\"></i>&nbsp;&nbsp;Destination</label>\n              <div id=\"custom-search-input\">\n                <div class=\"input-group col-md-12\">\n                  <input type=\"text\" class=\"form-control input-search\" placeholder=\"NewYork\" />\n                  <span class=\"input-group-btn\">\n                    <button class=\"btn btn-search btn-lg\" type=\"button\">\n                      <a href=\"#\"><i class=\"fa fa-search icon-search\"></i></a>\n                    </button>\n                  </span>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-1-4 col-1-4-sm\">\n            <div class=\"controls\">\n              <div class=\"row check-in\">\n                <div class=\"col-8 col-md-6 p-0 form__date\">\n                  <label class=\"form__label\"><i class=\"form__icon fa fa-calendar\"></i>&nbsp;&nbsp;Check-in date</label>\n                  <ejs-daterangepicker class=\"form-control\"></ejs-daterangepicker>\n                </div>\n                <div class=\"col-3 col-md-6 p-0 form__duration\">\n                  <label class=\"form__label\">Duration</label>\n                  <input type=\"text\" class=\"form-control\" />\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-1-4 col-1-4-sm\">\n            <div class=\"controls\">\n              <label class=\"form__label\"><i class=\"form__icon fa fa-tags\"></i>&nbsp;&nbsp;Total guests & Rooms</label>\n              <div id=\"custom-search-input\">\n                <div class=\"input-group col-md-12\">\n                  <input type=\"text\" class=\"form-control\" placeholder=\"2 guests & 1 rooms\" />\n                  <span class=\"input-group-btn\">\n                    <button class=\"btn btn-info btn-lg\" type=\"button\">\n                      <a href=\"#\"><i class=\"fa fa-sort\"></i></a>\n                    </button>\n                  </span>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-1-4 col-1-4-sm\">\n            <div class=\"controls\">\n              <button mat-raised-button color=\"primary\" class=\"btn-find-hotel\" (click)='goToFindHotel()'>Find hotel</button>\n            </div>\n          </div>\n        </div>\n      </div> <!-- /.form-group -->\n    </form>\n  </div>\n  <div class=\"recent-searches\">\n    <h5 class=\"title__recent-searches\">Recent Researches</h5>\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-6 col-md-6 item \" *ngFor='let item of hotelListRecent'>\n          <app-hotel-item [hotel]='item' (click)='goToDetail()'></app-hotel-item>\n        </div>\n      </div>\n    </div>\n  </div>\n  <hr>\n  <div class=\"explore\">\n    <h5 class=\"title__recent-searches\">Explore with QueenHotel</h5>\n    <div class=\"explore__content\">\n      <app-explore-item class=\"explore__item\"></app-explore-item>\n      <app-explore-item class=\"explore__item\"></app-explore-item>\n      <app-explore-item class=\"explore__item\"></app-explore-item>\n      <app-explore-item class=\"explore__item\"></app-explore-item>\n      <app-explore-item class=\"explore__item\"></app-explore-item>\n      <app-explore-item class=\"explore__item\"></app-explore-item>\n    </div>\n  </div>\n\n</div>"
+module.exports = "<div class=\"home container mx-auto container-custom\">\n    <div class=\"card home__find-hotel\">\n        <form action=\"\" class=\"form\">\n            <!--  Details -->\n            <div class=\"form-group\">\n                <div class=\"grid\">\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <label class=\"form__label\"><i class=\"form__icon fa fa-map-pin\"></i>&nbsp;&nbsp;Destination</label>\n                            <div id=\"custom-search-input\">\n                                <div class=\"input-group col-md-12\">\n                                    <input type=\"text\" class=\"form-control input-search\" placeholder=\"NewYork\" />\n                                    <span class=\"input-group-btn\">\n                    <button class=\"btn btn-search btn-lg\" type=\"button\">\n                      <a href=\"#\"><i class=\"fa fa-search icon-search\"></i></a>\n                    </button>\n                  </span>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <div class=\"row check-in\">\n                                <div class=\"col-8 col-md-6 p-0 form__date\">\n                                    <label class=\"form__label\"><i class=\"form__icon fa fa-calendar\"></i>&nbsp;&nbsp;Check-in date</label>\n                                    <input type=\"text\" class=\"form-control\" />\n                                </div>\n                                <div class=\"col-3 col-md-6 p-0 form__duration\">\n                                    <label class=\"form__label\">Duration</label>\n                                    <input type=\"text\" class=\"form-control\" />\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <label class=\"form__label\"><i class=\"form__icon fa fa-tags\"></i>&nbsp;&nbsp;Total guests & Rooms</label>\n                            <div id=\"custom-search-input\">\n                                <div class=\"input-group col-md-12\">\n                                    <input type=\"text\" class=\"form-control\" placeholder=\"2 guests & 1 rooms\" />\n                                    <span class=\"input-group-btn\">\n                    <button class=\"btn btn-info btn-lg\" type=\"button\">\n                      <a href=\"#\"><i class=\"fa fa-sort\"></i></a>\n                    </button>\n                  </span>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <button mat-raised-button color=\"primary\" class=\"btn-find-hotel\" (click)='goToFindHotel()'>Find\n                hotel</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <!-- /.form-group -->\n        </form>\n    </div>\n    <div class=\"recent-searches\">\n        <h5 class=\"title__recent-searches\">Recent Researches</h5>\n        <div class=\"container-fluid\">\n            <div class=\"row\">\n                <div class=\"col-6 col-md-6 item \" *ngFor='let item of hotelListRecent'>\n                    <app-hotel-item [hotel]='item' (click)='goToDetail()'></app-hotel-item>\n                </div>\n            </div>\n        </div>\n    </div>\n    <hr>\n\n    <div class=\"explore\">\n        <h5 class=\"title__recent-searches\">Explore with QueenHotel</h5>\n        <div class=\"explore__content\">\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n        </div>\n    </div>\n\n    <input type=\"text\" name=\"datefilter\" value=\"\" class=\"form-control\" />\n</div>"
 
 /***/ }),
 
@@ -1068,6 +1167,7 @@ var SignUpComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UtilityService", function() { return UtilityService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ultilities_system_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ultilities/system.constants */ "./src/app/ultilities/system.constants.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1077,6 +1177,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 var UtilityService = /** @class */ (function () {
     function UtilityService() {
@@ -1088,6 +1189,7 @@ var UtilityService = /** @class */ (function () {
         this._displayInnerHeader = true;
         this._isShowProcessBar = true;
         this._displayStarRating = true;
+        this.stackPage = [_ultilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT];
     }
     // Set Display Header
     UtilityService.prototype.setDisplayHeader = function (isShow) {
@@ -1148,6 +1250,18 @@ var UtilityService = /** @class */ (function () {
     };
     UtilityService.prototype.setDisplayStarRating = function (isShow) {
         this._displayStarRating = isShow;
+    };
+    UtilityService.prototype.getLastPageOfStack = function () {
+        if (this.stackPage && this.stackPage.length > 1) {
+            return this.stackPage[this.stackPage.length--];
+        }
+        return null;
+    };
+    UtilityService.prototype.getPreviousLastPageOfStack = function () {
+        if (this.stackPage && this.stackPage.length > 1) {
+            return this.stackPage[this.stackPage.length - 2];
+        }
+        return null;
     };
     UtilityService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -1363,7 +1477,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "img{\n    max-width: 100%;\n    display: block;\n}\n\n.home-header{\n    position: relative; \n}\n\n#overlay {\n    position: absolute;    \n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(86, 58, 109, 0.418);\n    cursor: pointer;\n}\n\n.header-icon, .header-text{\n    position: absolute;\n    top: 5%;\n    z-index: 5;\n}\n\n.header-icon{\n    right: 5%;\n}\n\n.header-icon .fa-bars{\n    font-size: 2rem;\n}\n\n.header-text{\n    left: 5%;\n}\n\n/* Inner Header */\n\n.inner-header{\n    background-color: #545dff;\n    height: 150px;\n    padding: 1.5rem 1rem 1rem 1rem;\n}\n\n.header-title{\n    display: flex;\n}\n\ni.header-back-icon{\n    font-size: 30px;\n}\n\n/* Processbar */\n\n.header-processbar{\n    margin-right: 1rem;\n    color: #b4b4fb!important;\n}\n\n.active-fill-in-details{\n    color: white!important;\n}\n\n.active-fill-in-details .circle{\n    background-color: white!important;\n}\n\nul.processbar{\n    display: flex;\n    justify-content: flex-end;\n    text-decoration: none;\n    list-style-type: none;\n    padding: unset;\n    font-size: 12px;\n}\n\nul.processbar > li{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-left: .5rem;\n}\n\n.processbar-text{\n    text-align: -webkit-center!important;\n}\n\n.processbar-text:nth-of-type(1){\n    padding-right: 1rem!important;\n}\n\nul.processbar li p.circle{\n    width: 30px;\n    height: 30px;\n    line-height: 30px;\n    text-align: center;\n    border: 1px solid #b4b4fb;\n    border-radius: 50%;\n    margin-right: .75rem;\n    background: #b4b4fb;\n    color: #545dff;\n    margin: 0 0 .5rem 0;\n    /* padding: 2rem; */\n}\n\nul.processbar p.line{\n    width: 35px;\n    height: 2px;\n    background-color: #b4b4fb;\n    margin-top: 1rem;\n}\n\n/* End Processbar */\n"
+module.exports = "img {\n    max-width: 100%;\n    display: block;\n}\n\n.home-header {\n    position: relative;\n}\n\n#overlay {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(86, 58, 109, 0.418);\n    cursor: pointer;\n}\n\n.header-icon,\n.header-text {\n    position: absolute;\n    top: 5%;\n    z-index: 5;\n}\n\n.header-icon {\n    right: 5%;\n}\n\n.header-icon .fa-bars {\n    font-size: 2rem;\n}\n\n.header-text {\n    left: 5%;\n}\n\n/* Inner Header */\n\n.inner-header {\n    background-color: #545dff;\n    height: 150px;\n    padding: 1.5rem 1rem 1rem 1rem;\n}\n\n.header-title {\n    display: flex;\n}\n\ni.header-back-icon {\n    font-size: 30px;\n}\n\n/* Processbar */\n\n.header-processbar {\n    margin-right: 1rem;\n    color: #b4b4fb!important;\n}\n\n.active-fill-in-details {\n    color: white!important;\n}\n\n.active-fill-in-details .circle {\n    background-color: white!important;\n}\n\nul.processbar {\n    display: flex;\n    justify-content: flex-end;\n    text-decoration: none;\n    list-style-type: none;\n    padding: unset;\n    font-size: 12px;\n}\n\nul.processbar>li {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-left: .5rem;\n}\n\n.processbar-text {\n    text-align: -webkit-center!important;\n}\n\n.processbar-text:nth-of-type(1) {\n    padding-right: 1rem!important;\n}\n\nul.processbar li p.circle {\n    width: 30px;\n    height: 30px;\n    line-height: 30px;\n    text-align: center;\n    border: 1px solid #b4b4fb;\n    border-radius: 50%;\n    margin-right: .75rem;\n    background: #b4b4fb;\n    color: #545dff;\n    margin: 0 0 .5rem 0;\n    /* padding: 2rem; */\n}\n\nul.processbar p.line {\n    width: 35px;\n    height: 2px;\n    background-color: #b4b4fb;\n    margin-top: 1rem;\n}\n\n/* End Processbar */"
 
 /***/ }),
 
@@ -1374,7 +1488,7 @@ module.exports = "img{\n    max-width: 100%;\n    display: block;\n}\n\n.home-he
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"isDisplayHeader\">\n  <div *ngIf=\"isDisplayHomeHeader\">\n    <div class=\"home-header\">\n      <div id=\"overlay\"></div>\n      <img src=\"./assets/images/tivkumb_0.jpg\" alt=\"\" class=\"\">\n    </div>\n    <div class=\"header-text text-white\">\n      <h5>NEC Hotel</h5>\n    </div>\n    <div class=\"header-icon\">\n      <i class=\"fa fa-bars text-white\"></i>\n    </div>\n  </div>\n\n\n  <div class=\"inner-header\" *ngIf=\"isDisplayInnerHeader\">\n    <div class=\"header-title text-white\">\n      <div>\n        <i class=\"material-icons header-back-icon\">keyboard_backspace</i>\n      </div>\n      <div>\n        <h4>&nbsp;&nbsp;{{title}}</h4>\n      </div>\n    </div>\n    <div class=\"header-star\" *ngIf=\"isDisplayStarRating\">\n      <span class=\"fa fa-star checked\"></span>\n      <span class=\"fa fa-star checked\"></span>\n      <span class=\"fa fa-star checked\"></span>\n      <span class=\"fa fa-star unchecked\"></span>\n      <span class=\"fa fa-star unchecked\"></span>\n    </div>\n    <div class=\"header-processbar\" *ngIf=\"isDisplayProcessBar\">\n      <ul class=\"processbar\">\n        <li class=\"active-fill-in-details\">\n          <div class=\"processbar-text text-center\">\n            <p class=\"circle\">01</p>\n            <p class=\"label\">Book</p>\n          </div>\n        </li>\n        <p class=\"line\"></p>\n        <li class=\"\">\n          <div class=\"processbar-text\">\n            <p class=\"circle\">02</p>\n            <p class=\"label\">Check out</p>\n          </div>\n        </li>\n        <p class=\"line\"></p>\n        <li class=\"\">\n          <div class=\"processbar-text\">\n            <p class=\"circle\">03</p>\n            <p class=\"label\">Pay</p>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>"
+module.exports = "<div *ngIf=\"isDisplayHeader\">\n    <div *ngIf=\"isDisplayHomeHeader\">\n        <div class=\"home-header\">\n            <div id=\"overlay\"></div>\n            <img src=\"./assets/images/tivkumb_0.jpg\" alt=\"\" class=\"\">\n        </div>\n        <div class=\"header-text text-white\">\n            <h5>NEC Hotel</h5>\n        </div>\n        <div class=\"header-icon\">\n            <i class=\"fa fa-bars text-white\"></i>\n        </div>\n    </div>\n\n\n    <div class=\"inner-header\" *ngIf=\"isDisplayInnerHeader\">\n        <div class=\"header-title text-white\">\n            <div>\n                <span class=\"text-white\"><i class=\"material-icons header-back-icon\">keyboard_backspace</i></span>\n            </div>\n            <div>\n                <h4>&nbsp;&nbsp;{{title}}</h4>\n            </div>\n        </div>\n        <div class=\"header-star\" *ngIf=\"isDisplayStarRating\">\n            <span class=\"fa fa-star checked\"></span>\n            <span class=\"fa fa-star checked\"></span>\n            <span class=\"fa fa-star checked\"></span>\n            <span class=\"fa fa-star unchecked\"></span>\n            <span class=\"fa fa-star unchecked\"></span>\n        </div>\n        <div class=\"header-processbar\" *ngIf=\"isDisplayProcessBar\">\n            <ul class=\"processbar\">\n                <li class=\"active-fill-in-details\">\n                    <div class=\"processbar-text text-center\">\n                        <p class=\"circle\">01</p>\n                        <p class=\"label\">Book</p>\n                    </div>\n                </li>\n                <p class=\"line\"></p>\n                <li class=\"\">\n                    <div class=\"processbar-text\">\n                        <p class=\"circle\">02</p>\n                        <p class=\"label\">Check out</p>\n                    </div>\n                </li>\n                <p class=\"line\"></p>\n                <li class=\"\">\n                    <div class=\"processbar-text\">\n                        <p class=\"circle\">03</p>\n                        <p class=\"label\">Pay</p>\n                    </div>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1390,6 +1504,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
+/* harmony import */ var src_app_ultilities_system_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/ultilities/system.constants */ "./src/app/ultilities/system.constants.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1401,13 +1516,37 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var HeaderComponent = /** @class */ (function () {
     function HeaderComponent(ultility) {
         this.ultility = ultility;
+        this.BACK_PAGE_TYPE = {
+            CONFIRM_POPUP: 1,
+            DEFINED: 2,
+            STACK: 3
+        };
         /**Setting Default Value **/
         this.title = '';
     }
     HeaderComponent.prototype.ngOnInit = function () {
+    };
+    HeaderComponent.prototype.btnBack_click = function () {
+        alert('click');
+        var currentPage = this.ultility.getLastPageOfStack();
+        console.log(currentPage);
+        if (!currentPage) {
+            return;
+        }
+        // tslint:disable-next-line:prefer-const
+        var isCheck = true;
+        // tslint:disable-next-line:prefer-const
+        var _page;
+        var backType = this.BACK_PAGE_TYPE.DEFINED;
+        switch (currentPage) {
+            case src_app_ultilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].DEFAULT:
+            case src_app_ultilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].FINDHOTEL:
+                _page = src_app_ultilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].DEFAULT;
+        }
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -1578,6 +1717,25 @@ var NavbarBottomComponent = /** @class */ (function () {
     return NavbarBottomComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/ultilities/system.constants.ts":
+/*!************************************************!*\
+  !*** ./src/app/ultilities/system.constants.ts ***!
+  \************************************************/
+/*! exports provided: PAGE_CODE */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PAGE_CODE", function() { return PAGE_CODE; });
+var PAGE_CODE;
+(function (PAGE_CODE) {
+    PAGE_CODE["DEFAULT"] = "HomeComponent";
+    PAGE_CODE["FINDHOTEL"] = "FindHotelComponent";
+})(PAGE_CODE || (PAGE_CODE = {}));
 
 
 /***/ }),

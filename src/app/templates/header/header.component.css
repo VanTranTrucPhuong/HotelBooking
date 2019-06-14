@@ -1,14 +1,14 @@
-img{
+img {
     max-width: 100%;
     display: block;
 }
 
-.home-header{
-    position: relative; 
+.home-header {
+    position: relative;
 }
 
 #overlay {
-    position: absolute;    
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
@@ -19,54 +19,59 @@ img{
     cursor: pointer;
 }
 
-.header-icon, .header-text{
+.header-icon,
+.header-text {
     position: absolute;
     top: 5%;
     z-index: 5;
 }
 
-.header-icon{
+.header-icon {
     right: 5%;
 }
 
-.header-icon .fa-bars{
+.header-icon .fa-bars {
     font-size: 2rem;
 }
 
-.header-text{
+.header-text {
     left: 5%;
 }
 
+
 /* Inner Header */
-.inner-header{
+
+.inner-header {
     background-color: #545dff;
     height: 150px;
     padding: 1.5rem 1rem 1rem 1rem;
 }
 
-.header-title{
+.header-title {
     display: flex;
 }
 
-i.header-back-icon{
+i.header-back-icon {
     font-size: 30px;
 }
 
+
 /* Processbar */
-.header-processbar{
+
+.header-processbar {
     margin-right: 1rem;
     color: #b4b4fb!important;
 }
 
-.active-fill-in-details{
+.active-fill-in-details {
     color: white!important;
 }
 
-.active-fill-in-details .circle{
+.active-fill-in-details .circle {
     background-color: white!important;
 }
 
-ul.processbar{
+ul.processbar {
     display: flex;
     justify-content: flex-end;
     text-decoration: none;
@@ -75,22 +80,22 @@ ul.processbar{
     font-size: 12px;
 }
 
-ul.processbar > li{
+ul.processbar>li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: .5rem;
 }
 
-.processbar-text{
+.processbar-text {
     text-align: -webkit-center!important;
 }
 
-.processbar-text:nth-of-type(1){
+.processbar-text:nth-of-type(1) {
     padding-right: 1rem!important;
 }
 
-ul.processbar li p.circle{
+ul.processbar li p.circle {
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -104,11 +109,12 @@ ul.processbar li p.circle{
     /* padding: 2rem; */
 }
 
-ul.processbar p.line{
+ul.processbar p.line {
     width: 35px;
     height: 2px;
     background-color: #b4b4fb;
     margin-top: 1rem;
 }
+
 
 /* End Processbar */

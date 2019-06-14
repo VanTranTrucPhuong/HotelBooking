@@ -40,17 +40,18 @@
             <hr>
 
             <!-- Contact Details -->
-            <div class="contact-detail" *ngIf="contactStatus; else CheckOutDetail">
+            <div class="contact-detail" *ngIf="originContactStatus; else CheckOutDetail">
                 <p class="title-text">Contact Details</p>
                 <div class="row">
                     <div class="col-8">
                         <p>Please fill in contact details</p>
                     </div>
                     <div class="col text-right">
-                        <button mat-stroked-button color="primary" data-toggle="modal" data-target="#fullHeightModalRight">Fill in</button>
+                        <button mat-stroked-button color="primary" data-toggle="modal" data-target="#myModal">Fill
+                            in</button>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col-8">
                         <p>Any special request?</p>
                     </div>
@@ -82,57 +83,112 @@
             <!-- End Button -->
         </div>
         <!-- End book detail -->
-
-        <!-- Check-Out -->
-        <ng-template #CheckOutDetail>
-            <!-- Contact Check-Out Details -->
-            <div class="contact-detail">
-                <p class="title-text">Contact Details</p>
-                <div class="row">
-                    <div class="col-8">
-                        <p>Guest's name</p>
-                    </div>
-                </div>
-                <p>+ 037 9999 999 / gmail@gmail.com</p>
-                <div class="select-form">
-                    <label class="container">I'm booking for myself
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-          </label>
-                    <label class="container">I'm booking for another person
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-          </label>
-                </div>
-            </div>
-
-            <!-- End Contact Check-Out Details -->
-
-            <hr>
-
-            <!-- Special request-->
-            <div>
-                <p class="title-text">Special request</p>
-                <div class="row">
-                    <div class="col">
-                        <p>High Floor</p>
-                    </div>
-                    <div class="col text-right">
-                        <button mat-stroked-button color="primary">Change / Add</button>
-                    </div>
-                </div>
-            </div>
-            <!-- End special request -->
-        </ng-template>
-        <!-- End Check Out -->
-
-        <!-- Contact Form -->
-        <ng-template #Payment>
-
-        </ng-template>
-        <!-- End contact form -->
-
-        <!-- Popup Contact -->
-
-        <!-- End popup Contact -->
     </div>
+</div>
+<!-- Check-Out -->
+<ng-template #CheckOutDetail>
+    <!-- Contact Check-Out Details -->
+    <div class="contact-detail">
+        <p class="title-text">Contact Details</p>
+        <div class="row">
+            <div class="col-8">
+                <p>Guest's name</p>
+            </div>
+            <div class="col-8">
+                <p style="font-weight: 700;">{{_fullName}}</p>
+            </div>
+        </div>
+        <p>{{_telephone}} / {{_email}}</p>
+        <div class="select-form">
+            <label class="container">I'm booking for myself
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">I'm booking for another person
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+    <!-- End Contact Check-Out Details -->
+
+    <hr>
+
+    <!-- Special request-->
+    <div>
+        <p class="title-text">Special request</p>
+        <div class="row">
+            <div class="col">
+                <p>High Floor</p>
+            </div>
+            <div class="col text-right">
+                <button mat-stroked-button color="primary">Change / Add</button>
+            </div>
+        </div>
+    </div>
+    <!-- End special request -->
+</ng-template>
+<!-- End Check Out -->
+
+<!-- Contact Form -->
+<ng-template #Payment>
+
+</ng-template>
+<!-- End contact form -->
+
+<!-- Popup Contact -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <span data-dismiss="modal"><i class="material-icons modal-back-icon">keyboard_backspace</i></span>
+                <h4 class="modal-title">&nbsp;&nbsp;Contact</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h6 class="contact-title">Where to send you booking details?</h6>
+                <form action="">
+                    <!-- Name -->
+                    <mat-form-field class="field">
+                        <input matInput placeholder="Contact name" #fullName>
+                    </mat-form-field>
+                    <!-- End name -->
+
+                    <!-- Country code & telephone -->
+                    <div class="field d-flex justify-content-between">
+                        <mat-form-field class="country-code">
+                            <input matInput placeholder="Country code" #countryCode>
+                        </mat-form-field>
+                        <mat-form-field class="telephone">
+                            <input matInput placeholder="Telephone" #telephone>
+                        </mat-form-field>
+                    </div>
+                    <!-- End code & telephone -->
+
+                    <!-- Email -->
+                    <mat-form-field class="field">
+                        <input matInput placeholder="Email" [formControl]="emailFormControl" #email>
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <!-- End email -->
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button mat-raised-button color="primary" class="btn" (click)="getInformationGuest(fullName, countryCode, telephone, email)" data-dismiss="modal">Done</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End popup Contact -->
