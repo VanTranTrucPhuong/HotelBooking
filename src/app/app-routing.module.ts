@@ -13,7 +13,8 @@ import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'find-hotel', component: FindHotelComponent},
+  { path: 'HOME', component: HomeComponent },
+  { path: 'FINDHOTEL', component: FindHotelComponent},
   { path: 'hotel-detail', component: HotelDetailComponent},
   { path: 'login', component: LoginComponent},
   { path: 'sign-up', component: SignUpComponent},

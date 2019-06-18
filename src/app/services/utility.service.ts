@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PAGE_CODE } from '../ultilities/system.constants';
+import { PAGE_CODE } from '../utilities/system.constants';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +11,22 @@ export class UtilityService {
   private _isShowHeaderButtonBack = true;
   private _displayHomeHeader = true;
   private _displayInnerHeader = true;
-  private _isShowProcessBar =  true;
+  private _isShowProcessBar = true;
   private _title: string;
   private _displayStarRating = true;
   private stackPage: PAGE_CODE[] = [PAGE_CODE.DEFAULT];
+  private stackMapping = new Map<number, StackData>().set(0, { 'params': {}, 'pageCode': PAGE_CODE.DEFAULT, 'data': {} });
+  private stackData: StackData;
+  private dataOfPrevPage: StackData;
 
   constructor() { }
+
+  public getDataOfPrevPage(): StackData {
+    return this.dataOfPrevPage;
+  }
+  public setDataOfPrevPage(data: StackData) {
+    this.dataOfPrevPage = data;
+  }
 
   // Set Display Header
   public setDisplayHeader(isShow: boolean) {
@@ -86,8 +96,41 @@ export class UtilityService {
     this._displayStarRating = isShow;
   }
 
+  public pushStackPage(pageCode: PAGE_CODE, stackStatus: StackData = null, isSaveData: boolean = true) {
+    if (!this.stackPage) {
+      this.stackPage = [PAGE_CODE.DEFAULT];
+      this.stackMapping = new Map<number, StackData>().set(0, { 'params': {}, 'pageCode': PAGE_CODE.DEFAULT, 'data': {} });
+    }
+    // check last page code is sampe page, is't
+    const currentPage = this.stackPage[this.stackPage.length - 1];
+    if (currentPage === pageCode) {
+      return;
+    }
+
+    this.stackPage.push(pageCode);
+    let stackDt = stackStatus;
+    if (!stackDt) {
+      stackDt = {
+        'params': {},
+        'pageCode': currentPage,
+        'data': {}
+      };
+    }
+    this.stackMapping.set(this.stackPage.length - 1, stackDt);
+    this.stackData = stackDt;
+    // save data
+    if (isSaveData) {
+      const dataPrev: StackData = {
+        'data': stackDt.params,
+        'pageCode': pageCode,
+        'params': {}
+      };
+      this.setDataOfPrevPage(dataPrev);
+    }
+  }
+
   public getLastPageOfStack(): PAGE_CODE {
-    if (this.stackPage && this.stackPage.length > 1) {
+    if (this.stackPage && this.stackPage.length >= 1) {
       return this.stackPage[this.stackPage.length--];
     }
     return null;
@@ -99,4 +142,10 @@ export class UtilityService {
     }
     return null;
   }
+}
+
+export interface StackData {
+  params: any;
+  data?: any;
+  pageCode: PAGE_CODE;
 }

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MbscModule } from './../lib/mobiscroll/js/mobiscroll.angular.min.js';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -56,6 +57,7 @@ import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    MbscModule,
     NgxDaterangepickerMd.forRoot()
   ],
   providers: [],

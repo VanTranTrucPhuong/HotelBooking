@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UtilityService } from 'src/app/services/utility.service';
-import { PAGE_CODE } from 'src/app/ultilities/system.constants';
+import { PAGE_CODE } from 'src/app/utilities/system.constants';
 
 @Component({
   selector: 'app-header',
@@ -32,9 +32,8 @@ export class HeaderComponent implements OnInit {
   }
 
   public btnBack_click() {
-    alert ('click');
     const currentPage = this.ultility.getLastPageOfStack();
-    console.log(currentPage);
+    alert (currentPage);
     if (!currentPage) {
       return;
     }

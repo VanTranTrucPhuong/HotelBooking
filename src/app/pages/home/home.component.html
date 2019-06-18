@@ -6,15 +6,16 @@
                 <div class="grid">
                     <div class="col-1-4 col-1-4-sm">
                         <div class="controls">
-                            <label class="form__label"><i class="form__icon fa fa-map-pin"></i>&nbsp;&nbsp;Destination</label>
+                            <label class="form__label"><i
+                                    class="form__icon fa fa-map-pin"></i>&nbsp;&nbsp;Destination</label>
                             <div id="custom-search-input">
-                                <div class="input-group col-md-12">
+                                <div class="input-group px-2">
                                     <input type="text" class="form-control input-search" placeholder="NewYork" />
                                     <span class="input-group-btn">
-                    <button class="btn btn-search btn-lg" type="button">
-                      <a href="#"><i class="fa fa-search icon-search"></i></a>
-                    </button>
-                  </span>
+                                        <button class="btn btn-search btn-lg" type="button">
+                                            <a href="#"><i class="fa fa-search icon-search"></i></a>
+                                        </button>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -22,13 +23,14 @@
                     <div class="col-1-4 col-1-4-sm">
                         <div class="controls">
                             <div class="row check-in">
-                                <div class="col-8 col-md-6 p-0 form__date">
-                                    <label class="form__label"><i class="form__icon fa fa-calendar"></i>&nbsp;&nbsp;Check-in date</label>
-                                    <input type="text" class="form-control" />
+                                <div class="col-8 col-md-6 p-0 field__date">
+                                    <label class="form__label"><i
+                                            class="form__icon fa fa-calendar"></i>&nbsp;&nbsp;Check-in date</label>
+                                    <input type="text" name="datefilter" (focus)="getDateRangePicker()" class="form-control px-2" />
                                 </div>
-                                <div class="col-3 col-md-6 p-0 form__duration">
+                                <div class="col-3 col-md-6 p-0 field__duration">
                                     <label class="form__label">Duration</label>
-                                    <input type="text" class="form-control" />
+                                    <input type="text" class="form-control px-1" id="duration" disabled/>
                                 </div>
                             </div>
                         </div>
@@ -37,21 +39,20 @@
                         <div class="controls">
                             <label class="form__label"><i class="form__icon fa fa-tags"></i>&nbsp;&nbsp;Total guests & Rooms</label>
                             <div id="custom-search-input">
-                                <div class="input-group col-md-12">
-                                    <input type="text" class="form-control" placeholder="2 guests & 1 rooms" />
+                                <div class="input-group px-2">
+                                    <input mbsc-scroller [mbsc-options]="scrollerOptions" type="text" class="form-control mobiscroll" placeholder="2 guests & 1 rooms" />
                                     <span class="input-group-btn">
-                    <button class="btn btn-info btn-lg" type="button">
-                      <a href="#"><i class="fa fa-sort"></i></a>
-                    </button>
-                  </span>
+                                        <button class="btn btn-info btn-lg" type="button">
+                                            <a href="#"><i class="fa fa-sort"></i></a>
+                                        </button>
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-1-4 col-1-4-sm">
                         <div class="controls">
-                            <button mat-raised-button color="primary" class="btn-find-hotel" (click)='goToFindHotel()'>Find
-                hotel</button>
+                            <button mat-raised-button color="primary" class="btn-find-hotel" (click)="goToPage('FINDHOTEL')">Find hotel</button>
                         </div>
                     </div>
                 </div>
@@ -79,9 +80,8 @@
             <app-explore-item class="explore__item"></app-explore-item>
             <app-explore-item class="explore__item"></app-explore-item>
             <app-explore-item class="explore__item"></app-explore-item>
-            <app-explore-item class="explore__item"></app-explore-item>
         </div>
     </div>
 
-    <input type="text" name="datefilter" value="" class="form-control" />
+    <input [(ngModel)]="price" mbsc-scroller [mbsc-options]="scrollerOptions" placeholder="Please Select..." />
 </div>

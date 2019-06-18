@@ -1,88 +1,84 @@
-
-#custom-search-input{
+#custom-search-input {
     border: solid 1px #E4E4E4;
     border-radius: 6px;
     background-color: #fff;
 }
 
-#custom-search-input input{
+#custom-search-input input {
     border: 0;
     box-shadow: none;
 }
 
-#custom-search-input button{
+#custom-search-input button {
     margin: 2px 0 0 0;
     background: none;
     box-shadow: none;
     border: 0;
     color: #666666;
-    padding: 0 8px 0 10px;
+    padding: 0 0 0 10px;
 }
 
-#custom-search-input button:hover{
+#custom-search-input button:hover {
     border: 0;
     box-shadow: none;
     border-left: solid 1px #ccc;
 }
 
-#custom-search-input .glyphicon-search{
+#custom-search-input .glyphicon-search {
     font-size: 23px;
 }
 
-.icon-search{
+.icon-search {
     color: #a8a8a8;
 }
 
-.form{
+.form {
     padding: 0.5em 5%;
 }
 
-.form-control{
+.form-control {
     padding: unset;
 }
 
-.form__label{
+.form__label {
     margin: 0.75rem 0;
 }
 
-.form__icon{
+.form__icon {
     color: #fc6f81;
 }
 
-.card{
+.card {
     border-radius: 1em;
 }
 
-.info-text{
+.info-text {
     text-align: left;
     width: 100%;
 }
 
-header, form{
+header,
+form {
     padding: 2em 5%;
 }
 
-.form-group{
+.form-group {
     margin-bottom: 20px;
 }
 
-.check-in{
+.check-in {
     margin-left: unset;
 }
 
-.form__date{
+.field__date {
     margin-right: 0.75rem;
 }
 
-.input__date{
-    padding: .375rem .75rem;
+#duration {
+    text-align: center;
 }
 
-.form__duration{
-    /* max-width: 30%; */
-}
-
-h2.heading{
+h2.heading {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 300;
@@ -93,7 +89,7 @@ h2.heading{
     margin-bottom: 20px;
 }
 
-.btn-find-hotel{
+.btn-find-hotel {
     outline: none;
     background-color: #545dff;
     /* border-color: #545dff; */
@@ -104,35 +100,37 @@ h2.heading{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.title__recent-searches{
+.title__recent-searches {
     padding: 1rem;
 }
 
-.col-6.col-md-6.item:nth-child(odd){
+.col-6.col-md-6.item:nth-child(odd) {
     padding-right: .5rem;
     padding-left: 2px;
 }
 
-.col-6.col-md-6.item:nth-child(even){
+.col-6.col-md-6.item:nth-child(even) {
     padding-left: .5rem;
     padding-right: 2px;
 }
 
-.explore{
+.explore {
     width: 100%;
 }
 
-.explore__content{
+.explore__content {
     overflow: auto;
     white-space: nowrap;
 }
 
-.explore__item{
+.explore__item {
     display: inline-block;
     /* margin: 0 0.5rem; */
 }
 
+
 /* Date */
+
 #control_wrapper {
     max-width: 246px;
     margin: 30px auto;
@@ -143,19 +141,13 @@ h2.heading{
     margin: 25px auto;
 }
 
-.e-input-group:not(.e-float-icon-left):not(.e-float-input)::after,.e-input-group:not(.e-float-icon-left):not(.e-float-input)::before{
-    background: unset;
+
+/* Mobiscroll */
+
+.form-control[readonly].mobiscroll {
+    background-color: unset;
+    opacity: 1;
 }
 
-.e-input-group:not(.e-float-icon-left), .e-input-group.e-control-wrapper:not(.e-float-icon-left){
-    border: unset;
-}
 
-.e-input-group-icon.e-range-icon, .e-control-wrapper .e-input-group-icon.e-range-icon {
-    padding: 4px;
-}
-
-.e-input-group input.e-input:focus, .e-input-group.e-control-wrapper input.e-input:focus, .e-input-group textarea.e-input:focus, .e-input-group.e-control-wrapper textarea.e-input:focus {
-    padding: 4px 0px 8px;
-    margin: 4px 0 4px 13px;
-}
+/* End mobiscroll */

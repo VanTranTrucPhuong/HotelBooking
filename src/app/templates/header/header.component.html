@@ -16,7 +16,7 @@
     <div class="inner-header" *ngIf="isDisplayInnerHeader">
         <div class="header-title text-white">
             <div>
-                <span class="text-white"><i class="material-icons header-back-icon">keyboard_backspace</i></span>
+                <span class="text-white" (click)="btnBack_click()"><i class="material-icons header-back-icon">keyboard_backspace</i></span>
             </div>
             <div>
                 <h4>&nbsp;&nbsp;{{title}}</h4>
