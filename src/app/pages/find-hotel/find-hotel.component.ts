@@ -22,15 +22,15 @@ export class FindHotelComponent implements OnInit {
   ngOnInit() {
   }
 
-  public isDisplayHeader(): boolean {
-    return this.utility.isDisplayHeader();
-  }
+  // public isDisplayHeader(): boolean {
+  //   return this.utility.isDisplayHeader();
+  // }
 
-  public isDisplayHomeHeader(): boolean {
-    return this.utility.isDisplayHomeHeader();
-  }
+  // public isDisplayHomeHeader(): boolean {
+  //   return this.utility.isDisplayHomeHeader();
+  // }
 
-  public isDisplayInnerHeader(): boolean {
-    return this.utility.isDisplayInnerHeader();
-  }
+  // public isDisplayInnerHeader(): boolean {
+  //   return this.utility.isDisplayInnerHeader();
+  // }
 }

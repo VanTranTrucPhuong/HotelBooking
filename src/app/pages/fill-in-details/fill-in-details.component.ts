@@ -19,14 +19,16 @@ export class FillInDetailsComponent implements OnInit {
   private _email: string;
   private btnContinueStatus = true;
 
-  constructor(private ultility: UtilityService) {
-    this.ultility.setDisplayHeader(true);
-    this.ultility.setDisplayHomeHeader(false);
-    this.ultility.setDisplayInnerHeader(true);
-    this.ultility.setDisplayProcessBar(true);
-    this.ultility.setDisplayStarRating(false);
-    this.ultility.setDisplayNavbar(false);
-    this.ultility.setTitle('Fill In Details');
+  constructor(private utility: UtilityService) {
+    this.utility.setDisplayHeader(true);
+    this.utility.setDisplayHomeHeader(false);
+    this.utility.setDisplayInnerHeader(true);
+    this.utility.setDisplayProcessBar(true);
+    this.utility.setDisplayStarRating(false);
+    this.utility.setDisplayNavbar(false);
+    this.utility.setCheckOutStatus(false);
+    this.utility.setPayStatus(false);
+    this.utility.setTitle('Fill In Details');
   }
 
   emailFormControl = new FormControl('', [
@@ -42,9 +44,9 @@ export class FillInDetailsComponent implements OnInit {
     if (this.countContinueBtnClick === 1) {
       // this.originContactStatus = false;
       this.bookCheckoutStatus = false;
-    } 
+      this.utility.setPayStatus(true);
+    }
     // else if (this.countContinueBtnClick === 2) {
-      
     // }
     // console.log(this.countContinueBtnClick);
   }
@@ -56,7 +58,7 @@ export class FillInDetailsComponent implements OnInit {
     if (this._fullName && this._telephone && this._email) {
       this.originContactStatus = false;
       this.btnContinueStatus = !this.btnContinueStatus;
-      this.ultility.setCheckOutStatus(true);
+      this.utility.setCheckOutStatus(true);
     }
     console.log(this._fullName + ' ' + this._telephone + ' ' + this._email);
   }

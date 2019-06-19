@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { UtilityService } from './services/utility.service';
-import { PAGE_CODE } from './utilities/system.constants';
+import { PAGE_CODE, POPUP_CONFIRM } from './utilities/system.constants';
 import { Router } from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  constructor(protected utility: UtilityService, protected router: Router) {
+  constructor(protected utility: UtilityService, protected router: Router, protected _snackBar: MatSnackBar) {
     utility.setDisplayHeader(true);
     utility.setDisplayHomeHeader(true);
     utility.setDisplayInnerHeader(false);
@@ -46,8 +47,12 @@ export class AppComponent {
     return this.utility.isDisplayStarRating();
   }
 
-  protected applyCheckOutStatus(): boolean {
+  public applyCheckOutStatus(): boolean {
     return this.utility.applyCheckOutStatus();
+  }
+
+  public applyPayStatus(): boolean {
+    return this.utility.applyPayStatus();
   }
 
   protected pushPage(pageCode: PAGE_CODE, stackStatus: StackData = null) {
@@ -73,6 +78,12 @@ export class AppComponent {
     } catch (error) {
       // Nothing
     }
+  }
+
+  public openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 3000,
+    });
   }
 }
 

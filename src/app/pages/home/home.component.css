@@ -101,7 +101,7 @@ h2.heading {
 }
 
 .title__recent-searches {
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .col-6.col-md-6.item:nth-child(odd) {
@@ -147,6 +147,10 @@ h2.heading {
 .form-control[readonly].mobiscroll {
     background-color: unset;
     opacity: 1;
+}
+
+.mbsc-sc-whl-gr-3d .mbsc-sc-whl {
+    margin: 0 2rem!important;
 }
 
 

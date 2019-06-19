@@ -9,13 +9,17 @@ export class UtilityService {
   private _displayFooter = true;
   private _isDisplayNavbar = true;
   private _isShowHeaderButtonBack = true;
-  private _displayHomeHeader = true;
+  private _displayHomeHeader = false;
   private _displayInnerHeader = true;
   private _isShowProcessBar = true;
   private _checkOutStatus = false;
   private _payStatus = false;
   private _title: string;
   private _displayStarRating = true;
+  // Declare for PopUp
+  private popupTitle: string;
+  private popupMessage: string;
+  // Back Page
   private stackPage: PAGE_CODE[] = [PAGE_CODE.DEFAULT];
   private stackMapping = new Map<number, StackData>().set(0, { 'params': {}, 'pageCode': PAGE_CODE.DEFAULT, 'data': {} });
   private stackData: StackData;
@@ -112,6 +116,78 @@ export class UtilityService {
     return this._payStatus;
   }
 
+  // Config PopUp
+  public getPopupTitle(): string {
+    return this.popupTitle;
+  }
+  public setPopupTitle(title) {
+    this.popupTitle = title;
+  }
+  public getPopupMessage(): string {
+    return this.popupMessage;
+  }
+  public setPopupMessage(msg) {
+    this.popupMessage = msg;
+  }
+
+  private popStackData(): StackData {
+    const rs: StackData = this.stackMapping.get(this.stackPage.length - 1);
+    this.stackMapping.delete(this.stackPage.length - 1);
+    return rs;
+  }
+
+  public popToRoot(): PAGE_CODE {
+    this.stackMapping = new Map<number, StackData>().set(0, { 'params': {}, 'pageCode': PAGE_CODE.DEFAULT, 'data': {} });
+    this.stackPage = [PAGE_CODE.DEFAULT];
+    return PAGE_CODE.DEFAULT;
+  }
+
+  public popStackPage(): PAGE_CODE {
+    if (!this.stackPage) {
+      this.stackMapping.clear();
+      this.stackPage = [PAGE_CODE.DEFAULT];
+      return PAGE_CODE.DEFAULT;
+    }
+    if (this.stackPage.length > 1) {
+      this.stackData = this.popStackData();
+      if (!this.stackData) {
+        this.stackData = {
+          'params': {},
+          'pageCode': null,
+          'data': {}
+        };
+      }
+      this.stackPage.pop();
+      // save data
+      const dataPrev: StackData = {
+        'data': this.stackData.data,
+        'pageCode': this.stackData.pageCode,
+        'params': {}
+      };
+      this.setDataOfPrevPage(dataPrev);
+      return this.stackPage[this.stackPage.length - 1];
+    }
+    return null;
+  }
+
+  public popToPageByPageCode(pageCode: PAGE_CODE): PAGE_CODE {
+    if (this.stackPage) {
+      if (this.stackPage.includes(pageCode)) {
+        for (let idx = this.stackPage.length - 1; idx > 0; idx--) {
+          if (this.stackPage[idx] && this.stackPage[idx] === pageCode) {
+            return pageCode;
+          } else {
+            this.popStackPage();
+          }
+        }
+      } else {
+        this.popStackPage();
+        this.pushStackPage(pageCode, this.stackData);
+        return pageCode;
+      }
+    }
+    return null;
+  }
 
   public pushStackPage(pageCode: PAGE_CODE, stackStatus: StackData = null, isSaveData: boolean = true) {
     if (!this.stackPage) {
@@ -148,7 +224,7 @@ export class UtilityService {
 
   public getLastPageOfStack(): PAGE_CODE {
     if (this.stackPage && this.stackPage.length > 1) {
-      return this.stackPage[this.stackPage.length--];
+      return this.stackPage[this.stackPage.length - 1];
     }
     return null;
   }

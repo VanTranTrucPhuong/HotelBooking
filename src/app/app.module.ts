@@ -30,6 +30,8 @@ import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.
 
 // Material
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { UtilityService } from './services/utility.service.js';
+import { BsEventsService } from './services/bs-events.service.js';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,10 @@ import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
     MbscModule,
     NgxDaterangepickerMd.forRoot()
   ],
-  providers: [],
+  providers: [
+     // include some services in app module providers
+     UtilityService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

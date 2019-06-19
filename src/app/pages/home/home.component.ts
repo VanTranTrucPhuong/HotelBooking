@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { UtilityService } from 'src/app/services/utility.service';
 import { PAGE_CODE } from 'src/app/utilities/system.constants';
 import { MbscScrollerOptions } from './../../../lib/mobiscroll/js/mobiscroll.angular.min.js';
+import { BsModalService } from 'ngx-bootstrap';
 // import { AppComponent } from 'src/app/app.component';'
 
 // Declare mobiscroll
@@ -51,9 +52,10 @@ export class HomeComponent extends AppComponent implements OnInit {
 
   constructor(
     protected utility: UtilityService,
-    protected router: Router
+    protected router: Router,
+    protected modalService: BsModalService
   ) {
-    super(utility, router);
+    super(utility, router, modalService);
     utility.setDisplayHeader(true);
     utility.setDisplayHomeHeader(true);
     utility.setDisplayInnerHeader(false);
@@ -107,18 +109,18 @@ export class HomeComponent extends AppComponent implements OnInit {
   }
 
   public goToPage(pageCode: string) {
-    alert(pageCode);
+    // alert(pageCode);
     try {
       const targetPage = PAGE_CODE[pageCode];
       console.log(targetPage);
       if (targetPage) {
         this.pushPage(targetPage, {
           params: {},
-          pageCode: PAGE_CODE.FINDHOTEL
+          pageCode: PAGE_CODE.HOME
         });
       }
     } catch (error) {
-
+      // Nothing
     }
   }
 

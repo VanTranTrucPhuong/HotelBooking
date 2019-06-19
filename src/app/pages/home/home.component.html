@@ -26,8 +26,7 @@
                                 <div class="col-8 col-md-6 p-0 field__date">
                                     <label class="form__label"><i
                                             class="form__icon fa fa-calendar"></i>&nbsp;&nbsp;Check-in date</label>
-                                    <input type="text" name="datefilter" (focus)="getDateRangePicker()"
-                                        class="form-control px-2" />
+                                    <input type="text" name="datefilter" (focus)="getDateRangePicker()" class="form-control px-2" />
                                 </div>
                                 <div class="col-3 col-md-6 p-0 field__duration">
                                     <label class="form__label">Duration</label>
@@ -42,8 +41,7 @@
                                 Rooms</label>
                             <div id="custom-search-input">
                                 <div class="input-group px-2">
-                                    <input mbsc-scroller [mbsc-options]="scrollerOptions" type="text"
-                                        class="form-control mobiscroll" placeholder="2 guests & 1 rooms" />
+                                    <input mbsc-scroller [mbsc-options]="scrollerOptions" type="text" class="form-control mobiscroll" placeholder="2 guests & 1 rooms" />
                                     <span class="input-group-btn">
                                         <button class="btn btn-info btn-lg" type="button">
                                             <a href="#"><i class="fa fa-sort"></i></a>
@@ -55,8 +53,7 @@
                     </div>
                     <div class="col-1-4 col-1-4-sm">
                         <div class="controls">
-                            <button mat-raised-button color="primary" class="btn-find-hotel"
-                                (click)="goToPage('FINDHOTEL')">Find hotel</button>
+                            <button mat-raised-button color="primary" class="btn-find-hotel" (click)="goToPage('FINDHOTEL')">Find hotel</button>
                         </div>
                     </div>
                 </div>
@@ -74,7 +71,8 @@
             </div>
         </div>
     </div>
-    <hr>
+
+    <hr class="line">
 
     <div class="explore">
         <h5 class="title__recent-searches">Explore with QueenHotel</h5>
