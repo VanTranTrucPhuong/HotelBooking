@@ -10,27 +10,27 @@ export class FindHotelComponent implements OnInit {
 
   title: string;
 
-  constructor(private ultility: UtilityService) {
-    this.ultility.setDisplayHeader(true);
-    this.ultility.setDisplayHomeHeader(false);
-    this.ultility.setDisplayInnerHeader(true);
-    this.ultility.setDisplayProcessBar(false);
-    this.ultility.setDisplayStarRating(true);
-    this.ultility.setTitle('Marriote NewYork City');
+  constructor(private utility: UtilityService) {
+    this.utility.setDisplayHeader(true);
+    this.utility.setDisplayHomeHeader(false);
+    this.utility.setDisplayInnerHeader(true);
+    this.utility.setDisplayProcessBar(false);
+    this.utility.setDisplayStarRating(true);
+    this.utility.setTitle('Marriote NewYork City');
   }
 
   ngOnInit() {
   }
 
   public isDisplayHeader(): boolean {
-    return this.ultility.isDisplayHeader();
+    return this.utility.isDisplayHeader();
   }
 
   public isDisplayHomeHeader(): boolean {
-    return this.ultility.isDisplayHomeHeader();
+    return this.utility.isDisplayHomeHeader();
   }
 
   public isDisplayInnerHeader(): boolean {
-    return this.ultility.isDisplayInnerHeader();
+    return this.utility.isDisplayInnerHeader();
   }
 }

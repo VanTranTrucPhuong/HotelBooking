@@ -10,6 +10,7 @@ import { UtilityService } from 'src/app/services/utility.service';
 export class LoginComponent implements OnInit {
 
   constructor(protected utility: UtilityService) {
+    this.utility.setDisplayNavbar(false);
     this.utility.setDisplayHeader(false);
   }
 

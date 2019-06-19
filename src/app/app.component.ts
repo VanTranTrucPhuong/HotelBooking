@@ -46,8 +46,13 @@ export class AppComponent {
     return this.utility.isDisplayStarRating();
   }
 
+  protected applyCheckOutStatus(): boolean {
+    return this.utility.applyCheckOutStatus();
+  }
+
   protected pushPage(pageCode: PAGE_CODE, stackStatus: StackData = null) {
     try {
+      console.log('Push page: ', pageCode);
       // if (pageCode === PAGE_CODE.VERSION || pageCode === PAGE_CODE.EXCEPTION) {
       //   this.router.navigate(['/' + pageCode]);
       // } else {

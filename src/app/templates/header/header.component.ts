@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UtilityService } from 'src/app/services/utility.service';
 import { PAGE_CODE } from 'src/app/utilities/system.constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,9 @@ export class HeaderComponent implements OnInit {
   @Input() isDisplayInnerHeader: Boolean; // Header In Another Screen
   @Input() isDisplayProcessBar: Boolean;
   @Input() isDisplayStarRating: Boolean;
+  @Input() processBarStatus: Boolean;
+  @Input() applyCheckOutStatus: Boolean;
+  @Input() applyPayStatus: Boolean;
 
   private readonly BACK_PAGE_TYPE = {
     CONFIRM_POPUP: 1,
@@ -23,7 +27,7 @@ export class HeaderComponent implements OnInit {
   // Set Title
   @Input() title: string;
 
-  constructor(private ultility: UtilityService) {
+  constructor(private ultility: UtilityService, private router: Router) {
     /**Setting Default Value **/
     this.title = '';
   }
@@ -47,6 +51,7 @@ export class HeaderComponent implements OnInit {
       case PAGE_CODE.FINDHOTEL:
         _page = PAGE_CODE.DEFAULT;
     }
+    this.router.navigate(['/'+ _page]);
   }
 
 }

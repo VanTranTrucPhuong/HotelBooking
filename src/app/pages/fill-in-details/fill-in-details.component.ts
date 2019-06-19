@@ -17,6 +17,7 @@ export class FillInDetailsComponent implements OnInit {
   private _fullName: string;
   private _telephone: string;
   private _email: string;
+  private btnContinueStatus = true;
 
   constructor(private ultility: UtilityService) {
     this.ultility.setDisplayHeader(true);
@@ -39,10 +40,12 @@ export class FillInDetailsComponent implements OnInit {
   public FillInContinue() {
     this.countContinueBtnClick++;
     if (this.countContinueBtnClick === 1) {
-      this.originContactStatus = false;
-    } else if (this.countContinueBtnClick === 2) {
+      // this.originContactStatus = false;
       this.bookCheckoutStatus = false;
-    }
+    } 
+    // else if (this.countContinueBtnClick === 2) {
+      
+    // }
     // console.log(this.countContinueBtnClick);
   }
 
@@ -52,6 +55,8 @@ export class FillInDetailsComponent implements OnInit {
     this._email = email.value;
     if (this._fullName && this._telephone && this._email) {
       this.originContactStatus = false;
+      this.btnContinueStatus = !this.btnContinueStatus;
+      this.ultility.setCheckOutStatus(true);
     }
     console.log(this._fullName + ' ' + this._telephone + ' ' + this._email);
   }

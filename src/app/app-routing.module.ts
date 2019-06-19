@@ -12,7 +12,7 @@ import { FindHotelComponent } from './pages/find-hotel/find-hotel.component';
 import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LoginComponent },
   { path: 'HOME', component: HomeComponent },
   { path: 'FINDHOTEL', component: FindHotelComponent},
   { path: 'hotel-detail', component: HotelDetailComponent},

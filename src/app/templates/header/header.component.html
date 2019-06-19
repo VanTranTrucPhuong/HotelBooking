@@ -38,14 +38,14 @@
                     </div>
                 </li>
                 <p class="line"></p>
-                <li class="">
+                <li [ngClass]="{'active-fill-in-details': applyCheckOutStatus}">
                     <div class="processbar-text">
                         <p class="circle">02</p>
                         <p class="label">Check out</p>
                     </div>
                 </li>
                 <p class="line"></p>
-                <li class="">
+                <li [ngClass]="{'active-fill-in-details': applyPayStatus}">
                     <div class="processbar-text">
                         <p class="circle">03</p>
                         <p class="label">Pay</p>

@@ -107,7 +107,7 @@ export class HomeComponent extends AppComponent implements OnInit {
   }
 
   public goToPage(pageCode: string) {
-    alert('GotoPage');
+    alert(pageCode);
     try {
       const targetPage = PAGE_CODE[pageCode];
       console.log(targetPage);

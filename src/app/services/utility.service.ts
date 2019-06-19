@@ -12,6 +12,8 @@ export class UtilityService {
   private _displayHomeHeader = true;
   private _displayInnerHeader = true;
   private _isShowProcessBar = true;
+  private _checkOutStatus = false;
+  private _payStatus = false;
   private _title: string;
   private _displayStarRating = true;
   private stackPage: PAGE_CODE[] = [PAGE_CODE.DEFAULT];
@@ -96,6 +98,21 @@ export class UtilityService {
     this._displayStarRating = isShow;
   }
 
+  // Set status of ProcessBar
+  public setCheckOutStatus(isApply: boolean) {
+    this._checkOutStatus = isApply;
+  }
+  public applyCheckOutStatus() {
+    return this._checkOutStatus;
+  }
+  public setPayStatus(isApply: boolean) {
+    this._payStatus = isApply;
+  }
+  public applyPayStatus() {
+    return this._payStatus;
+  }
+
+
   public pushStackPage(pageCode: PAGE_CODE, stackStatus: StackData = null, isSaveData: boolean = true) {
     if (!this.stackPage) {
       this.stackPage = [PAGE_CODE.DEFAULT];
@@ -130,7 +147,7 @@ export class UtilityService {
   }
 
   public getLastPageOfStack(): PAGE_CODE {
-    if (this.stackPage && this.stackPage.length >= 1) {
+    if (this.stackPage && this.stackPage.length > 1) {
       return this.stackPage[this.stackPage.length--];
     }
     return null;

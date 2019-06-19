@@ -71,14 +71,14 @@
                         <p>Total Price</p>
                     </div>
                     <div class="col text-right">
-                        <p>$119</p>
+                        <p class="price">$119</p>
                     </div>
                 </div>
             </div>
             <!-- End total price -->
 
             <!-- Button  -->
-            <button mat-raised-button color="primary" class="btn-common" (click)="FillInContinue()">Continue</button>
+            <button mat-raised-button color="primary" class="btn-common btn-continue" (click)="FillInContinue()" [disabled]="btnContinueStatus">Continue</button>
             <!-- End Button -->
         </div>
         <!-- End book detail -->
