@@ -10,12 +10,15 @@ import { FindHotelItemComponent } from './templates/find-hotel-item/find-hotel-i
 import { HeaderComponent } from './templates/header/header.component';
 import { FindHotelComponent } from './pages/find-hotel/find-hotel.component';
 import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.component';
+import { FindedHotelItemComponent } from './templates/finded-hotel-item/finded-hotel-item.component';
+import { FindedHotelListComponent } from './pages/finded-hotel-list/finded-hotel-list.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'HOME', component: HomeComponent },
+  { path: 'FINDEDHOTELLIST', component: FindedHotelListComponent },
   { path: 'FINDHOTEL', component: FindHotelComponent},
-  { path: 'hotel-detail', component: HotelDetailComponent},
+  { path: 'HOTELDETAIL', component: HotelDetailComponent},
   { path: 'LOGIN', component: LoginComponent},
   { path: 'SIGNUP', component: SignUpComponent},
   { path: 'FILLINDETAILS', component: FillInDetailsComponent},

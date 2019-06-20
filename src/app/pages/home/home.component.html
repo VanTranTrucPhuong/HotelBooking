@@ -13,7 +13,7 @@
                                     <input type="text" class="form-control input-search" placeholder="NewYork" />
                                     <span class="input-group-btn">
                                         <button class="btn btn-search btn-lg" type="button">
-                                            <a href="#"><i class="fa fa-search icon-search"></i></a>
+                                            <a><i class="fa fa-search icon-search"></i></a>
                                         </button>
                                     </span>
                                 </div>
@@ -44,7 +44,7 @@
                                     <input mbsc-scroller [mbsc-options]="scrollerOptions" type="text" class="form-control mobiscroll" placeholder="2 guests & 1 rooms" />
                                     <span class="input-group-btn">
                                         <button class="btn btn-info btn-lg" type="button">
-                                            <a href="#"><i class="fa fa-sort"></i></a>
+                                            <a><i class="fa fa-sort"></i></a>
                                         </button>
                                     </span>
                                 </div>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-1-4 col-1-4-sm">
                         <div class="controls">
-                            <button mat-raised-button color="primary" class="btn-find-hotel" (click)="goToPage('FINDHOTEL')">Find hotel</button>
+                            <button mat-raised-button color="primary" class="btn-find-hotel" (click)="goToPage('FINDEDHOTELLIST')">Find hotel</button>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-6 col-md-6 item " *ngFor='let item of hotelListRecent'>
-                    <app-hotel-item [hotel]='item' (click)='goToDetail()'></app-hotel-item>
+                    <app-hotel-item [hotel]='item' (click)="goToPage('HOTELDETAIL')"></app-hotel-item>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
     <hr class="line">
 
     <div class="explore">
-        <h5 class="title__recent-searches">Explore with QueenHotel</h5>
+        <h5 class="title__recent-searches">Explore with TravelInHands</h5>
         <div class="explore__content">
             <app-explore-item class="explore__item"></app-explore-item>
             <app-explore-item class="explore__item"></app-explore-item>

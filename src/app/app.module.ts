@@ -32,6 +32,8 @@ import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { UtilityService } from './services/utility.service.js';
 import { BsEventsService } from './services/bs-events.service.js';
+import { FindedHotelListComponent } from './pages/finded-hotel-list/finded-hotel-list.component';
+import { FindedHotelItemComponent } from './templates/finded-hotel-item/finded-hotel-item.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { BsEventsService } from './services/bs-events.service.js';
     FooterComponent,
     FindHotelItemComponent,
     FindHotelComponent,
-    FillInDetailsComponent
+    FillInDetailsComponent,
+    FindedHotelListComponent,
+    FindedHotelItemComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   @Input() isDisplayHeader: Boolean;
+  @Input() isDisplayHeaderTitle: Boolean;
+  @Input() isDisplayBackButton: Boolean;
   @Input() isDisplayHomeHeader: Boolean; // Header In Home Screen
   @Input() isDisplayInnerHeader: Boolean; // Header In Another Screen
   @Input() isDisplayProcessBar: Boolean;
@@ -48,11 +50,27 @@ export class HeaderComponent implements OnInit {
     const backType = this.BACK_PAGE_TYPE.DEFINED;
     switch (currentPage) {
       case PAGE_CODE.DEFAULT:
-      case PAGE_CODE.FINDHOTEL:
+      case PAGE_CODE.SIGNUP:
+        _page = PAGE_CODE.DEFAULT;
+        this.router.navigate(['/' + _page]);
+        break;
+      case PAGE_CODE.FINDEDHOTELLIST:
         _page = PAGE_CODE.HOME;
         break;
+      case PAGE_CODE.FINDHOTEL:
+        _page = PAGE_CODE.FINDEDHOTELLIST;
+        break;
+      case PAGE_CODE.HOTELDETAIL:
+        console.log("PREV: " + this.utility.getPreviousLastPageOfStack());
+        if (this.utility.getPreviousLastPageOfStack() === "HOME") {
+          _page = PAGE_CODE.HOME;
+        }
+        else {
+          _page = PAGE_CODE.FINDHOTEL;
+        }
+        break;
       case PAGE_CODE.FILLINDETAILS:
-        _page = PAGE_CODE.FINDHOTEL;
+        _page = PAGE_CODE.HOTELDETAIL;
         break;
       default:
         break;

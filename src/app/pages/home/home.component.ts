@@ -4,8 +4,7 @@ import { Router } from '@angular/router';
 import { UtilityService } from 'src/app/services/utility.service';
 import { PAGE_CODE } from 'src/app/utilities/system.constants';
 import { MbscScrollerOptions } from './../../../lib/mobiscroll/js/mobiscroll.angular.min.js';
-import { BsModalService } from 'ngx-bootstrap';
-// import { AppComponent } from 'src/app/app.component';'
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 // Declare mobiscroll
 const guestValues: any = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -44,22 +43,24 @@ export class HomeComponent extends AppComponent implements OnInit {
 
   private hotelListRecent = [
     // tslint:disable-next-line:max-line-length
-    { name: 'California', price: '200.000 USD', description: 'Some example text', image: './assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg' },
-    { name: 'White Palace', price: '150 000 USD', description: 'Some example text', image: './assets/images/tivkumb_0.jpg' },
-    { name: 'White Palace', price: '150 000 USD', description: 'Some example text', image: './assets/images/tivkumb_0.jpg' },
-    { name: 'White Palace', price: '150 000 USD', description: 'Some example text', image: './assets/images/tivkumb_0.jpg' }
+    { name: 'California', price: '200 USD', description: 'Some example text', image: './assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg' },
+    { name: 'White Palace', price: '170 USD', description: 'Some example text', image: './assets/images/hotel.jpg' },
+    { name: 'King Hotel', price: '150 USD', description: 'Some example text', image: './assets/images/tivkumb_0.jpg' },
+    { name: 'NEC Hotel', price: '1200 USD', description: 'Some example text', image: './assets/images/room.jpg' }
   ];
 
   constructor(
     protected utility: UtilityService,
     protected router: Router,
-    protected modalService: BsModalService
+    protected _snackbar: MatSnackBar
   ) {
-    super(utility, router, modalService);
+    super(utility, router, _snackbar);
     utility.setDisplayHeader(true);
     utility.setDisplayHomeHeader(true);
     utility.setDisplayInnerHeader(false);
     utility.setDisplayNavbar(true);
+    utility.setDisplayHeaderTitle(true);
+    utility.setDisplayBackButton(false);
   }
 
   ngOnInit() {
@@ -105,7 +106,7 @@ export class HomeComponent extends AppComponent implements OnInit {
   }
 
   public goToDetail() {
-    this.router.navigate(['/hotel-detail']);
+    this.router.navigate(['/HOTELDETAIL']);
   }
 
   public goToPage(pageCode: string) {

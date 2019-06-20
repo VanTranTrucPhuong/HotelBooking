@@ -13,6 +13,7 @@ export class AppComponent {
 
   constructor(protected utility: UtilityService, protected router: Router, protected _snackBar: MatSnackBar) {
     utility.setDisplayHeader(true);
+    utility.setDisplayHeaderTitle(true);
     utility.setDisplayHomeHeader(true);
     utility.setDisplayInnerHeader(false);
     utility.setDisplayNavbar(true);
@@ -37,6 +38,14 @@ export class AppComponent {
 
   public isDisplayProcessBar(): boolean {
     return this.utility.isDisplayProcessBar();
+  }
+
+  public isDisplayBackButton(): boolean {
+    return this.utility.isDisplayBackButton();
+  }
+
+  public isDisplayHeaderTitle(): boolean {
+    return this.utility.isDisplayHeaderTitle();
   }
 
   public getTitle() {

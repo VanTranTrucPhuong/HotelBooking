@@ -5,20 +5,18 @@ import { PAGE_CODE } from '../utilities/system.constants';
   providedIn: 'root'
 })
 export class UtilityService {
-  private _displayHeader = true;
-  private _displayFooter = true;
+  private _isDisplayHeader = true;
+  private _isDisplayFooter = true;
   private _isDisplayNavbar = true;
-  private _isShowHeaderButtonBack = true;
-  private _displayHomeHeader = false;
-  private _displayInnerHeader = true;
-  private _isShowProcessBar = true;
+  private _isDisplayBackButton = false;
+  private _isDisplayHeaderTitle = true;
+  private _isDisplayHomeHeader = false;
+  private _isDisplayInnerHeader = true;
+  private _isDisplayProcessBar = true;
   private _checkOutStatus = false;
   private _payStatus = false;
   private _title: string;
   private _displayStarRating = true;
-  // Declare for PopUp
-  private popupTitle: string;
-  private popupMessage: string;
   // Back Page
   private stackPage: PAGE_CODE[] = [PAGE_CODE.DEFAULT];
   private stackMapping = new Map<number, StackData>().set(0, { 'params': {}, 'pageCode': PAGE_CODE.DEFAULT, 'data': {} });
@@ -36,30 +34,30 @@ export class UtilityService {
 
   // Set Display Header
   public setDisplayHeader(isShow: boolean) {
-    this._displayHeader = isShow;
+    this._isDisplayHeader = isShow;
   }
   public isDisplayHeader() {
-    return this._displayHeader;
+    return this._isDisplayHeader;
   }
   public setDisplayHomeHeader(isShow: boolean) {
-    this._displayHomeHeader = isShow;
+    this._isDisplayHomeHeader = isShow;
   }
   public isDisplayHomeHeader() {
-    return this._displayHomeHeader;
+    return this._isDisplayHomeHeader;
   }
   public setDisplayInnerHeader(isShow: boolean) {
-    this._displayInnerHeader = isShow;
+    this._isDisplayInnerHeader = isShow;
   }
   public isDisplayInnerHeader() {
-    return this._displayInnerHeader;
+    return this._isDisplayInnerHeader;
   }
 
   // Set Display Footer
   public setDisplayFooter(isShow: boolean) {
-    this._displayFooter = isShow;
+    this._isDisplayFooter = isShow;
   }
   public isDisplayFooter() {
-    return this._displayFooter;
+    return this._isDisplayFooter;
   }
 
   // Set Display Navbar(~ Navigation)
@@ -69,12 +67,19 @@ export class UtilityService {
   public isDisplayNavbar() {
     return this._isDisplayNavbar;
   }
-  public isShowHeaderButton() {
-    return this._isShowHeaderButtonBack;
+  public isDisplayBackButton() {
+    return this._isDisplayBackButton;
   }
-  public setShowHeaderButtonBack(isShow: boolean) {
-    this._isShowHeaderButtonBack = isShow;
+  public setDisplayBackButton(isShow: boolean) {
+    this._isDisplayBackButton = isShow;
   }
+  public isDisplayHeaderTitle() {
+    return this._isDisplayHeaderTitle;
+  }
+  public setDisplayHeaderTitle(isShow: boolean) {
+    this._isDisplayHeaderTitle = isShow;
+  }
+
 
   // Set Title
   public getTitle() {
@@ -86,11 +91,11 @@ export class UtilityService {
 
   // Set Display Processbar
   public isDisplayProcessBar() {
-    return this._isShowProcessBar;
+    return this._isDisplayProcessBar;
   }
 
   public setDisplayProcessBar(isShow: boolean) {
-    this._isShowProcessBar = isShow;
+    this._isDisplayProcessBar = isShow;
   }
 
   // Set Display Star Rating
@@ -116,19 +121,6 @@ export class UtilityService {
     return this._payStatus;
   }
 
-  // Config PopUp
-  public getPopupTitle(): string {
-    return this.popupTitle;
-  }
-  public setPopupTitle(title) {
-    this.popupTitle = title;
-  }
-  public getPopupMessage(): string {
-    return this.popupMessage;
-  }
-  public setPopupMessage(msg) {
-    this.popupMessage = msg;
-  }
 
   private popStackData(): StackData {
     const rs: StackData = this.stackMapping.get(this.stackPage.length - 1);

@@ -29,7 +29,7 @@
   <div class="container-fluid">
 
     <!-- Deals -->
-    <div class="deals">
+    <!-- <div class="deals">
       <h6 class="deals__heading heading">Deals</h6>
       <div class="deals__content">
         <div class="deals__text">
@@ -80,7 +80,7 @@
         </div>
       </div>
       <button class="btn btn-see">See more</button>
-    </div>
+    </div> -->
     <!-- End Deals -->
 
     <hr class="line">
@@ -135,7 +135,7 @@
           <div class="bar__point">8.9</div>
         </div>
       </div>
-      <button class="btn btn-see">See more</button>
+      <!-- <button class="btn btn-see">See more</button> -->
     </div>
     <!-- End Rating & Reviews -->
 
@@ -162,7 +162,7 @@
             <p class="icon-name">Swimming</p>
         </div>
       </div>
-      <button class="btn btn-see">See all amenities</button>
+      <!-- <button class="btn btn-see">See all amenities</button> -->
     </div>
     <!-- End Amenities -->
 
@@ -190,6 +190,17 @@
   </div>
 
   <!-- Footer -->
-  <app-footer></app-footer>
+  <div class="container-fluid footer">
+    <div class="footer-content">
+      <div class="footer-detail">
+        <mat-card-subtitle class="footer-subtitle">Price/room/night star from</mat-card-subtitle>
+        <p class="price">$119</p>
+        <mat-card-subtitle>per night on Hotel website</mat-card-subtitle>
+      </div>
+      <div class="footer-btn mx-auto">
+          <button mat-raised-button color="warn" (click)="goToPage('FILLINDETAILS')">Select room</button>
+      </div>
+    </div>
+  </div>
   <!-- End Footer -->
 </div>

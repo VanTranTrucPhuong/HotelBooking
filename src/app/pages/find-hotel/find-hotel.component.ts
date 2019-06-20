@@ -13,6 +13,7 @@ export class FindHotelComponent implements OnInit {
   constructor(private utility: UtilityService) {
     this.utility.setDisplayHeader(true);
     this.utility.setDisplayHomeHeader(false);
+    this.utility.setDisplayNavbar(true);
     this.utility.setDisplayInnerHeader(true);
     this.utility.setDisplayProcessBar(false);
     this.utility.setDisplayStarRating(true);
@@ -33,4 +34,5 @@ export class FindHotelComponent implements OnInit {
   // public isDisplayInnerHeader(): boolean {
   //   return this.utility.isDisplayInnerHeader();
   // }
+  
 }

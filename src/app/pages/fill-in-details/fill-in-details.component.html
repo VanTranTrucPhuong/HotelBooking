@@ -159,10 +159,13 @@
                     <!-- Country code & telephone -->
                     <div class="field d-flex justify-content-between">
                         <mat-form-field class="country-code">
-                            <input matInput placeholder="Country code" #countryCode>
+                            <span matPrefix>+ &nbsp;</span>
+                            <input matInput  maxlength="2" placeholder="Country code" #countryCode >
+                            <mat-hint align="end">{{countryCode.value.length}} / 2</mat-hint>
                         </mat-form-field>
                         <mat-form-field class="telephone">
-                            <input matInput placeholder="Telephone" #telephone>
+                            <input matInput  maxlength="8" placeholder="Telephone" #telephone>
+                            <mat-hint align="end">{{telephone.value.length}} / 8</mat-hint>
                         </mat-form-field>
                     </div>
                     <!-- End code & telephone -->
@@ -183,7 +186,7 @@
 
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button mat-raised-button color="primary" class="btn" (click)="getInformationGuest(fullName, countryCode, telephone, email)" data-dismiss="modal">Done</button>
+                <button mat-raised-button color="primary" class="btn" (click)="getInformationGuest(fullName, countryCode, telephone, email)">Done</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
 

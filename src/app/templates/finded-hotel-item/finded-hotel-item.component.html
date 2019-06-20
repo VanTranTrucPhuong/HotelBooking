@@ -1,0 +1,26 @@
+<mat-card class="find-hotel-card">
+    <!-- <img mat-card-image src="./assets/images/room33.jpg" alt="hotel"> -->
+
+     <img mat-card-image src="./assets/images/hotel.jpg" alt="Photo of a Shiba Inu">
+
+    <mat-card-content>
+        <h5 class="item-heading">
+            Charlotte Hotel
+        </h5>
+        <div class="item__rating">
+          <span class="fa fa-star checked mr-1"></span>
+          <span class="fa fa-star checked mr-1"></span>
+          <span class="fa fa-star checked mr-1"></span>
+          <span class="fa fa-star unchecked mr-1"></span>
+          <span class="fa fa-star unchecked mr-1"></span>
+        </div>
+    </mat-card-content>
+    <div class="row">
+        <div class="col">
+            <p class="price text-color">$119</p>
+        </div>
+        <div class="col text-right">
+            <button mat-raised-button color="primary" (click)="goToPage('FINDHOTEL')">View rooms</button>
+        </div>
+    </div>
+</mat-card>
