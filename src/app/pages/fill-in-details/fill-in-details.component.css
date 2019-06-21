@@ -85,10 +85,14 @@
     background: #545dff;
 }
 
+
 /* Button */
-.btn-continue{
+
+.btn-continue {
     margin: 1.5rem 0;
 }
+
+
 /* End button */
 
 
@@ -161,3 +165,10 @@ h6.contact-title {
     transform: translate3d(0, -300px, 0);
     opacity: 1;
 } */
+
+
+/* Payment-button-group */
+
+.payment-button-group {
+    margin-top: 20rem;
+}

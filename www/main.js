@@ -330,6 +330,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/sign-up/sign-up.component */ "./src/app/pages/sign-up/sign-up.component.ts");
 /* harmony import */ var _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/find-hotel/find-hotel.component */ "./src/app/pages/find-hotel/find-hotel.component.ts");
 /* harmony import */ var _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/fill-in-details/fill-in-details.component */ "./src/app/pages/fill-in-details/fill-in-details.component.ts");
+/* harmony import */ var _pages_finded_hotel_list_finded_hotel_list_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/finded-hotel-list/finded-hotel-list.component */ "./src/app/pages/finded-hotel-list/finded-hotel-list.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -345,14 +346,16 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
-    { path: '', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
+    { path: '', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"] },
     { path: 'HOME', component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
+    { path: 'FINDEDHOTELLIST', component: _pages_finded_hotel_list_finded_hotel_list_component__WEBPACK_IMPORTED_MODULE_9__["FindedHotelListComponent"] },
     { path: 'FINDHOTEL', component: _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_7__["FindHotelComponent"] },
-    { path: 'hotel-detail', component: _pages_hotel_detail_hotel_detail_component__WEBPACK_IMPORTED_MODULE_4__["HotelDetailComponent"] },
-    { path: 'login', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"] },
-    { path: 'sign-up', component: _pages_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_6__["SignUpComponent"] },
-    { path: 'fill-in-details', component: _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_8__["FillInDetailsComponent"] },
+    { path: 'HOTELDETAIL', component: _pages_hotel_detail_hotel_detail_component__WEBPACK_IMPORTED_MODULE_4__["HotelDetailComponent"] },
+    { path: 'LOGIN', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"] },
+    { path: 'SIGNUP', component: _pages_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_6__["SignUpComponent"] },
+    { path: 'FILLINDETAILS', component: _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_8__["FillInDetailsComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -394,7 +397,7 @@ module.exports = ".main{\n    /* position: absolute;\n    top: 20%; */\n    /* z
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page\">\n    <app-header class=\"header\" \n    [title] = \"getTitle()\"\n    [isDisplayHeader]=\"isDisplayHeader()\"\n    [isDisplayHomeHeader]=\"isDisplayHomeHeader()\"\n    [isDisplayInnerHeader]=\"isDisplayInnerHeader()\"\n    [isDisplayProcessBar]=\"isDisplayProcessBar()\"\n    [isDisplayStarRating]=\"isDisplayStarRating()\"></app-header>\n\n    <div class=\"main\">\n        <router-outlet></router-outlet>\n    </div>\n\n    <app-navbar-bottom [isDisplayNavbar]=\"isDisplayNavbar()\"></app-navbar-bottom>\n\n</div>\n"
+module.exports = "<div class=\"page\">\n    <app-header class=\"header\" [title]=\"getTitle()\" [isDisplayHeader]=\"isDisplayHeader()\" [isDisplayHomeHeader]=\"isDisplayHomeHeader()\" [isDisplayInnerHeader]=\"isDisplayInnerHeader()\" [isDisplayProcessBar]=\"isDisplayProcessBar()\" [isDisplayStarRating]=\"isDisplayStarRating()\"\n        [isDisplayBackButton]=\"isDisplayBackButton()\" [isDisplayHeaderTitle]=\"isDisplayHeaderTitle()\" [applyCheckOutStatus]=\"applyCheckOutStatus()\" [applyPayStatus]=\"applyPayStatus()\">\n    </app-header>\n\n    <div class=\"main\">\n        <router-outlet></router-outlet>\n    </div>\n\n    <app-navbar-bottom [isDisplayNavbar]=\"isDisplayNavbar()\"></app-navbar-bottom>\n\n</div>"
 
 /***/ }),
 
@@ -411,6 +414,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/utility.service */ "./src/app/services/utility.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -423,11 +427,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var AppComponent = /** @class */ (function () {
-    function AppComponent(utility, router) {
+    function AppComponent(utility, router, _snackBar) {
         this.utility = utility;
         this.router = router;
+        this._snackBar = _snackBar;
         utility.setDisplayHeader(true);
+        utility.setDisplayHeaderTitle(true);
         utility.setDisplayHomeHeader(true);
         utility.setDisplayInnerHeader(false);
         utility.setDisplayNavbar(true);
@@ -448,15 +455,28 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.isDisplayProcessBar = function () {
         return this.utility.isDisplayProcessBar();
     };
+    AppComponent.prototype.isDisplayBackButton = function () {
+        return this.utility.isDisplayBackButton();
+    };
+    AppComponent.prototype.isDisplayHeaderTitle = function () {
+        return this.utility.isDisplayHeaderTitle();
+    };
     AppComponent.prototype.getTitle = function () {
         return this.utility.getTitle();
     };
     AppComponent.prototype.isDisplayStarRating = function () {
         return this.utility.isDisplayStarRating();
     };
+    AppComponent.prototype.applyCheckOutStatus = function () {
+        return this.utility.applyCheckOutStatus();
+    };
+    AppComponent.prototype.applyPayStatus = function () {
+        return this.utility.applyPayStatus();
+    };
     AppComponent.prototype.pushPage = function (pageCode, stackStatus) {
         if (stackStatus === void 0) { stackStatus = null; }
         try {
+            console.log('Push page: ', pageCode);
             // if (pageCode === PAGE_CODE.VERSION || pageCode === PAGE_CODE.EXCEPTION) {
             //   this.router.navigate(['/' + pageCode]);
             // } else {
@@ -479,13 +499,18 @@ var AppComponent = /** @class */ (function () {
             // Nothing
         }
     };
+    AppComponent.prototype.openSnackBar = function (message, action) {
+        this._snackBar.open(message, action, {
+            duration: 3000,
+        });
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+        __metadata("design:paramtypes", [_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_3__["MatSnackBar"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -529,6 +554,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/find-hotel/find-hotel.component */ "./src/app/pages/find-hotel/find-hotel.component.ts");
 /* harmony import */ var _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/fill-in-details/fill-in-details.component */ "./src/app/pages/fill-in-details/fill-in-details.component.ts");
 /* harmony import */ var ngx_daterangepicker_material__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ngx-daterangepicker-material */ "./node_modules/ngx-daterangepicker-material/fesm5/ngx-daterangepicker-material.js");
+/* harmony import */ var _services_utility_service_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./services/utility.service.js */ "./src/app/services/utility.service.js");
+/* harmony import */ var _pages_finded_hotel_list_finded_hotel_list_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./pages/finded-hotel-list/finded-hotel-list.component */ "./src/app/pages/finded-hotel-list/finded-hotel-list.component.ts");
+/* harmony import */ var _templates_finded_hotel_item_finded_hotel_item_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./templates/finded-hotel-item/finded-hotel-item.component */ "./src/app/templates/finded-hotel-item/finded-hotel-item.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -562,6 +590,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 // Wheel Selector
 // Material
 
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -580,7 +611,9 @@ var AppModule = /** @class */ (function () {
                 _templates_footer_footer_component__WEBPACK_IMPORTED_MODULE_19__["FooterComponent"],
                 _templates_find_hotel_item_find_hotel_item_component__WEBPACK_IMPORTED_MODULE_20__["FindHotelItemComponent"],
                 _pages_find_hotel_find_hotel_component__WEBPACK_IMPORTED_MODULE_21__["FindHotelComponent"],
-                _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_22__["FillInDetailsComponent"]
+                _pages_fill_in_details_fill_in_details_component__WEBPACK_IMPORTED_MODULE_22__["FillInDetailsComponent"],
+                _pages_finded_hotel_list_finded_hotel_list_component__WEBPACK_IMPORTED_MODULE_25__["FindedHotelListComponent"],
+                _templates_finded_hotel_item_finded_hotel_item_component__WEBPACK_IMPORTED_MODULE_26__["FindedHotelItemComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -595,7 +628,10 @@ var AppModule = /** @class */ (function () {
                 _lib_mobiscroll_js_mobiscroll_angular_min_js__WEBPACK_IMPORTED_MODULE_2__["MbscModule"],
                 ngx_daterangepicker_material__WEBPACK_IMPORTED_MODULE_23__["NgxDaterangepickerMd"].forRoot()
             ],
-            providers: [],
+            providers: [
+                // include some services in app module providers
+                _services_utility_service_js__WEBPACK_IMPORTED_MODULE_24__["UtilityService"]
+            ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
@@ -705,7 +741,7 @@ var MaterialModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".fill-details-content {\n    margin-top: 1rem;\n    font-size: 14px;\n}\n\n\n/* The container */\n\n\n.container {\n    display: block;\n    position: relative;\n    padding-left: 35px;\n    margin-bottom: 12px;\n    cursor: pointer;\n    font-size: 14px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n}\n\n\n/* Hide the browser's default radio button */\n\n\n.container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n}\n\n\n/* Create a custom radio button */\n\n\n.checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 20px;\n    width: 20px;\n    background-color: #eee;\n    border-radius: 50%;\n    border: 1px solid #545dff;\n}\n\n\n/* On mouse-over, add a grey background color */\n\n\n.container:hover input~.checkmark {\n    background-color: #ccc;\n}\n\n\n/* When the radio button is checked, add a blue background */\n\n\n.container input:checked~.checkmark {\n    background-color: white;\n}\n\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n\n\n.checkmark:after {\n    content: \"\";\n    position: absolute;\n    display: none;\n}\n\n\n/* Show the indicator (dot/circle) when checked */\n\n\n.container input:checked~.checkmark:after {\n    display: block;\n}\n\n\n/* Style the indicator (dot/circle) */\n\n\n.container .checkmark:after {\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background: #545dff;\n}\n\n\n/* Modal contact*/\n\n\n.modal {\n    position: fixed;\n    bottom: 0;\n}\n\n\n.modal-header {\n    justify-content: unset;\n}\n\n\n.modal-body {\n    padding: 1rem;\n}\n\n\n.modal-dialog {\n    position: fixed;\n    bottom: 0;\n    margin: unset;\n    width: 100%;\n}\n\n\n.modal-content {\n    border: unset;\n    border-radius: unset;\n}\n\n\ni.material-icons.modal-back-icon {\n    margin-top: 0.15rem;\n}\n\n\n.country-code,\n.telephone {\n    width: 48%;\n}\n\n\nh6.contact-title {\n    margin: 1.5rem 0 1.5rem 0;\n}\n\n\n.field {\n    margin-bottom: .75rem;\n}\n\n\n/* End modal contact */\n\n\n/* .modal.fade .modal-dialog {\n    -webkit-transform: scale(0.1);\n    -moz-transform: scale(0.1);\n    -ms-transform: scale(0.1);\n    transform: scale(0.1);\n    top: 300px;\n    opacity: 0;\n    -webkit-transition: all 0.3s;\n    -moz-transition: all 0.3s;\n    transition: all 0.3s;\n}\n\n.modal.fade.in .modal-dialog {\n    -webkit-transform: scale(1);\n    -moz-transform: scale(1);\n    -ms-transform: scale(1);\n    transform: scale(1);\n    -webkit-transform: translate3d(0, -300px, 0);\n    transform: translate3d(0, -300px, 0);\n    opacity: 1;\n} */"
+module.exports = ".fill-details-content {\n    margin-top: 1rem;\n    font-size: 14px;\n}\n\n\n/* The container */\n\n\n.container {\n    display: block;\n    position: relative;\n    padding-left: 35px;\n    margin-bottom: 12px;\n    cursor: pointer;\n    font-size: 14px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n}\n\n\n/* Hide the browser's default radio button */\n\n\n.container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n}\n\n\n/* Create a custom radio button */\n\n\n.checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 20px;\n    width: 20px;\n    background-color: #eee;\n    border-radius: 50%;\n    border: 1px solid #545dff;\n}\n\n\n/* On mouse-over, add a grey background color */\n\n\n.container:hover input~.checkmark {\n    background-color: #ccc;\n}\n\n\n/* When the radio button is checked, add a blue background */\n\n\n.container input:checked~.checkmark {\n    background-color: white;\n}\n\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n\n\n.checkmark:after {\n    content: \"\";\n    position: absolute;\n    display: none;\n}\n\n\n/* Show the indicator (dot/circle) when checked */\n\n\n.container input:checked~.checkmark:after {\n    display: block;\n}\n\n\n/* Style the indicator (dot/circle) */\n\n\n.container .checkmark:after {\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background: #545dff;\n}\n\n\n/* Button */\n\n\n.btn-continue {\n    margin: 1.5rem 0;\n}\n\n\n/* End button */\n\n\n/* Modal contact*/\n\n\n.modal {\n    position: fixed;\n    bottom: 0;\n}\n\n\n.modal-header {\n    justify-content: unset;\n}\n\n\n.modal-body {\n    padding: 1rem;\n}\n\n\n.modal-dialog {\n    position: fixed;\n    bottom: 0;\n    margin: unset;\n    width: 100%;\n}\n\n\n.modal-content {\n    border: unset;\n    border-radius: unset;\n}\n\n\ni.material-icons.modal-back-icon {\n    margin-top: 0.15rem;\n}\n\n\n.country-code,\n.telephone {\n    width: 48%;\n}\n\n\nh6.contact-title {\n    margin: 1.5rem 0 1.5rem 0;\n}\n\n\n.field {\n    margin-bottom: .75rem;\n}\n\n\n/* End modal contact */\n\n\n/* .modal.fade .modal-dialog {\n    -webkit-transform: scale(0.1);\n    -moz-transform: scale(0.1);\n    -ms-transform: scale(0.1);\n    transform: scale(0.1);\n    top: 300px;\n    opacity: 0;\n    -webkit-transition: all 0.3s;\n    -moz-transition: all 0.3s;\n    transition: all 0.3s;\n}\n\n.modal.fade.in .modal-dialog {\n    -webkit-transform: scale(1);\n    -moz-transform: scale(1);\n    -ms-transform: scale(1);\n    transform: scale(1);\n    -webkit-transform: translate3d(0, -300px, 0);\n    transform: translate3d(0, -300px, 0);\n    opacity: 1;\n} */\n\n\n/* Payment-button-group */\n\n\n.payment-button-group {\n    margin-top: 20rem;\n}"
 
 /***/ }),
 
@@ -716,7 +752,7 @@ module.exports = ".fill-details-content {\n    margin-top: 1rem;\n    font-size:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"fill-details-content\" *ngIf=\"bookCheckoutStatus; else Payment\">\n    <!-- Book detail -->\n    <div class=\"book-content container-fluid\">\n        <!-- Your Booking -->\n        <div>\n            <p class=\"title-text\">Your booking</p>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <p>Marriotte NY city</p>\n                </div>\n                <div class=\"col text-right\">\n                    <button mat-stroked-button color=\"primary\">Details</button>\n                </div>\n            </div>\n        </div>\n        <!-- End Your Booking -->\n\n        <hr>\n\n        <!-- Information Booking -->\n        <div>\n            <div class=\"infor-book-item\">\n                <ul>\n                    <li class=\"dot-check-in\">\n                        <span class=\"title-text\">&nbsp;&nbsp;Check-in-day</span>\n                        <p>Thur, 06 August 2018</p>\n                    </li>\n                    <li class=\"dot-check-out\">\n                        <span class=\"title-text\">&nbsp;&nbsp;Check-out-day</span>\n                        <p>Sat, 10 August 2018</p>\n                    </li>\n                    <li class=\"dot-room\">\n                        <span class=\"title-text room-type\">&nbsp;&nbsp;Room</span>\n                        <p>Standard Double Room with view</p>\n                    </li>\n                </ul>\n            </div>\n            <!-- End Information Booking -->\n\n            <hr>\n\n            <!-- Contact Details -->\n            <div class=\"contact-detail\" *ngIf=\"originContactStatus; else CheckOutDetail\">\n                <p class=\"title-text\">Contact Details</p>\n                <div class=\"row\">\n                    <div class=\"col-8\">\n                        <p>Please fill in contact details</p>\n                    </div>\n                    <div class=\"col text-right\">\n                        <button mat-stroked-button color=\"primary\" data-toggle=\"modal\" data-target=\"#myModal\">Fill in</button>\n                    </div>\n                </div>\n                <div class=\"row mt-2\">\n                    <div class=\"col-8\">\n                        <p>Any special request?</p>\n                    </div>\n                    <div class=\"col text-right\">\n                        <button mat-stroked-button color=\"primary\">Add more</button>\n                    </div>\n                </div>\n            </div>\n            <!-- End Contact Details -->\n\n            <hr>\n\n            <!-- Total price -->\n            <div class=\"total-price\">\n                <p class=\"title-text\">Your Price</p>\n                <div class=\"row\">\n                    <div class=\"col-8\">\n                        <p>Total Price</p>\n                    </div>\n                    <div class=\"col text-right\">\n                        <p>$119</p>\n                    </div>\n                </div>\n            </div>\n            <!-- End total price -->\n\n            <!-- Button  -->\n            <button mat-raised-button color=\"primary\" class=\"btn-common\" (click)=\"FillInContinue()\">Continue</button>\n            <!-- End Button -->\n        </div>\n        <!-- End book detail -->\n    </div>\n</div>\n<!-- Check-Out -->\n<ng-template #CheckOutDetail>\n    <!-- Contact Check-Out Details -->\n    <div class=\"contact-detail\">\n        <p class=\"title-text\">Contact Details</p>\n        <div class=\"row\">\n            <div class=\"col-8\">\n                <p>Guest's name</p>\n            </div>\n            <div class=\"col-8\">\n                <p style=\"font-weight: 700;\">{{_fullName}}</p>\n            </div>\n        </div>\n        <p>{{_telephone}} / {{_email}}</p>\n        <div class=\"select-form\">\n            <label class=\"container\">I'm booking for myself\n                <input type=\"radio\" checked=\"checked\" name=\"radio\">\n                <span class=\"checkmark\"></span>\n            </label>\n            <label class=\"container\">I'm booking for another person\n                <input type=\"radio\" name=\"radio\">\n                <span class=\"checkmark\"></span>\n            </label>\n        </div>\n    </div>\n    <!-- End Contact Check-Out Details -->\n\n    <hr>\n\n    <!-- Special request-->\n    <div>\n        <p class=\"title-text\">Special request</p>\n        <div class=\"row\">\n            <div class=\"col\">\n                <p>High Floor</p>\n            </div>\n            <div class=\"col text-right\">\n                <button mat-stroked-button color=\"primary\">Change / Add</button>\n            </div>\n        </div>\n    </div>\n    <!-- End special request -->\n</ng-template>\n<!-- End Check Out -->\n\n<!-- Contact Form -->\n<ng-template #Payment>\n\n</ng-template>\n<!-- End contact form -->\n\n<!-- Popup Contact -->\n<div class=\"modal fade\" id=\"myModal\">\n    <div class=\"modal-dialog\">\n        <div class=\"modal-content\">\n\n            <!-- Modal Header -->\n            <div class=\"modal-header\">\n                <span data-dismiss=\"modal\"><i class=\"material-icons modal-back-icon\">keyboard_backspace</i></span>\n                <h4 class=\"modal-title\">&nbsp;&nbsp;Contact</h4>\n            </div>\n\n            <!-- Modal body -->\n            <div class=\"modal-body\">\n                <h6 class=\"contact-title\">Where to send you booking details?</h6>\n                <form action=\"\">\n                    <!-- Name -->\n                    <mat-form-field class=\"field\">\n                        <input matInput placeholder=\"Contact name\" #fullName>\n                    </mat-form-field>\n                    <!-- End name -->\n\n                    <!-- Country code & telephone -->\n                    <div class=\"field d-flex justify-content-between\">\n                        <mat-form-field class=\"country-code\">\n                            <input matInput placeholder=\"Country code\" #countryCode>\n                        </mat-form-field>\n                        <mat-form-field class=\"telephone\">\n                            <input matInput placeholder=\"Telephone\" #telephone>\n                        </mat-form-field>\n                    </div>\n                    <!-- End code & telephone -->\n\n                    <!-- Email -->\n                    <mat-form-field class=\"field\">\n                        <input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\" #email>\n                        <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n                            Please enter a valid email address\n                        </mat-error>\n                        <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n                            Email is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                    <!-- End email -->\n                </form>\n            </div>\n\n            <!-- Modal footer -->\n            <div class=\"modal-footer\">\n                <button mat-raised-button color=\"primary\" class=\"btn\" (click)=\"getInformationGuest(fullName, countryCode, telephone, email)\" data-dismiss=\"modal\">Done</button>\n                <button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">Close</button>\n            </div>\n\n        </div>\n    </div>\n</div>\n<!-- End popup Contact -->"
+module.exports = "<div class=\"fill-details-content\" *ngIf=\"bookCheckoutStatus; else Payment\">\n    <!-- Book detail -->\n    <div class=\"book-content container-fluid\">\n        <!-- Your Booking -->\n        <div>\n            <p class=\"title-text\">Your booking</p>\n            <div class=\"row\">\n                <div class=\"col\">\n                    <p>Marriotte NY city</p>\n                </div>\n                <div class=\"col text-right\">\n                    <button mat-stroked-button color=\"primary\">Details</button>\n                </div>\n            </div>\n        </div>\n        <!-- End Your Booking -->\n\n        <hr>\n\n        <!-- Information Booking -->\n        <div>\n            <div class=\"infor-book-item\">\n                <ul>\n                    <li class=\"dot-check-in\">\n                        <span class=\"title-text\">&nbsp;&nbsp;Check-in-day</span>\n                        <p>Thur, 06 August 2018</p>\n                    </li>\n                    <li class=\"dot-check-out\">\n                        <span class=\"title-text\">&nbsp;&nbsp;Check-out-day</span>\n                        <p>Sat, 10 August 2018</p>\n                    </li>\n                    <li class=\"dot-room\">\n                        <span class=\"title-text room-type\">&nbsp;&nbsp;Room</span>\n                        <p>Standard Double Room with view</p>\n                    </li>\n                </ul>\n            </div>\n            <!-- End Information Booking -->\n\n            <hr>\n\n            <!-- Contact Details -->\n            <div class=\"contact-detail\" *ngIf=\"originContactStatus; else CheckOutDetail\">\n                <p class=\"title-text\">Contact Details</p>\n                <div class=\"row\">\n                    <div class=\"col-8\">\n                        <p>Please fill in contact details</p>\n                    </div>\n                    <div class=\"col text-right\">\n                        <button mat-stroked-button color=\"primary\" data-toggle=\"modal\" data-target=\"#myModal\">Fill\n                            in</button>\n                    </div>\n                </div>\n                <div class=\"row mt-2\">\n                    <div class=\"col-8\">\n                        <p>Any special request?</p>\n                    </div>\n                    <div class=\"col text-right\">\n                        <button mat-stroked-button color=\"primary\">Add more</button>\n                    </div>\n                </div>\n            </div>\n            <!-- End Contact Details -->\n\n            <hr>\n\n            <!-- Total price -->\n            <div class=\"total-price\">\n                <p class=\"title-text\">Your Price</p>\n                <div class=\"row\">\n                    <div class=\"col-8\">\n                        <p>Total Price</p>\n                    </div>\n                    <div class=\"col text-right\">\n                        <p class=\"price\">$119</p>\n                    </div>\n                </div>\n            </div>\n            <!-- End total price -->\n\n            <!-- Button  -->\n            <button mat-raised-button color=\"primary\" class=\"btn-common btn-continue\" (click)=\"FillInContinue()\" [disabled]=\"btnContinueStatus\">{{buttonTitle}}</button>\n            <!-- End Button -->\n        </div>\n        <!-- End book detail -->\n    </div>\n</div>\n<!-- Check-Out -->\n<ng-template #CheckOutDetail>\n    <!-- Contact Check-Out Details -->\n    <div class=\"contact-detail\">\n        <p class=\"title-text\">Contact Details</p>\n        <div class=\"row\">\n            <div class=\"col-8\">\n                <p>Guest's name</p>\n            </div>\n            <div class=\"col-8\">\n                <p style=\"font-weight: 700;\">{{_fullName}}</p>\n            </div>\n        </div>\n        <p>{{_telephone}} / {{_email}}</p>\n        <div class=\"select-form\">\n            <label class=\"container\">I'm booking for myself\n                <input type=\"radio\" checked=\"checked\" name=\"radio\">\n                <span class=\"checkmark\"></span>\n            </label>\n            <label class=\"container\">I'm booking for another person\n                <input type=\"radio\" name=\"radio\">\n                <span class=\"checkmark\"></span>\n            </label>\n        </div>\n    </div>\n    <!-- End Contact Check-Out Details -->\n\n    <hr>\n\n    <!-- Special request-->\n    <div>\n        <p class=\"title-text\">Special request</p>\n        <div class=\"row\">\n            <div class=\"col\">\n                <p>High Floor</p>\n            </div>\n            <div class=\"col text-right\">\n                <button mat-stroked-button color=\"primary\">Change / Add</button>\n            </div>\n        </div>\n    </div>\n    <!-- End special request -->\n</ng-template>\n<!-- End Check Out -->\n\n<!-- Contact Form -->\n<ng-template #Payment>\n    <div class=\"container-fluid\">\n        <p>Implement payment step</p>\n        <!-- Button  -->\n        <div class=\"row payment-button-group\">\n            <div class=\"col\">\n                <button mat-raised-button color=\"primary\" class=\"btn-common btn-check-info\" (click)=\"checkInfo()\">Check Information</button>\n            </div>\n            <div class=\"col\">\n                <button mat-raised-button color=\"primary\" class=\"btn-common btn-check-info\" (click)=\"confirmPayment()\">Confirm</button>\n            </div>\n        </div>\n        <!-- End Button -->\n    </div>\n</ng-template>\n<!-- End contact form -->\n\n<!-- Popup Contact -->\n<div class=\"modal fade\" id=\"myModal\">\n    <div class=\"modal-dialog\">\n        <div class=\"modal-content\">\n\n            <!-- Modal Header -->\n            <div class=\"modal-header\">\n                <span data-dismiss=\"modal\"><i class=\"material-icons modal-back-icon\">keyboard_backspace</i></span>\n                <h4 class=\"modal-title\">&nbsp;&nbsp;Contact</h4>\n            </div>\n\n            <!-- Modal body -->\n            <div class=\"modal-body\">\n                <h6 class=\"contact-title\">Where to send you booking details?</h6>\n                <form action=\"\">\n                    <!-- Name -->\n                    <mat-form-field class=\"field\">\n                        <input matInput placeholder=\"Contact name\" #fullName>\n                    </mat-form-field>\n                    <!-- End name -->\n\n                    <!-- Country code & telephone -->\n                    <div class=\"field d-flex justify-content-between\">\n                        <mat-form-field class=\"country-code\">\n                            <span matPrefix>+ &nbsp;</span>\n                            <input matInput maxlength=\"2\" placeholder=\"Country code\" #countryCode>\n                            <mat-hint align=\"end\">{{countryCode.value.length}} / 2</mat-hint>\n                        </mat-form-field>\n                        <mat-form-field class=\"telephone\">\n                            <input matInput maxlength=\"8\" placeholder=\"Telephone\" #telephone>\n                            <mat-hint align=\"end\">{{telephone.value.length}} / 8</mat-hint>\n                        </mat-form-field>\n                    </div>\n                    <!-- End code & telephone -->\n\n                    <!-- Email -->\n                    <mat-form-field class=\"field\">\n                        <input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\" #email>\n                        <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n                            Please enter a valid email address\n                        </mat-error>\n                        <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n                            Email is <strong>required</strong>\n                        </mat-error>\n                    </mat-form-field>\n                    <!-- End email -->\n                </form>\n            </div>\n\n            <!-- Modal footer -->\n            <div class=\"modal-footer\">\n                <button mat-raised-button color=\"primary\" class=\"btn\" (click)=\"getInformationGuest(fullName, countryCode, telephone, email)\">Done</button>\n                <button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">Close</button>\n            </div>\n\n        </div>\n    </div>\n</div>\n<!-- End popup Contact -->"
 
 /***/ }),
 
@@ -733,190 +769,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var FillInDetailsComponent = /** @class */ (function () {
-    function FillInDetailsComponent(ultility) {
-        this.ultility = ultility;
-        this.originContactStatus = true;
-        this.bookCheckoutStatus = true;
-        this.countContinueBtnClick = 0;
-        this.emailFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [
-            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email,
-        ]);
-        this.ultility.setDisplayHeader(true);
-        this.ultility.setDisplayHomeHeader(false);
-        this.ultility.setDisplayInnerHeader(true);
-        this.ultility.setDisplayProcessBar(true);
-        this.ultility.setDisplayStarRating(false);
-        this.ultility.setDisplayNavbar(false);
-        this.ultility.setTitle('Fill In Details');
-    }
-    FillInDetailsComponent.prototype.ngOnInit = function () {
-    };
-    FillInDetailsComponent.prototype.FillInContinue = function () {
-        this.countContinueBtnClick++;
-        if (this.countContinueBtnClick === 1) {
-            this.originContactStatus = false;
-        }
-        else if (this.countContinueBtnClick === 2) {
-            this.bookCheckoutStatus = false;
-        }
-        // console.log(this.countContinueBtnClick);
-    };
-    FillInDetailsComponent.prototype.getInformationGuest = function (fullName, countryCode, telephone, email) {
-        this._fullName = fullName.value;
-        this._telephone = '+' + countryCode.value + ' ' + telephone.value;
-        this._email = email.value;
-        if (this._fullName && this._telephone && this._email) {
-            this.originContactStatus = false;
-        }
-        console.log(this._fullName + ' ' + this._telephone + ' ' + this._email);
-    };
-    FillInDetailsComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-fill-in-details',
-            template: __webpack_require__(/*! ./fill-in-details.component.html */ "./src/app/pages/fill-in-details/fill-in-details.component.html"),
-            styles: [__webpack_require__(/*! ./fill-in-details.component.css */ "./src/app/pages/fill-in-details/fill-in-details.component.css")]
-        }),
-        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"]])
-    ], FillInDetailsComponent);
-    return FillInDetailsComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/pages/find-hotel/find-hotel.component.css":
-/*!***********************************************************!*\
-  !*** ./src/app/pages/find-hotel/find-hotel.component.css ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/pages/find-hotel/find-hotel.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/pages/find-hotel/find-hotel.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"find-hotel-content container-fluid\">\n    <div class=\"title\">\n        <span>All room (9)</span>\n    </div>\n    <div class=\"item\">\n        <div class=\"row\">\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n        </div>\n    </div>\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/pages/find-hotel/find-hotel.component.ts":
-/*!**********************************************************!*\
-  !*** ./src/app/pages/find-hotel/find-hotel.component.ts ***!
-  \**********************************************************/
-/*! exports provided: FindHotelComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FindHotelComponent", function() { return FindHotelComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var FindHotelComponent = /** @class */ (function () {
-    function FindHotelComponent(ultility) {
-        this.ultility = ultility;
-        this.ultility.setDisplayHeader(true);
-        this.ultility.setDisplayHomeHeader(false);
-        this.ultility.setDisplayInnerHeader(true);
-        this.ultility.setDisplayProcessBar(false);
-        this.ultility.setDisplayStarRating(true);
-        this.ultility.setTitle('Marriote NewYork City');
-    }
-    FindHotelComponent.prototype.ngOnInit = function () {
-    };
-    FindHotelComponent.prototype.isDisplayHeader = function () {
-        return this.ultility.isDisplayHeader();
-    };
-    FindHotelComponent.prototype.isDisplayHomeHeader = function () {
-        return this.ultility.isDisplayHomeHeader();
-    };
-    FindHotelComponent.prototype.isDisplayInnerHeader = function () {
-        return this.ultility.isDisplayInnerHeader();
-    };
-    FindHotelComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-find-hotel',
-            template: __webpack_require__(/*! ./find-hotel.component.html */ "./src/app/pages/find-hotel/find-hotel.component.html"),
-            styles: [__webpack_require__(/*! ./find-hotel.component.css */ "./src/app/pages/find-hotel/find-hotel.component.css")]
-        }),
-        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"]])
-    ], FindHotelComponent);
-    return FindHotelComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/pages/home/home.component.css":
-/*!***********************************************!*\
-  !*** ./src/app/pages/home/home.component.css ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "#custom-search-input {\n    border: solid 1px #E4E4E4;\n    border-radius: 6px;\n    background-color: #fff;\n}\n\n#custom-search-input input {\n    border: 0;\n    box-shadow: none;\n}\n\n#custom-search-input button {\n    margin: 2px 0 0 0;\n    background: none;\n    box-shadow: none;\n    border: 0;\n    color: #666666;\n    padding: 0 0 0 10px;\n}\n\n#custom-search-input button:hover {\n    border: 0;\n    box-shadow: none;\n    border-left: solid 1px #ccc;\n}\n\n#custom-search-input .glyphicon-search {\n    font-size: 23px;\n}\n\n.icon-search {\n    color: #a8a8a8;\n}\n\n.form {\n    padding: 0.5em 5%;\n}\n\n.form-control {\n    padding: unset;\n}\n\n.form__label {\n    margin: 0.75rem 0;\n}\n\n.form__icon {\n    color: #fc6f81;\n}\n\n.card {\n    border-radius: 1em;\n}\n\n.info-text {\n    text-align: left;\n    width: 100%;\n}\n\nheader,\nform {\n    padding: 2em 5%;\n}\n\n.form-group {\n    margin-bottom: 20px;\n}\n\n.check-in {\n    margin-left: unset;\n}\n\n.field__date {\n    margin-right: 0.75rem;\n}\n\n#duration {\n    text-align: center;\n}\n\nh2.heading {\n    font-size: 18px;\n    text-transform: uppercase;\n    font-weight: 300;\n    text-align: left;\n    color: #506982;\n    border-bottom: 1px solid #506982;\n    padding-bottom: 3px;\n    margin-bottom: 20px;\n}\n\n.btn-find-hotel {\n    outline: none;\n    background-color: #545dff;\n    /* border-color: #545dff; */\n    font-size: 16px;\n    margin-top: 10%;\n    padding: 5px 0;\n    width: 100%;\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n}\n\n.title__recent-searches {\n    padding: 1rem;\n}\n\n.col-6.col-md-6.item:nth-child(odd) {\n    padding-right: .5rem;\n    padding-left: 2px;\n}\n\n.col-6.col-md-6.item:nth-child(even) {\n    padding-left: .5rem;\n    padding-right: 2px;\n}\n\n.explore {\n    width: 100%;\n}\n\n.explore__content {\n    overflow: auto;\n    white-space: nowrap;\n}\n\n.explore__item {\n    display: inline-block;\n    /* margin: 0 0.5rem; */\n}\n\n/* Date */\n\n#control_wrapper {\n    max-width: 246px;\n    margin: 30px auto;\n    padding-top: 50px;\n}\n\n.control-section {\n    margin: 25px auto;\n}\n\n/* Mobiscroll */\n\n.form-control[readonly].mobiscroll {\n    background-color: unset;\n    opacity: 1;\n}\n\n.mbsc-sc-whl {\n    margin: 0 2rem;\n}\n\n/* End mobiscroll */"
-
-/***/ }),
-
-/***/ "./src/app/pages/home/home.component.html":
-/*!************************************************!*\
-  !*** ./src/app/pages/home/home.component.html ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"home container mx-auto container-custom\">\n    <div class=\"card home__find-hotel\">\n        <form action=\"\" class=\"form\">\n            <!--  Details -->\n            <div class=\"form-group\">\n                <div class=\"grid\">\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <label class=\"form__label\"><i\n                                    class=\"form__icon fa fa-map-pin\"></i>&nbsp;&nbsp;Destination</label>\n                            <div id=\"custom-search-input\">\n                                <div class=\"input-group px-2\">\n                                    <input type=\"text\" class=\"form-control input-search\" placeholder=\"NewYork\" />\n                                    <span class=\"input-group-btn\">\n                                        <button class=\"btn btn-search btn-lg\" type=\"button\">\n                                            <a href=\"#\"><i class=\"fa fa-search icon-search\"></i></a>\n                                        </button>\n                                    </span>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <div class=\"row check-in\">\n                                <div class=\"col-8 col-md-6 p-0 field__date\">\n                                    <label class=\"form__label\"><i\n                                            class=\"form__icon fa fa-calendar\"></i>&nbsp;&nbsp;Check-in date</label>\n                                    <input type=\"text\" name=\"datefilter\" (focus)=\"getDateRangePicker()\" class=\"form-control px-2\" />\n                                </div>\n                                <div class=\"col-3 col-md-6 p-0 field__duration\">\n                                    <label class=\"form__label\">Duration</label>\n                                    <input type=\"text\" class=\"form-control px-1\" id=\"duration\" disabled/>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <label class=\"form__label\"><i class=\"form__icon fa fa-tags\"></i>&nbsp;&nbsp;Total guests & Rooms</label>\n                            <div id=\"custom-search-input\">\n                                <div class=\"input-group px-2\">\n                                    <input mbsc-scroller [mbsc-options]=\"scrollerOptions\" type=\"text\" class=\"form-control mobiscroll\" placeholder=\"2 guests & 1 rooms\" />\n                                    <span class=\"input-group-btn\">\n                                        <button class=\"btn btn-info btn-lg\" type=\"button\">\n                                            <a href=\"#\"><i class=\"fa fa-sort\"></i></a>\n                                        </button>\n                                    </span>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <button mat-raised-button color=\"primary\" class=\"btn-find-hotel\" (click)=\"goToPage('FINDHOTEL')\">Find hotel</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <!-- /.form-group -->\n        </form>\n    </div>\n    <div class=\"recent-searches\">\n        <h5 class=\"title__recent-searches\">Recent Researches</h5>\n        <div class=\"container-fluid\">\n            <div class=\"row\">\n                <div class=\"col-6 col-md-6 item \" *ngFor='let item of hotelListRecent'>\n                    <app-hotel-item [hotel]='item' (click)='goToDetail()'></app-hotel-item>\n                </div>\n            </div>\n        </div>\n    </div>\n    <hr>\n\n    <div class=\"explore\">\n        <h5 class=\"title__recent-searches\">Explore with QueenHotel</h5>\n        <div class=\"explore__content\">\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n        </div>\n    </div>\n\n    <input [(ngModel)]=\"price\" mbsc-scroller [mbsc-options]=\"scrollerOptions\" placeholder=\"Please Select...\" />\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/pages/home/home.component.ts":
-/*!**********************************************!*\
-  !*** ./src/app/pages/home/home.component.ts ***!
-  \**********************************************/
-/*! exports provided: HomeComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
-/* harmony import */ var src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/utilities/system.constants */ "./src/app/utilities/system.constants.ts");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -944,16 +799,312 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-// import { AppComponent } from 'src/app/app.component';'
+
+var FillInDetailsComponent = /** @class */ (function (_super) {
+    __extends(FillInDetailsComponent, _super);
+    function FillInDetailsComponent(utility, router, _snackBar) {
+        var _this = _super.call(this, utility, router, _snackBar) || this;
+        _this.utility = utility;
+        _this.router = router;
+        _this._snackBar = _snackBar;
+        _this.originContactStatus = true;
+        _this.bookCheckoutStatus = true;
+        _this.countContinueBtnClick = 0;
+        _this.btnContinueStatus = true;
+        _this.buttonTitle = 'Continue';
+        _this.currentPositon = '';
+        _this.emailFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email,
+        ]);
+        _this.utility.setDisplayHeader(true);
+        _this.utility.setDisplayHomeHeader(false);
+        _this.utility.setDisplayInnerHeader(true);
+        _this.utility.setDisplayProcessBar(true);
+        _this.utility.setDisplayStarRating(false);
+        _this.utility.setDisplayNavbar(false);
+        _this.utility.setCheckOutStatus(false);
+        _this.utility.setPayStatus(false);
+        _this.utility.setTitle('Fill In Details');
+        return _this;
+    }
+    FillInDetailsComponent.prototype.ngOnInit = function () {
+    };
+    FillInDetailsComponent.prototype.FillInContinue = function () {
+        this.bookCheckoutStatus = false;
+        this.utility.setPayStatus(true);
+    };
+    FillInDetailsComponent.prototype.getInformationGuest = function (fullName, countryCode, telephone, email) {
+        this._fullName = fullName.value;
+        this._telephone = '+' + countryCode.value + ' ' + telephone.value;
+        this._email = email.value;
+        var telephoneStr = countryCode.value + telephone.value;
+        var regTelephone = /^[0-9]+$/;
+        var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!this._fullName || !regTelephone.test(telephoneStr) || (this._telephone.length < 10) || !regEmail.test(this._email)) {
+            console.log('Tel: ' + false);
+            this.openSnackBarTop('Please check your input!', '');
+        }
+        else {
+            this.originContactStatus = false;
+            this.btnContinueStatus = !this.btnContinueStatus;
+            this.utility.setCheckOutStatus(true);
+            $('#myModal').modal('hide');
+        }
+        console.log(this._fullName + ' ' + this._telephone + ' ' + this._email);
+    };
+    FillInDetailsComponent.prototype.checkInfo = function () {
+        this.bookCheckoutStatus = !this.bookCheckoutStatus;
+        this.utility.setPayStatus(false);
+    };
+    FillInDetailsComponent.prototype.confirmPayment = function () {
+        alert('--- Return result ---');
+    };
+    FillInDetailsComponent.prototype.openSnackBarTop = function (message, action) {
+        this._snackBar.open(message, action, {
+            duration: 2000,
+            // here specify the position
+            verticalPosition: 'top'
+        });
+    };
+    FillInDetailsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-fill-in-details',
+            template: __webpack_require__(/*! ./fill-in-details.component.html */ "./src/app/pages/fill-in-details/fill-in-details.component.html"),
+            styles: [__webpack_require__(/*! ./fill-in-details.component.css */ "./src/app/pages/fill-in-details/fill-in-details.component.css")]
+        }),
+        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]])
+    ], FillInDetailsComponent);
+    return FillInDetailsComponent;
+}(src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]));
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/find-hotel/find-hotel.component.css":
+/*!***********************************************************!*\
+  !*** ./src/app/pages/find-hotel/find-hotel.component.css ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".find-hotel-content {\n    margin-bottom: 4rem;\n}"
+
+/***/ }),
+
+/***/ "./src/app/pages/find-hotel/find-hotel.component.html":
+/*!************************************************************!*\
+  !*** ./src/app/pages/find-hotel/find-hotel.component.html ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"find-hotel-content container-fluid mt-2\">\n    <div class=\"title\">\n        <span>All room (9)</span>\n    </div>\n    <div class=\"item\">\n        <div class=\"row\">\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n            <app-find-hotel-item></app-find-hotel-item>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/pages/find-hotel/find-hotel.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/pages/find-hotel/find-hotel.component.ts ***!
+  \**********************************************************/
+/*! exports provided: FindHotelComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FindHotelComponent", function() { return FindHotelComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FindHotelComponent = /** @class */ (function () {
+    function FindHotelComponent(utility) {
+        this.utility = utility;
+        this.utility.setDisplayHeader(true);
+        this.utility.setDisplayHomeHeader(false);
+        this.utility.setDisplayNavbar(true);
+        this.utility.setDisplayInnerHeader(true);
+        this.utility.setDisplayProcessBar(false);
+        this.utility.setDisplayStarRating(true);
+        this.utility.setTitle('Marriote NewYork City');
+    }
+    FindHotelComponent.prototype.ngOnInit = function () {
+    };
+    FindHotelComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-find-hotel',
+            template: __webpack_require__(/*! ./find-hotel.component.html */ "./src/app/pages/find-hotel/find-hotel.component.html"),
+            styles: [__webpack_require__(/*! ./find-hotel.component.css */ "./src/app/pages/find-hotel/find-hotel.component.css")]
+        }),
+        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"]])
+    ], FindHotelComponent);
+    return FindHotelComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/finded-hotel-list/finded-hotel-list.component.css":
+/*!*************************************************************************!*\
+  !*** ./src/app/pages/finded-hotel-list/finded-hotel-list.component.css ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".find-hotel-content {\n    margin-bottom: 4rem;\n}\n\n.title-h{\n    font-weight: 600;\n    font-size: 18px;\n}"
+
+/***/ }),
+
+/***/ "./src/app/pages/finded-hotel-list/finded-hotel-list.component.html":
+/*!**************************************************************************!*\
+  !*** ./src/app/pages/finded-hotel-list/finded-hotel-list.component.html ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"find-hotel-content container-fluid mt-2\">\n  <div class=\"title\">\n      <span class=\"title-h\">Search result (99 hotels)</span>\n  </div>\n  <div class=\"item\">\n      <div class=\"row\">\n          <app-finded-hotel-item></app-finded-hotel-item>\n          <app-finded-hotel-item></app-finded-hotel-item>\n          <app-finded-hotel-item></app-finded-hotel-item>\n          <app-finded-hotel-item></app-finded-hotel-item>\n      </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/pages/finded-hotel-list/finded-hotel-list.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/pages/finded-hotel-list/finded-hotel-list.component.ts ***!
+  \************************************************************************/
+/*! exports provided: FindedHotelListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FindedHotelListComponent", function() { return FindedHotelListComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FindedHotelListComponent = /** @class */ (function () {
+    function FindedHotelListComponent(utility) {
+        this.utility = utility;
+        this.utility.setDisplayHeader(true);
+        this.utility.setDisplayBackButton(true);
+        this.utility.setDisplayHeaderTitle(false);
+        this.utility.setDisplayHomeHeader(true);
+        this.utility.setDisplayNavbar(true);
+        this.utility.setDisplayProcessBar(false);
+        this.utility.setTitle('NewYork City');
+    }
+    FindedHotelListComponent.prototype.ngOnInit = function () {
+    };
+    FindedHotelListComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-finded-hotel-list',
+            template: __webpack_require__(/*! ./finded-hotel-list.component.html */ "./src/app/pages/finded-hotel-list/finded-hotel-list.component.html"),
+            styles: [__webpack_require__(/*! ./finded-hotel-list.component.css */ "./src/app/pages/finded-hotel-list/finded-hotel-list.component.css")]
+        }),
+        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"]])
+    ], FindedHotelListComponent);
+    return FindedHotelListComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/home/home.component.css":
+/*!***********************************************!*\
+  !*** ./src/app/pages/home/home.component.css ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "#custom-search-input {\n    border: solid 1px #E4E4E4;\n    border-radius: 6px;\n    background-color: #fff;\n}\n\n#custom-search-input input {\n    border: 0;\n    box-shadow: none;\n}\n\n#custom-search-input button {\n    margin: 2px 0 0 0;\n    background: none;\n    box-shadow: none;\n    border: 0;\n    color: #666666;\n    padding: 0 0 0 10px;\n}\n\n#custom-search-input button:hover {\n    border: 0;\n    box-shadow: none;\n    border-left: solid 1px #ccc;\n}\n\n#custom-search-input .glyphicon-search {\n    font-size: 23px;\n}\n\n.icon-search {\n    color: #a8a8a8;\n}\n\n.form {\n    padding: 0.5em 5%;\n}\n\n.form-control {\n    padding: unset;\n}\n\n.form__label {\n    margin: 0.75rem 0;\n}\n\n.form__icon {\n    color: #fc6f81;\n}\n\n.card {\n    border-radius: 1em;\n}\n\n.info-text {\n    text-align: left;\n    width: 100%;\n}\n\nheader,\nform {\n    padding: 2em 5%;\n}\n\n.form-group {\n    margin-bottom: 20px;\n}\n\n.check-in {\n    margin-left: unset;\n}\n\n.field__date {\n    margin-right: 0.75rem;\n}\n\n#duration {\n    text-align: center;\n}\n\nh2.heading {\n    font-size: 18px;\n    text-transform: uppercase;\n    font-weight: 300;\n    text-align: left;\n    color: #506982;\n    border-bottom: 1px solid #506982;\n    padding-bottom: 3px;\n    margin-bottom: 20px;\n}\n\n.btn-find-hotel {\n    outline: none;\n    background-color: #545dff;\n    /* border-color: #545dff; */\n    font-size: 16px;\n    margin-top: 10%;\n    padding: 5px 0;\n    width: 100%;\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n}\n\n.title__recent-searches {\n    padding: 1rem 0;\n}\n\n.col-6.col-md-6.item:nth-child(odd) {\n    padding-right: .5rem;\n    padding-left: 2px;\n}\n\n.col-6.col-md-6.item:nth-child(even) {\n    padding-left: .5rem;\n    padding-right: 2px;\n}\n\n.explore {\n    width: 100%;\n}\n\n.explore__content {\n    overflow: auto;\n    white-space: nowrap;\n}\n\n.explore__item {\n    display: inline-block;\n    /* margin: 0 0.5rem; */\n}\n\n/* Date */\n\n#control_wrapper {\n    max-width: 246px;\n    margin: 30px auto;\n    padding-top: 50px;\n}\n\n.control-section {\n    margin: 25px auto;\n}\n\n/* Mobiscroll */\n\n.form-control[readonly].mobiscroll {\n    background-color: unset;\n    opacity: 1;\n}\n\n.mbsc-sc-whl-gr-3d .mbsc-sc-whl {\n    margin: 0 2rem!important;\n}\n\n/* End mobiscroll */"
+
+/***/ }),
+
+/***/ "./src/app/pages/home/home.component.html":
+/*!************************************************!*\
+  !*** ./src/app/pages/home/home.component.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"home container mx-auto container-custom\">\n    <div class=\"card home__find-hotel\">\n        <form action=\"\" class=\"form\">\n            <!--  Details -->\n            <div class=\"form-group\">\n                <div class=\"grid\">\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <label class=\"form__label\"><i\n                                    class=\"form__icon fa fa-map-pin\"></i>&nbsp;&nbsp;Destination</label>\n                            <div id=\"custom-search-input\">\n                                <div class=\"input-group px-2\">\n                                    <input type=\"text\" class=\"form-control input-search\" placeholder=\"NewYork\" />\n                                    <span class=\"input-group-btn\">\n                                        <button class=\"btn btn-search btn-lg\" type=\"button\">\n                                            <a><i class=\"fa fa-search icon-search\"></i></a>\n                                        </button>\n                                    </span>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <div class=\"row check-in\">\n                                <div class=\"col-8 col-md-6 p-0 field__date\">\n                                    <label class=\"form__label\"><i\n                                            class=\"form__icon fa fa-calendar\"></i>&nbsp;&nbsp;Check-in date</label>\n                                    <input type=\"text\" name=\"datefilter\" (focus)=\"getDateRangePicker()\" class=\"form-control px-2\" />\n                                </div>\n                                <div class=\"col-3 col-md-6 p-0 field__duration\">\n                                    <label class=\"form__label\">Duration</label>\n                                    <input type=\"text\" class=\"form-control px-1\" id=\"duration\" disabled />\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <label class=\"form__label\"><i class=\"form__icon fa fa-tags\"></i>&nbsp;&nbsp;Total guests &\n                                Rooms</label>\n                            <div id=\"custom-search-input\">\n                                <div class=\"input-group px-2\">\n                                    <input mbsc-scroller [mbsc-options]=\"scrollerOptions\" type=\"text\" class=\"form-control mobiscroll\" placeholder=\"2 guests & 1 rooms\" />\n                                    <span class=\"input-group-btn\">\n                                        <button class=\"btn btn-info btn-lg\" type=\"button\">\n                                            <a><i class=\"fa fa-sort\"></i></a>\n                                        </button>\n                                    </span>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-1-4 col-1-4-sm\">\n                        <div class=\"controls\">\n                            <button mat-raised-button color=\"primary\" class=\"btn-find-hotel\" (click)=\"goToPage('FINDEDHOTELLIST')\">Find hotel</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <!-- /.form-group -->\n        </form>\n    </div>\n    <div class=\"recent-searches\">\n        <h5 class=\"title__recent-searches\">Recent Researches</h5>\n        <div class=\"container-fluid\">\n            <div class=\"row\">\n                <div class=\"col-6 col-md-6 item \" *ngFor='let item of hotelListRecent'>\n                    <app-hotel-item [hotel]='item' (click)=\"goToPage('FINDEDHOTELLIST')\"></app-hotel-item>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <hr class=\"line\">\n\n    <div class=\"explore\">\n        <h5 class=\"title__recent-searches\">Explore with TravelInHands</h5>\n        <div class=\"explore__content\">\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n            <app-explore-item class=\"explore__item\"></app-explore-item>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/pages/home/home.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/pages/home/home.component.ts ***!
+  \**********************************************/
+/*! exports provided: HomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
+/* harmony import */ var src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/utilities/system.constants */ "./src/app/utilities/system.constants.ts");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+// import { } from 'cordova-plugin-keyboard';
 // Declare mobiscroll
 var guestValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var roomValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var HomeComponent = /** @class */ (function (_super) {
     __extends(HomeComponent, _super);
-    function HomeComponent(utility, router) {
-        var _this = _super.call(this, utility, router) || this;
+    function HomeComponent(utility, router, _snackbar) {
+        var _this = _super.call(this, utility, router, _snackbar) || this;
         _this.utility = utility;
         _this.router = router;
+        _this._snackbar = _snackbar;
         _this.scrollerOptions = {
             theme: 'ios',
             wheels: [
@@ -977,20 +1128,24 @@ var HomeComponent = /** @class */ (function (_super) {
         _this.duration = '';
         _this.hotelListRecent = [
             // tslint:disable-next-line:max-line-length
-            { name: 'California', price: '200.000 USD', description: 'Some example text', image: './assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg' },
-            { name: 'White Palace', price: '150 000 USD', description: 'Some example text', image: './assets/images/tivkumb_0.jpg' },
-            { name: 'White Palace', price: '150 000 USD', description: 'Some example text', image: './assets/images/tivkumb_0.jpg' },
-            { name: 'White Palace', price: '150 000 USD', description: 'Some example text', image: './assets/images/tivkumb_0.jpg' }
+            { name: 'NewYork City', price: '200 USD', description: 'Some example text', image: './assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg' },
+            { name: 'White Palace', price: '170 USD', description: 'Some example text', image: './assets/images/hotel.jpg' },
+            { name: 'King Hotel', price: '150 USD', description: 'Some example text', image: './assets/images/tivkumb_0.jpg' },
+            { name: 'NEC Hotel', price: '1200 USD', description: 'Some example text', image: './assets/images/room.jpg' }
         ];
         utility.setDisplayHeader(true);
         utility.setDisplayHomeHeader(true);
         utility.setDisplayInnerHeader(false);
         utility.setDisplayNavbar(true);
+        utility.setDisplayHeaderTitle(true);
+        utility.setDisplayBackButton(false);
         return _this;
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
     HomeComponent.prototype.getDateRangePicker = function () {
+        // Keyboard.hide();
+        console.log();
         var diffDate;
         $('input[name="datefilter"]').daterangepicker({
             autoUpdateInput: false,
@@ -1025,21 +1180,22 @@ var HomeComponent = /** @class */ (function (_super) {
         this.router.navigate(['/find-hotel']);
     };
     HomeComponent.prototype.goToDetail = function () {
-        this.router.navigate(['/hotel-detail']);
+        this.router.navigate(['/HOTELDETAIL']);
     };
     HomeComponent.prototype.goToPage = function (pageCode) {
-        alert('GotoPage');
+        // alert(pageCode);
         try {
             var targetPage = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_4__["PAGE_CODE"][pageCode];
             console.log(targetPage);
             if (targetPage) {
                 this.pushPage(targetPage, {
                     params: {},
-                    pageCode: src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_4__["PAGE_CODE"].FINDHOTEL
+                    pageCode: src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_4__["PAGE_CODE"].HOME
                 });
             }
         }
         catch (error) {
+            // Nothing
         }
     };
     HomeComponent = __decorate([
@@ -1049,7 +1205,8 @@ var HomeComponent = /** @class */ (function (_super) {
             styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/pages/home/home.component.css")]
         }),
         __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_3__["UtilityService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]])
     ], HomeComponent);
     return HomeComponent;
 }(_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"]));
@@ -1065,7 +1222,7 @@ var HomeComponent = /** @class */ (function (_super) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*Slide */\n.container-slide{\n    padding-right: 25px;\n    padding-left: 25px;\n}\n.carousel-inner {\n    border-radius: 0.5em;\n}\n.carousel-inner img {\n    width: 100%;\n    height: 315px;\n}\n.carousel-indicators li{\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n}\n/* End Slide */\n/* Deals */\n.heading{\n    margin: 2rem 0;\n}\n.deals__content, .rating{\n    display: flex;\n    justify-content: space-between;\n    /* align-items: center; */\n}\n.sub-title, .pernight{\n    font-size: 14px;\n    color: rgb(150, 150, 150);\n}\n.title{\n    color: #4D4DC7;\n}\n.price{\n    color: rgb(255, 116, 66);\n}\n.btn-see{\n    float: right;\n    background-color: rgb(195, 195, 238);\n    font-size: 14px;\n    color: #4c4cc6;\n}\nhr.line{\n    margin-top: 4rem;\n    border-top: 2px solid #f5bec5;\n}\n/* End Deals */\n/* Rating & Reviews */\n.rating__point{\n    width: 50px;\n    height: 50px;\n    background-color: #4D4DC7;\n    border-radius: 5px;\n    position: relative;\n    margin-right: 0.5rem;\n}\n.point{\n    position: absolute;\n    left: 50%;\n    top: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n}\n.bar__content{\n    padding-right: 15px;\n    margin: 10px 0;\n}\n.bar__content:nth-child(odd){\n    padding-left: 0;\n}\n/* .bar__content:nth-child(even){\n    padding-right: 0;\n} */\n.bar__content p{\n    margin-bottom: 1rem;\n    letter-spacing: 0.5;\n}\n/* The bar container */\n.bar-container {\n    width: 85%;\n    background-color: rgb(247, 209, 138);\n    text-align: center;\n    color: white;\n    border-radius: 10px;\n}\n/* Individual bars */\n.bar{\n    width: 60%; \n    height: 4px; \n    background-color: rgb(255, 175, 25);\n    border-radius: 10px;\n    position: relative;\n}\n.rating__bars{\n    display: flex;\n    flex-wrap: wrap;\n}\n.bar__point{\n    position: absolute;\n    color: rgb(255, 175, 25);\n    top: 1.5rem;\n    right: 5px;\n}\n/* End Rating & Reviews */\n/* Amenities */\n.amenites__content{\n    display: flex;\n    justify-content: space-between;\n    margin-bottom: 2rem;\n}\n.amenities__item{\n    padding-top: 20px;\n    text-align: center;\n    width: 80px;\n    height: 80px;\n    border: 1px solid rgb(70, 70, 70);\n}\n.icon, .icon-name{\n    color: #4D4DC7;\n}\n.icon{\n    font-size: 25px;\n}\n.icon-name{\n    font-size: 14px;\n    margin: 0;\n}\n/* End Amenities */\n/* Description Hotel */\n.description-text{\n    color: rgb(150, 150, 150);\n    font-size: 14px;\n    line-height: 1.75rem;\n    letter-spacing: .5px;\n}\n/* End Descripttion Hotel */\n/* Contact */\n#map {\n    width: 100%;\n    height: 250px;\n    background-color: grey;\n  }\n/* End Contact */"
+module.exports = "/* Content */\n.hotel-detail{\n    margin-bottom: 8rem;\n}\n/*Slide */\n.container-slide{\n    padding-right: 25px;\n    padding-left: 25px;\n}\n.carousel-inner {\n    border-radius: 0.5em;\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n}\n.carousel-inner img {\n    width: 100%;\n    height: 315px;\n}\n.carousel-indicators li{\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n}\n/* End Slide */\n/* Deals */\n.heading{\n    margin: 2rem 0;\n}\n.deals__content, .rating{\n    display: flex;\n    justify-content: space-between;\n    /* align-items: center; */\n}\n.sub-title, .pernight{\n    font-size: 14px;\n    color: rgb(150, 150, 150);\n}\n.title{\n    color: #4D4DC7;\n}\n.price{\n    color: rgb(255, 116, 66);\n}\n.btn-see{\n    float: right;\n    background-color: rgb(195, 195, 238);\n    font-size: 14px;\n    color: #4c4cc6;\n}\nhr.line{\n    margin-top: 4rem;\n    border-top: 2px solid #f5bec5;\n}\n/* End Deals */\n/* Rating & Reviews */\n.rating__point{\n    width: 50px;\n    height: 50px;\n    background-color: #4D4DC7;\n    border-radius: 5px;\n    position: relative;\n    margin-right: 0.5rem;\n}\n.point{\n    position: absolute;\n    left: 50%;\n    top: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n}\n.bar__content{\n    padding-right: 15px;\n    margin: 10px 0;\n}\n.bar__content:nth-child(odd){\n    padding-left: 0;\n}\n/* .bar__content:nth-child(even){\n    padding-right: 0;\n} */\n.bar__content p{\n    margin-bottom: 1rem;\n    letter-spacing: 0.5;\n}\n/* The bar container */\n.bar-container {\n    width: 85%;\n    background-color: rgb(247, 209, 138);\n    text-align: center;\n    color: white;\n    border-radius: 10px;\n}\n/* Individual bars */\n.bar{\n    width: 60%; \n    height: 4px; \n    background-color: rgb(255, 175, 25);\n    border-radius: 10px;\n    position: relative;\n}\n.rating__bars{\n    display: flex;\n    flex-wrap: wrap;\n}\n.bar__point{\n    position: absolute;\n    color: rgb(255, 175, 25);\n    top: 1.5rem;\n    right: 5px;\n}\n/* End Rating & Reviews */\n/* Amenities */\n.amenites__content{\n    display: flex;\n    justify-content: space-between;\n    margin-bottom: 2rem;\n}\n.amenities__item{\n    padding-top: 20px;\n    text-align: center;\n    width: 80px;\n    height: 80px;\n    border: 1px solid rgb(70, 70, 70);\n}\n.icon, .icon-name{\n    color: #4D4DC7;\n}\n.icon{\n    font-size: 25px;\n}\n.icon-name{\n    font-size: 14px;\n    margin: 0;\n}\n/* End Amenities */\n/* Description Hotel */\n.description-text{\n    color: rgb(150, 150, 150);\n    font-size: 14px;\n    line-height: 1.75rem;\n    letter-spacing: .5px;\n}\n/* End Descripttion Hotel */\n/* Contact */\n#map {\n    width: 100%;\n    height: 250px;\n    background-color: grey;\n  }\n/* End Contact */\n/* Footer */\n.footer {\n    width: 100%;\n    background-color: #ffffff;\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n    /* padding: 1.5rem 0; */\n    overflow: hidden;\n    z-index: 99;\n    position: fixed;\n    bottom: 0;\n}\n.footer-content{\n    display: flex;\n    justify-content: space-between;\n    padding: 1rem 0;\n}\n.footer-detail{\n    width: 70%;\n}\n.footer-detail p{\n    margin-bottom: 0;\n}\n.footer-btn{\n    display: flex;\n    align-items: center;\n}\n.price{\n    color: orange;\n    font-size: 16px;\n    font-weight: 600;\n}\n.mat-card-content, .mat-card-subtitle {\n    font-size: 15px;\n}\n.footer-subtitle{\n    margin-bottom: unset;\n}\n/* End Footer */"
 
 /***/ }),
 
@@ -1076,7 +1233,7 @@ module.exports = "/*Slide */\n.container-slide{\n    padding-right: 25px;\n    p
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"hotel-detail container-custom\">\n  <!-- Carousel -->\n  <div class=\"container-fluid container-slide\">\n    <div class=\"carousel slide\" data-ride=\"carousel\">\n      <!-- Indicators -->\n      <ul class=\"carousel-indicators\">\n        <li data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>\n        <li data-target=\"#demo\" data-slide-to=\"1\"></li>\n        <li data-target=\"#demo\" data-slide-to=\"2\"></li>\n      </ul>\n      <!-- The slideshow -->\n      <div class=\"carousel-inner\">\n        <div class=\"carousel-item active\">\n          <img src=\"./assets/images/HaLong.jpg\" alt=\"Los Angeles\">\n        </div>\n        <div class=\"carousel-item\">\n          <img\n            src=\"./assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg\"\n            alt=\"Chicago\">\n        </div>\n        <div class=\"carousel-item\">\n          <img src=\"./assets/images/tivkumb_0.jpg\" alt=\"New York\">\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- End Carousel  -->\n\n  <div class=\"container-fluid\">\n\n    <!-- Deals -->\n    <div class=\"deals\">\n      <h6 class=\"deals__heading heading\">Deals</h6>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <button class=\"btn btn-see\">See more</button>\n    </div>\n    <!-- End Deals -->\n\n    <hr class=\"line\">\n\n    <!-- Rating & Reviews -->\n    <div class=\"rating-review\">\n      <h6 class=\"rating-review__heading heading\">Rating & Reviews</h6>\n      <div class=\"rating\">\n        <div class=\"rating__point\">\n          <p class=\"point text-white\">8.4</p>\n        </div>\n        <div class=\"rating__text\">\n          <h6 class=\"rating__title title\">Impressive</h6>\n          <p class=\"sub-title\">Rating based on 6969 reviews across the web</p>\n        </div>\n      </div>\n      <div class=\"rating__bars\">\n        <!-- with using property binding -->\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Comfort</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-comfort\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Service</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-service\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Cleanliness</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-cleanliness\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Food</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-food\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Location</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-location\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n      </div>\n      <button class=\"btn btn-see\">See more</button>\n    </div>\n    <!-- End Rating & Reviews -->\n\n    <hr class=\"line\">\n\n    <!-- Amenities -->\n    <div class=\"amenities\">\n      <h6 class=\"heading\">Main Amenities</h6>\n      <div class=\"amenites__content\">\n        <div class=\"amenities__item\">\n            <i class=\"fa fa-wifi icon\"></i>\n            <p class=\"icon-name\">Free Wifi</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">restaurant</i>\n            <p class=\"icon-name\">Breakfast</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">local_hotel</i>\n            <p class=\"icon-name\">Spa</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">pool</i>\n            <p class=\"icon-name\">Swimming</p>\n        </div>\n      </div>\n      <button class=\"btn btn-see\">See all amenities</button>\n    </div>\n    <!-- End Amenities -->\n\n    <hr class=\"line\">\n\n    <!-- Hotel Description -->\n    <div class=\"description\">\n      <h6 class=\"heading\">Hotel Description</h6>\n      <p class=\"description-text\">\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit aut et sint accusantium blanditiis tempore repellendus incidunt doloremque quas?\n      </p>\n    </div>\n    <!-- End Hotel Description -->\n\n    <hr class=\"line mt-4\">\n\n    <!-- Contact -->\n    <div class=\"contact\">\n      <h6 class=\"heading\">Contact</h6>\n      <div id=\"map\">\n        <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1214396311398!2d106.6391917153343!3d10.8020099616734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294fe7593643%3A0x75fc2555a7f3e79!2zRXRvd24sIEPhu5luZyBIw7JhLCBQaMaw4budbmcgMTMsIFTDom4gQsOsbmgsIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1559788558354!5m2!1sen!2s\" frameborder=\"0\" style=\"border:0\" width=\"100%\" height=\"100%\"></iframe>\n      </div>\n    </div>\n    <!-- End Contact -->\n  </div>\n\n  <!-- Footer -->\n  <app-footer></app-footer>\n  <!-- End Footer -->\n</div>"
+module.exports = "<div class=\"hotel-detail container-custom\">\n  <!-- Carousel -->\n  <div class=\"container-fluid container-slide\">\n    <div class=\"carousel slide\" data-ride=\"carousel\">\n      <!-- Indicators -->\n      <ul class=\"carousel-indicators\">\n        <li data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>\n        <li data-target=\"#demo\" data-slide-to=\"1\"></li>\n        <li data-target=\"#demo\" data-slide-to=\"2\"></li>\n      </ul>\n      <!-- The slideshow -->\n      <div class=\"carousel-inner\">\n        <div class=\"carousel-item active\">\n          <img src=\"./assets/images/HaLong.jpg\" alt=\"Los Angeles\">\n        </div>\n        <div class=\"carousel-item\">\n          <img\n            src=\"./assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg\"\n            alt=\"Chicago\">\n        </div>\n        <div class=\"carousel-item\">\n          <img src=\"./assets/images/tivkumb_0.jpg\" alt=\"New York\">\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- End Carousel  -->\n\n  <div class=\"container-fluid\">\n\n    <!-- Deals -->\n    <!-- <div class=\"deals\">\n      <h6 class=\"deals__heading heading\">Deals</h6>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <div class=\"deals__content\">\n        <div class=\"deals__text\">\n          <h6 class=\"deals__title title\">\n            Hotel Website\n          </h6>\n          <p class=\"deals__sub-title sub-title\">Basic - Suit - Save More 48 Hour Sale</p>\n        </div>\n        <div class=\"deals__price\">\n          <h6 class=\"price\">$119</h6>\n          <p class=\"pernight\">per night</p>\n        </div>\n      </div>\n      <button class=\"btn btn-see\">See more</button>\n    </div> -->\n    <!-- End Deals -->\n\n    <hr class=\"line\">\n\n    <!-- Rating & Reviews -->\n    <div class=\"rating-review\">\n      <h6 class=\"rating-review__heading heading\">Rating & Reviews</h6>\n      <div class=\"rating\">\n        <div class=\"rating__point\">\n          <p class=\"point text-white\">8.4</p>\n        </div>\n        <div class=\"rating__text\">\n          <h6 class=\"rating__title title\">Impressive</h6>\n          <p class=\"sub-title\">Rating based on 6969 reviews across the web</p>\n        </div>\n      </div>\n      <div class=\"rating__bars\">\n        <!-- with using property binding -->\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Comfort</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-comfort\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Service</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-service\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Cleanliness</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-cleanliness\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Food</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-food\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n        <div class=\"col-6 bar__content\">\n          <p class=\"sub-title\">Location</p>\n          <div class=\"bar-container\">\n            <div class=\"bar bar-location\"></div>\n          </div>\n          <div class=\"bar__point\">8.9</div>\n        </div>\n      </div>\n      <!-- <button class=\"btn btn-see\">See more</button> -->\n    </div>\n    <!-- End Rating & Reviews -->\n\n    <hr class=\"line\">\n\n    <!-- Amenities -->\n    <div class=\"amenities\">\n      <h6 class=\"heading\">Main Amenities</h6>\n      <div class=\"amenites__content\">\n        <div class=\"amenities__item\">\n            <i class=\"fa fa-wifi icon\"></i>\n            <p class=\"icon-name\">Free Wifi</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">restaurant</i>\n            <p class=\"icon-name\">Breakfast</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">local_hotel</i>\n            <p class=\"icon-name\">Spa</p>\n        </div>\n        <div class=\"amenities__item\">\n            <i class=\"material-icons icon\">pool</i>\n            <p class=\"icon-name\">Swimming</p>\n        </div>\n      </div>\n      <!-- <button class=\"btn btn-see\">See all amenities</button> -->\n    </div>\n    <!-- End Amenities -->\n\n    <hr class=\"line\">\n\n    <!-- Hotel Description -->\n    <div class=\"description\">\n      <h6 class=\"heading\">Hotel Description</h6>\n      <p class=\"description-text\">\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit aut et sint accusantium blanditiis tempore repellendus incidunt doloremque quas?\n      </p>\n    </div>\n    <!-- End Hotel Description -->\n\n    <hr class=\"line mt-4\">\n\n    <!-- Contact -->\n    <div class=\"contact\">\n      <h6 class=\"heading\">Contact</h6>\n      <div id=\"map\">\n        <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1214396311398!2d106.6391917153343!3d10.8020099616734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294fe7593643%3A0x75fc2555a7f3e79!2zRXRvd24sIEPhu5luZyBIw7JhLCBQaMaw4budbmcgMTMsIFTDom4gQsOsbmgsIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1559788558354!5m2!1sen!2s\" frameborder=\"0\" style=\"border:0\" width=\"100%\" height=\"100%\"></iframe>\n      </div>\n    </div>\n    <!-- End Contact -->\n  </div>\n\n  <!-- Footer -->\n  <div class=\"container-fluid footer\">\n    <div class=\"footer-content\">\n      <div class=\"footer-detail\">\n        <mat-card-subtitle class=\"footer-subtitle\">Price/room/night star from</mat-card-subtitle>\n        <p class=\"price\">$119</p>\n        <mat-card-subtitle>per night on Hotel website</mat-card-subtitle>\n      </div>\n      <div class=\"footer-btn mx-auto\">\n          <button mat-raised-button color=\"warn\" (click)=\"goToPage('FILLINDETAILS')\">Select room</button>\n      </div>\n    </div>\n  </div>\n  <!-- End Footer -->\n</div>"
 
 /***/ }),
 
@@ -1092,6 +1249,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HotelDetailComponent", function() { return HotelDetailComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
+/* harmony import */ var src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/utilities/system.constants */ "./src/app/utilities/system.constants.ts");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1103,12 +1277,40 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-var HotelDetailComponent = /** @class */ (function () {
-    function HotelDetailComponent(ultility) {
-        this.ultility = ultility;
-        this.ultility.setDisplayNavbar(false);
+
+
+
+
+var HotelDetailComponent = /** @class */ (function (_super) {
+    __extends(HotelDetailComponent, _super);
+    function HotelDetailComponent(utility, router, _snackBar) {
+        var _this = _super.call(this, utility, router, _snackBar) || this;
+        _this.utility = utility;
+        _this.router = router;
+        _this._snackBar = _snackBar;
+        utility.setDisplayBackButton(true);
+        utility.setDisplayHeaderTitle(false);
+        utility.setDisplayNavbar(false);
+        utility.setTitle('Marriote NewYork City');
+        return _this;
     }
     HotelDetailComponent.prototype.ngOnInit = function () {
+    };
+    HotelDetailComponent.prototype.goToPage = function (pageCode) {
+        // alert(pageCode);
+        try {
+            var targetPage = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"][pageCode];
+            console.log(targetPage);
+            if (targetPage) {
+                this.pushPage(targetPage, {
+                    params: {},
+                    pageCode: src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].HOTELDETAIL
+                });
+            }
+        }
+        catch (error) {
+            // Nothing
+        }
     };
     HotelDetailComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1116,10 +1318,10 @@ var HotelDetailComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./hotel-detail.component.html */ "./src/app/pages/hotel-detail/hotel-detail.component.html"),
             styles: [__webpack_require__(/*! ./hotel-detail.component.css */ "./src/app/pages/hotel-detail/hotel-detail.component.css")]
         }),
-        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"]])
+        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]])
     ], HotelDetailComponent);
     return HotelDetailComponent;
-}());
+}(src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]));
 
 
 
@@ -1132,7 +1334,7 @@ var HotelDetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a{\n    text-decoration: none;\n}\n\n.login-card{\n    margin:50px 0 auto;\n    /* max-width: 80%; */\n}\n\n.login-title{\n    color: #545dff;\n}\n\n.mat-card-header-text{\n    margin: 0 auto !important;\n}\n\n.login-header {\n    text-align: center;\n    margin: 0 auto!important;\n}\n\n.btn-login{\n    width: 100%;\n    outline: none;\n    background-color: #545dff;\n}\n\n.login-field{\n    width: 100%;\n}\n\n/* Text Field  */\n\n.mat-form-field {\n    font-size: 14px;\n    line-height: 2.125;\n    margin-bottom: 1rem;\n}\n\n/* End Text Field */\n\n/* Forgot Password */\n\n.forgot-password{\n    float: right;\n    margin: 1rem 0;\n}\n\n.forgotpw-text{\n    font-size: 14px;\n    text-decoration: none;\n}\n\n/* End Forgot Password */\n\n/* Signup */\n\n.sign-up-text{\n    text-align: center;\n    margin: 1rem 0\n}\n\n/* End Signup */\n\n/* Placeholder */\n\ninput[type=\"email\"]::-webkit-input-placeholder {\n    color: orange;\n}"
+module.exports = "a{\n    text-decoration: none;\n}\n\n.login-card{\n    padding-top:50px;\n    /* max-width: 80%; */\n}\n\n.login-title{\n    color: #545dff;\n}\n\n.mat-card-header-text{\n    margin: 0 auto !important;\n}\n\n.login-header {\n    text-align: center;\n    margin: 0 auto!important;\n}\n\n.btn-login{\n    width: 100%;\n    outline: none;\n    background-color: #545dff;\n}\n\n.login-field{\n    width: 100%;\n}\n\n/* Text Field  */\n\n.mat-form-field {\n    font-size: 14px;\n    line-height: 2.125;\n    margin-bottom: 1rem;\n}\n\n/* End Text Field */\n\n/* Forgot Password */\n\n.forgot-password{\n    float: right;\n    margin: 1rem 0;\n}\n\n.forgotpw-text{\n    font-size: 14px;\n    text-decoration: none;\n}\n\n/* End Forgot Password */\n\n/* Signup */\n\n.sign-up-text{\n    text-align: center;\n    margin: 1rem 0\n}\n\n/* End Signup */\n\n/* Placeholder */\n\ninput[type=\"email\"]::-webkit-input-placeholder {\n    color: orange;\n}"
 
 /***/ }),
 
@@ -1143,7 +1345,7 @@ module.exports = "a{\n    text-decoration: none;\n}\n\n.login-card{\n    margin:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"login-card container-fluid\">\n  <div class=\"login-header\">\n    <mat-card-title class=\"login-title\">Welcome</mat-card-title>\n    <br>\n    <mat-card-subtitle>Sign in to continue</mat-card-subtitle>\n  </div>\n  <mat-card-content>\n    <form action=\"\">\n      <!-- Email -->\n      <mat-form-field class=\"login-field\">\n        <!-- [formControl]=\"emailFormControl\" -->\n        <input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\">\n        <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n          Please enter a valid email address\n        </mat-error>\n        <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n          Email is <strong>required</strong>\n        </mat-error>\n      </mat-form-field>\n      <!-- End Email -->\n\n      <!-- Password -->\n      <mat-form-field class=\"login-field\">\n        <input matInput placeholder=\"Enter your password\" [type]=\"hide ? 'password' : 'text'\">\n        <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\n          [attr.aria-pressed]=\"hide\">\n          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n        </button>\n      </mat-form-field>\n      <!-- End Password -->\n    </form>\n    <div class=\"forgot-password\">\n      <a href=\"#\" class=\"forgotpw-text\">Forgot Password?</a>\n    </div>\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-raised-button color=\"primary\" class=\"btn-login\">Login</button>\n  </mat-card-actions>\n\n  <!-- SignUp -->\n  <div class=\"sign-up-text\">\n    <mat-card-subtitle>New to ...Travel?&nbsp;&nbsp;<a href=\"#\" class=\"signup-text\" routerLink=\"/sign-up\">Signup</a></mat-card-subtitle> \n  </div>\n  <!-- End SignUp -->\n</div>"
+module.exports = "<div class=\"login-card container-fluid\">\n    <div class=\"login-header\">\n        <mat-card-title class=\"login-title\">Welcome</mat-card-title>\n        <br>\n        <mat-card-subtitle>Sign in to continue</mat-card-subtitle>\n    </div>\n    <mat-card-content>\n        <form action=\"\">\n            <!-- Email -->\n            <mat-form-field class=\"login-field\">\n                <!-- [formControl]=\"emailFormControl\" -->\n                <input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\" #userID>\n                <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n                    Please enter a valid email address\n                </mat-error>\n                <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n                    Email is <strong>required</strong>\n                </mat-error>\n            </mat-form-field>\n            <!-- End Email -->\n\n            <!-- Password -->\n            <mat-form-field class=\"login-field\">\n                <input matInput placeholder=\"Enter your password\" [type]=\"hide ? 'password' : 'text'\" #password>\n                <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\" [attr.aria-pressed]=\"hide\">\n          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n        </button>\n            </mat-form-field>\n            <!-- End Password -->\n        </form>\n        <div class=\"forgot-password\">\n            <a href=\"#\" class=\"forgotpw-text\">Forgot Password?</a>\n        </div>\n    </mat-card-content>\n    <mat-card-actions>\n        <button mat-raised-button color=\"primary\" class=\"btn-login\" (click)=\"btnLogin_click(userID.value, password.value)\">Login</button>\n    </mat-card-actions>\n\n    <!-- SignUp -->\n    <div class=\"sign-up-text\">\n        <mat-card-subtitle>New to ...Travel?&nbsp;&nbsp;<a class=\"signup-text\" (click)=\"goToPageSignUp('SIGNUP')\">Signup</a></mat-card-subtitle>\n    </div>\n    <!-- End SignUp -->\n</div>"
 
 /***/ }),
 
@@ -1160,6 +1362,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/utilities/system.constants */ "./src/app/utilities/system.constants.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1172,16 +1391,92 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-var LoginComponent = /** @class */ (function () {
-    function LoginComponent(utility) {
-        this.utility = utility;
-        this.emailFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [
+
+
+
+
+var LoginComponent = /** @class */ (function (_super) {
+    __extends(LoginComponent, _super);
+    function LoginComponent(utility, router, _snackBar) {
+        var _this = _super.call(this, utility, router, _snackBar) || this;
+        _this.utility = utility;
+        _this.router = router;
+        _this._snackBar = _snackBar;
+        _this.emailFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [
             _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
             _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].email,
         ]);
-        this.utility.setDisplayHeader(false);
+        _this.utility.setDisplayNavbar(false);
+        _this.utility.setDisplayHeader(false);
+        return _this;
     }
     LoginComponent.prototype.ngOnInit = function () {
+    };
+    // Declare public function
+    LoginComponent.prototype.btnLogin_click = function (_userID, _password) {
+        try {
+            this.userId = _userID;
+            this.password = _password;
+            if (this.checkValidation()) {
+                return;
+            }
+            else {
+                // send to API
+                // if result success
+                this.goToPage('HOME');
+            }
+        }
+        catch (exception) {
+            // do nothing
+        }
+    };
+    LoginComponent.prototype.checkValidation = function () {
+        // tslint:disable-next-line:prefer-const
+        var validate;
+        var isValidate = false;
+        var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!regEmail.test(this.userId) || !this.userId || this.userId.length < 0) {
+            isValidate = true;
+        }
+        if (!isValidate && (!this.password || this.password.length < 0)) {
+            isValidate = true;
+        }
+        if (isValidate) {
+            this.openSnackBar('Username or password invalid', 'OK');
+        }
+        return isValidate;
+    };
+    LoginComponent.prototype.goToPage = function (pageCode) {
+        // alert(pageCode);
+        try {
+            var targetPage = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_6__["PAGE_CODE"][pageCode];
+            console.log(targetPage);
+            if (targetPage) {
+                this.pushPage(targetPage, {
+                    params: {},
+                    pageCode: src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_6__["PAGE_CODE"].HOME
+                });
+            }
+        }
+        catch (error) {
+            // Nothing
+        }
+    };
+    LoginComponent.prototype.goToPageSignUp = function (pageCode) {
+        // alert(pageCode);
+        try {
+            var targetPage = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_6__["PAGE_CODE"][pageCode];
+            console.log(targetPage);
+            if (targetPage) {
+                this.pushPage(targetPage, {
+                    params: {},
+                    pageCode: src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_6__["PAGE_CODE"].SIGNUP
+                });
+            }
+        }
+        catch (error) {
+            // Nothing
+        }
     };
     LoginComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1189,10 +1484,10 @@ var LoginComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./login.component.html */ "./src/app/pages/login/login.component.html"),
             styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/pages/login/login.component.css")]
         }),
-        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_2__["UtilityService"]])
+        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_2__["UtilityService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]])
     ], LoginComponent);
     return LoginComponent;
-}());
+}(src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]));
 
 
 
@@ -1216,7 +1511,7 @@ module.exports = "a{\n    text-decoration: none;\n}\n\n.signup-card{\n    paddin
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"signup-card container-fluid\">\n  <div class=\"signup-header\">\n    <i class=\"material-icons back-icon\">keyboard_backspace</i>\n    <h4 class=\"signup-title\">&nbsp;&nbsp;Sign Up</h4>\n  </div>\n  <mat-card-content>\n    <form action=\"\">\n      <!-- Name -->\n      <div class=\"name-field\">\n        <mat-form-field class=\"firstname\">\n          <input matInput placeholder=\"Firstname\">\n        </mat-form-field>\n        <mat-form-field class=\"surname\">\n          <input matInput placeholder=\"Surname\">\n        </mat-form-field>\n      </div>\n      <!-- End Name -->\n\n      <!-- Email -->\n      <mat-form-field class=\"signup-field\">\n        <input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\">\n        <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n          Please enter a valid email address\n        </mat-error>\n        <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n          Email is <strong>required</strong>\n        </mat-error>\n      </mat-form-field>\n      <!-- End Email -->\n\n      <!-- Phonenumber -->\n      <mat-form-field class=\"signup-field\">\n        <input matInput maxlength=\"10\" placeholder=\"Phonenumber\">\n      </mat-form-field>\n      <!-- End Phonenumber -->\n\n      <!-- Password -->\n      <mat-form-field class=\"signup-field\">\n        <input matInput placeholder=\"Enter your password\" [type]=\"hide ? 'password' : 'text'\">\n        <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\n          [attr.aria-pressed]=\"hide\">\n          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n        </button>\n      </mat-form-field>\n      <mat-form-field class=\"signup-field\">\n        <input matInput placeholder=\"Renter your password\" [type]=\"hide ? 'password' : 'text'\">\n      </mat-form-field>\n      <!-- End Password -->\n    </form>\n\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-raised-button color=\"primary\" class=\"btn-signup\">Sign up</button>\n  </mat-card-actions>\n\n  <!-- SignUp -->\n  <div class=\"login-text\">\n    <mat-card-subtitle>Alredy have an account?&nbsp;<a href=\"#\" class=\"signup-text\" routerLink=\"/login\">Login</a>\n    </mat-card-subtitle>\n  </div>\n  <!-- End SignUp -->\n</div>"
+module.exports = "<div class=\"signup-card container-fluid\">\n  <!-- <div class=\"signup-header\">\n    <i class=\"material-icons back-icon\">keyboard_backspace</i>\n    <h4 class=\"signup-title\">&nbsp;&nbsp;Sign Up</h4>\n  </div> -->\n  <mat-card-content>\n    <form action=\"\">\n      <!-- Name -->\n      <div class=\"name-field\">\n        <mat-form-field class=\"firstname\">\n          <input matInput placeholder=\"Firstname\">\n        </mat-form-field>\n        <mat-form-field class=\"surname\">\n          <input matInput placeholder=\"Surname\">\n        </mat-form-field>\n      </div>\n      <!-- End Name -->\n\n      <!-- Email -->\n      <mat-form-field class=\"signup-field\">\n        <input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\">\n        <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n          Please enter a valid email address\n        </mat-error>\n        <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n          Email is <strong>required</strong>\n        </mat-error>\n      </mat-form-field>\n      <!-- End Email -->\n\n      <!-- Phonenumber -->\n      <mat-form-field class=\"signup-field\">\n        <input matInput maxlength=\"10\" placeholder=\"Phonenumber\">\n      </mat-form-field>\n      <!-- End Phonenumber -->\n\n      <!-- Password -->\n      <mat-form-field class=\"signup-field\">\n        <input matInput placeholder=\"Enter your password\" [type]=\"hide ? 'password' : 'text'\">\n        <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\"\n          [attr.aria-pressed]=\"hide\">\n          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n        </button>\n      </mat-form-field>\n      <mat-form-field class=\"signup-field\">\n        <input matInput placeholder=\"Renter your password\" [type]=\"hide ? 'password' : 'text'\">\n      </mat-form-field>\n      <!-- End Password -->\n    </form>\n\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-raised-button color=\"primary\" class=\"btn-signup\">Sign up</button>\n  </mat-card-actions>\n\n  <!-- SignUp -->\n  <div class=\"login-text\">\n    <mat-card-subtitle>Alredy have an account?&nbsp;<a href=\"#\" class=\"signup-text\" routerLink=\"/LOGIN\">Login</a>\n    </mat-card-subtitle>\n  </div>\n  <!-- End SignUp -->\n</div>"
 
 /***/ }),
 
@@ -1252,7 +1547,13 @@ var SignUpComponent = /** @class */ (function () {
             _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
             _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].email,
         ]);
-        this.utility.setDisplayHeader(false);
+        this.utility.setDisplayHeader(true);
+        this.utility.setDisplayHomeHeader(false);
+        this.utility.setDisplayInnerHeader(true);
+        this.utility.setDisplayProcessBar(false);
+        this.utility.setDisplayNavbar(false);
+        this.utility.setDisplayStarRating(false);
+        this.utility.setTitle('Sign Up');
     }
     SignUpComponent.prototype.ngOnInit = function () {
     };
@@ -1271,9 +1572,9 @@ var SignUpComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/services/utility.service.ts":
+/***/ "./src/app/services/utility.service.js":
 /*!*********************************************!*\
-  !*** ./src/app/services/utility.service.ts ***!
+  !*** ./src/app/services/utility.service.js ***!
   \*********************************************/
 /*! exports provided: UtilityService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1296,14 +1597,18 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var UtilityService = /** @class */ (function () {
     function UtilityService() {
-        this._displayHeader = true;
-        this._displayFooter = true;
+        this._isDisplayHeader = true;
+        this._isDisplayFooter = true;
         this._isDisplayNavbar = true;
-        this._isShowHeaderButtonBack = true;
-        this._displayHomeHeader = true;
-        this._displayInnerHeader = true;
-        this._isShowProcessBar = true;
+        this._isDisplayBackButton = false;
+        this._isDisplayHeaderTitle = true;
+        this._isDisplayHomeHeader = false;
+        this._isDisplayInnerHeader = true;
+        this._isDisplayProcessBar = true;
+        this._checkOutStatus = false;
+        this._payStatus = false;
         this._displayStarRating = true;
+        // Back Page
         this.stackPage = [_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT];
         this.stackMapping = new Map().set(0, { 'params': {}, 'pageCode': _utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT, 'data': {} });
     }
@@ -1315,29 +1620,29 @@ var UtilityService = /** @class */ (function () {
     };
     // Set Display Header
     UtilityService.prototype.setDisplayHeader = function (isShow) {
-        this._displayHeader = isShow;
+        this._isDisplayHeader = isShow;
     };
     UtilityService.prototype.isDisplayHeader = function () {
-        return this._displayHeader;
+        return this._isDisplayHeader;
     };
     UtilityService.prototype.setDisplayHomeHeader = function (isShow) {
-        this._displayHomeHeader = isShow;
+        this._isDisplayHomeHeader = isShow;
     };
     UtilityService.prototype.isDisplayHomeHeader = function () {
-        return this._displayHomeHeader;
+        return this._isDisplayHomeHeader;
     };
     UtilityService.prototype.setDisplayInnerHeader = function (isShow) {
-        this._displayInnerHeader = isShow;
+        this._isDisplayInnerHeader = isShow;
     };
     UtilityService.prototype.isDisplayInnerHeader = function () {
-        return this._displayInnerHeader;
+        return this._isDisplayInnerHeader;
     };
     // Set Display Footer
     UtilityService.prototype.setDisplayFooter = function (isShow) {
-        this._displayFooter = isShow;
+        this._isDisplayFooter = isShow;
     };
     UtilityService.prototype.isDisplayFooter = function () {
-        return this._displayFooter;
+        return this._isDisplayFooter;
     };
     // Set Display Navbar(~ Navigation)
     UtilityService.prototype.setDisplayNavbar = function (isShow) {
@@ -1346,11 +1651,17 @@ var UtilityService = /** @class */ (function () {
     UtilityService.prototype.isDisplayNavbar = function () {
         return this._isDisplayNavbar;
     };
-    UtilityService.prototype.isShowHeaderButton = function () {
-        return this._isShowHeaderButtonBack;
+    UtilityService.prototype.isDisplayBackButton = function () {
+        return this._isDisplayBackButton;
     };
-    UtilityService.prototype.setShowHeaderButtonBack = function (isShow) {
-        this._isShowHeaderButtonBack = isShow;
+    UtilityService.prototype.setDisplayBackButton = function (isShow) {
+        this._isDisplayBackButton = isShow;
+    };
+    UtilityService.prototype.isDisplayHeaderTitle = function () {
+        return this._isDisplayHeaderTitle;
+    };
+    UtilityService.prototype.setDisplayHeaderTitle = function (isShow) {
+        this._isDisplayHeaderTitle = isShow;
     };
     // Set Title
     UtilityService.prototype.getTitle = function () {
@@ -1361,10 +1672,10 @@ var UtilityService = /** @class */ (function () {
     };
     // Set Display Processbar
     UtilityService.prototype.isDisplayProcessBar = function () {
-        return this._isShowProcessBar;
+        return this._isDisplayProcessBar;
     };
     UtilityService.prototype.setDisplayProcessBar = function (isShow) {
-        this._isShowProcessBar = isShow;
+        this._isDisplayProcessBar = isShow;
     };
     // Set Display Star Rating
     UtilityService.prototype.isDisplayStarRating = function () {
@@ -1372,6 +1683,76 @@ var UtilityService = /** @class */ (function () {
     };
     UtilityService.prototype.setDisplayStarRating = function (isShow) {
         this._displayStarRating = isShow;
+    };
+    // Set status of ProcessBar
+    UtilityService.prototype.setCheckOutStatus = function (isApply) {
+        this._checkOutStatus = isApply;
+    };
+    UtilityService.prototype.applyCheckOutStatus = function () {
+        return this._checkOutStatus;
+    };
+    UtilityService.prototype.setPayStatus = function (isApply) {
+        this._payStatus = isApply;
+    };
+    UtilityService.prototype.applyPayStatus = function () {
+        return this._payStatus;
+    };
+    UtilityService.prototype.popStackData = function () {
+        var rs = this.stackMapping.get(this.stackPage.length - 1);
+        this.stackMapping.delete(this.stackPage.length - 1);
+        return rs;
+    };
+    UtilityService.prototype.popToRoot = function () {
+        this.stackMapping = new Map().set(0, { 'params': {}, 'pageCode': _utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT, 'data': {} });
+        this.stackPage = [_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT];
+        return _utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT;
+    };
+    UtilityService.prototype.popStackPage = function () {
+        if (!this.stackPage) {
+            this.stackMapping.clear();
+            this.stackPage = [_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT];
+            return _utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT;
+        }
+        if (this.stackPage.length > 1) {
+            this.stackData = this.popStackData();
+            if (!this.stackData) {
+                this.stackData = {
+                    'params': {},
+                    'pageCode': null,
+                    'data': {}
+                };
+            }
+            this.stackPage.pop();
+            // save data
+            var dataPrev = {
+                'data': this.stackData.data,
+                'pageCode': this.stackData.pageCode,
+                'params': {}
+            };
+            this.setDataOfPrevPage(dataPrev);
+            return this.stackPage[this.stackPage.length - 1];
+        }
+        return null;
+    };
+    UtilityService.prototype.popToPageByPageCode = function (pageCode) {
+        if (this.stackPage) {
+            if (this.stackPage.includes(pageCode)) {
+                for (var idx = this.stackPage.length - 1; idx > 0; idx--) {
+                    if (this.stackPage[idx] && this.stackPage[idx] === pageCode) {
+                        return pageCode;
+                    }
+                    else {
+                        this.popStackPage();
+                    }
+                }
+            }
+            else {
+                this.popStackPage();
+                this.pushStackPage(pageCode, this.stackData);
+                return pageCode;
+            }
+        }
+        return null;
     };
     UtilityService.prototype.pushStackPage = function (pageCode, stackStatus, isSaveData) {
         if (stackStatus === void 0) { stackStatus = null; }
@@ -1407,8 +1788,248 @@ var UtilityService = /** @class */ (function () {
         }
     };
     UtilityService.prototype.getLastPageOfStack = function () {
-        if (this.stackPage && this.stackPage.length >= 1) {
-            return this.stackPage[this.stackPage.length--];
+        if (this.stackPage && this.stackPage.length > 1) {
+            return this.stackPage[this.stackPage.length - 1];
+        }
+        return null;
+    };
+    UtilityService.prototype.getPreviousLastPageOfStack = function () {
+        if (this.stackPage && this.stackPage.length > 1) {
+            return this.stackPage[this.stackPage.length - 2];
+        }
+        return null;
+    };
+    UtilityService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], UtilityService);
+    return UtilityService;
+}());
+
+//# sourceMappingURL=utility.service.js.map
+
+/***/ }),
+
+/***/ "./src/app/services/utility.service.ts":
+/*!*********************************************!*\
+  !*** ./src/app/services/utility.service.ts ***!
+  \*********************************************/
+/*! exports provided: UtilityService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UtilityService", function() { return UtilityService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/system.constants */ "./src/app/utilities/system.constants.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var UtilityService = /** @class */ (function () {
+    function UtilityService() {
+        this._isDisplayHeader = true;
+        this._isDisplayFooter = true;
+        this._isDisplayNavbar = true;
+        this._isDisplayBackButton = false;
+        this._isDisplayHeaderTitle = true;
+        this._isDisplayHomeHeader = false;
+        this._isDisplayInnerHeader = true;
+        this._isDisplayProcessBar = true;
+        this._checkOutStatus = false;
+        this._payStatus = false;
+        this._displayStarRating = true;
+        // Back Page
+        this.stackPage = [_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT];
+        this.stackMapping = new Map().set(0, { 'params': {}, 'pageCode': _utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT, 'data': {} });
+    }
+    UtilityService.prototype.getDataOfPrevPage = function () {
+        return this.dataOfPrevPage;
+    };
+    UtilityService.prototype.setDataOfPrevPage = function (data) {
+        this.dataOfPrevPage = data;
+    };
+    // Set Display Header
+    UtilityService.prototype.setDisplayHeader = function (isShow) {
+        this._isDisplayHeader = isShow;
+    };
+    UtilityService.prototype.isDisplayHeader = function () {
+        return this._isDisplayHeader;
+    };
+    UtilityService.prototype.setDisplayHomeHeader = function (isShow) {
+        this._isDisplayHomeHeader = isShow;
+    };
+    UtilityService.prototype.isDisplayHomeHeader = function () {
+        return this._isDisplayHomeHeader;
+    };
+    UtilityService.prototype.setDisplayInnerHeader = function (isShow) {
+        this._isDisplayInnerHeader = isShow;
+    };
+    UtilityService.prototype.isDisplayInnerHeader = function () {
+        return this._isDisplayInnerHeader;
+    };
+    // Set Display Footer
+    UtilityService.prototype.setDisplayFooter = function (isShow) {
+        this._isDisplayFooter = isShow;
+    };
+    UtilityService.prototype.isDisplayFooter = function () {
+        return this._isDisplayFooter;
+    };
+    // Set Display Navbar(~ Navigation)
+    UtilityService.prototype.setDisplayNavbar = function (isShow) {
+        this._isDisplayNavbar = isShow;
+    };
+    UtilityService.prototype.isDisplayNavbar = function () {
+        return this._isDisplayNavbar;
+    };
+    UtilityService.prototype.isDisplayBackButton = function () {
+        return this._isDisplayBackButton;
+    };
+    UtilityService.prototype.setDisplayBackButton = function (isShow) {
+        this._isDisplayBackButton = isShow;
+    };
+    UtilityService.prototype.isDisplayHeaderTitle = function () {
+        return this._isDisplayHeaderTitle;
+    };
+    UtilityService.prototype.setDisplayHeaderTitle = function (isShow) {
+        this._isDisplayHeaderTitle = isShow;
+    };
+    // Set Title
+    UtilityService.prototype.getTitle = function () {
+        return this._title;
+    };
+    UtilityService.prototype.setTitle = function (title) {
+        this._title = title;
+    };
+    // Set Display Processbar
+    UtilityService.prototype.isDisplayProcessBar = function () {
+        return this._isDisplayProcessBar;
+    };
+    UtilityService.prototype.setDisplayProcessBar = function (isShow) {
+        this._isDisplayProcessBar = isShow;
+    };
+    // Set Display Star Rating
+    UtilityService.prototype.isDisplayStarRating = function () {
+        return this._displayStarRating;
+    };
+    UtilityService.prototype.setDisplayStarRating = function (isShow) {
+        this._displayStarRating = isShow;
+    };
+    // Set status of ProcessBar
+    UtilityService.prototype.setCheckOutStatus = function (isApply) {
+        this._checkOutStatus = isApply;
+    };
+    UtilityService.prototype.applyCheckOutStatus = function () {
+        return this._checkOutStatus;
+    };
+    UtilityService.prototype.setPayStatus = function (isApply) {
+        this._payStatus = isApply;
+    };
+    UtilityService.prototype.applyPayStatus = function () {
+        return this._payStatus;
+    };
+    UtilityService.prototype.popStackData = function () {
+        var rs = this.stackMapping.get(this.stackPage.length - 1);
+        this.stackMapping.delete(this.stackPage.length - 1);
+        return rs;
+    };
+    UtilityService.prototype.popToRoot = function () {
+        this.stackMapping = new Map().set(0, { 'params': {}, 'pageCode': _utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT, 'data': {} });
+        this.stackPage = [_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT];
+        return _utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT;
+    };
+    UtilityService.prototype.popStackPage = function () {
+        if (!this.stackPage) {
+            this.stackMapping.clear();
+            this.stackPage = [_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT];
+            return _utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT;
+        }
+        if (this.stackPage.length > 1) {
+            this.stackData = this.popStackData();
+            if (!this.stackData) {
+                this.stackData = {
+                    'params': {},
+                    'pageCode': null,
+                    'data': {}
+                };
+            }
+            this.stackPage.pop();
+            // save data
+            var dataPrev = {
+                'data': this.stackData.data,
+                'pageCode': this.stackData.pageCode,
+                'params': {}
+            };
+            this.setDataOfPrevPage(dataPrev);
+            return this.stackPage[this.stackPage.length - 1];
+        }
+        return null;
+    };
+    UtilityService.prototype.popToPageByPageCode = function (pageCode) {
+        if (this.stackPage) {
+            if (this.stackPage.includes(pageCode)) {
+                for (var idx = this.stackPage.length - 1; idx > 0; idx--) {
+                    if (this.stackPage[idx] && this.stackPage[idx] === pageCode) {
+                        return pageCode;
+                    }
+                    else {
+                        this.popStackPage();
+                    }
+                }
+            }
+            else {
+                this.popStackPage();
+                this.pushStackPage(pageCode, this.stackData);
+                return pageCode;
+            }
+        }
+        return null;
+    };
+    UtilityService.prototype.pushStackPage = function (pageCode, stackStatus, isSaveData) {
+        if (stackStatus === void 0) { stackStatus = null; }
+        if (isSaveData === void 0) { isSaveData = true; }
+        if (!this.stackPage) {
+            this.stackPage = [_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT];
+            this.stackMapping = new Map().set(0, { 'params': {}, 'pageCode': _utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].DEFAULT, 'data': {} });
+        }
+        // check last page code is sampe page, is't
+        var currentPage = this.stackPage[this.stackPage.length - 1];
+        if (currentPage === pageCode) {
+            return;
+        }
+        this.stackPage.push(pageCode);
+        var stackDt = stackStatus;
+        if (!stackDt) {
+            stackDt = {
+                'params': {},
+                'pageCode': currentPage,
+                'data': {}
+            };
+        }
+        this.stackMapping.set(this.stackPage.length - 1, stackDt);
+        this.stackData = stackDt;
+        // save data
+        if (isSaveData) {
+            var dataPrev = {
+                'data': stackDt.params,
+                'pageCode': pageCode,
+                'params': {}
+            };
+            this.setDataOfPrevPage(dataPrev);
+        }
+    };
+    UtilityService.prototype.getLastPageOfStack = function () {
+        if (this.stackPage && this.stackPage.length > 1) {
+            return this.stackPage[this.stackPage.length - 1];
         }
         return null;
     };
@@ -1512,7 +2133,7 @@ module.exports = ".find-hotel-card {\n    margin: 1rem;\n}\n\n.item-heading{\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"find-hotel-card\">\n  <!-- <img mat-card-image src=\"./assets/images/room33.jpg\" alt=\"hotel\"> -->\n\n  <div id=\"demo\" class=\"carousel slide\" data-ride=\"carousel\" mat-card-image >\n    <!-- Indicators -->\n    <ul class=\"carousel-indicators\">\n      <li data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>\n      <li data-target=\"#demo\" data-slide-to=\"1\"></li>\n      <li data-target=\"#demo\" data-slide-to=\"2\"></li>\n    </ul>\n\n    <!-- The slideshow -->\n    <div class=\"carousel-inner\">\n      <div class=\"carousel-item active\">\n        <img src=\"./assets/images/room33.jpg\" alt=\"hotel\">\n      </div>\n      <div class=\"carousel-item\">\n        <img src=\"./assets/images/room.jpg\" alt=\"hotel\">\n      </div>\n      <div class=\"carousel-item\">\n        <img src=\"./assets/images/room33.jpg\" alt=\"hotel\">\n      </div>\n    </div>\n\n    <!-- Left and right controls -->\n    <a class=\"carousel-control-prev\" href=\"#demo\" data-slide=\"prev\">\n      <span class=\"carousel-control-prev-icon\"></span>\n    </a>\n    <a class=\"carousel-control-next\" href=\"#demo\" data-slide=\"next\">\n      <span class=\"carousel-control-next-icon\"></span>\n    </a>\n  </div>\n\n  <mat-card-content>\n    <h6 class=\"item-heading\">\n      Standard Double room with view\n    </h6>\n    <mat-card-subtitle>2 guests/room</mat-card-subtitle>\n    <mat-card-subtitle>1 double bed</mat-card-subtitle>\n    <hr>\n    <div class=\"item-content\">\n      <i class=\"material-icons\">restaurant</i>\n      <p>&nbsp;&nbsp;Breakfast not included</p>\n    </div>\n    <div class=\"item-content\">\n      <i class=\"material-icons\">attach_money</i>\n      <p>&nbsp;&nbsp;Non-refundable</p>\n    </div>\n    <div class=\"row\">\n      <div class=\"col item-content text-color\">\n        <i class=\"material-icons\">wifi</i>\n        <p>&nbsp;&nbsp;Free wifi</p>\n      </div>\n      <div class=\"col text-right\">\n        <p class=\"text-danger\">&nbsp;&nbsp;2 room(s) left !</p>\n      </div>\n    </div>\n  </mat-card-content>\n  <hr>\n  <div class=\"row\">\n    <div class=\"col\">\n      <p class=\"price text-color\">$119</p>\n    </div>\n    <div class=\"col text-right\">\n      <button mat-raised-button color=\"primary\" routerLink=\"/fill-in-details\">Choose</button>\n    </div>\n  </div>\n</mat-card>"
+module.exports = "<mat-card class=\"find-hotel-card\">\n    <!-- <img mat-card-image src=\"./assets/images/room33.jpg\" alt=\"hotel\"> -->\n\n    <div id=\"demo\" class=\"carousel slide\" data-ride=\"carousel\" mat-card-image>\n        <!-- Indicators -->\n        <ul class=\"carousel-indicators\">\n            <li data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>\n            <li data-target=\"#demo\" data-slide-to=\"1\"></li>\n            <li data-target=\"#demo\" data-slide-to=\"2\"></li>\n        </ul>\n\n        <!-- The slideshow -->\n        <div class=\"carousel-inner\">\n            <div class=\"carousel-item active\">\n                <img src=\"./assets/images/room33.jpg\" alt=\"hotel\">\n            </div>\n            <div class=\"carousel-item\">\n                <img src=\"./assets/images/room.jpg\" alt=\"hotel\">\n            </div>\n            <div class=\"carousel-item\">\n                <img src=\"./assets/images/room33.jpg\" alt=\"hotel\">\n            </div>\n        </div>\n\n        <!-- Left and right controls -->\n        <a class=\"carousel-control-prev\" href=\"#demo\" data-slide=\"prev\">\n            <span class=\"carousel-control-prev-icon\"></span>\n        </a>\n        <a class=\"carousel-control-next\" href=\"#demo\" data-slide=\"next\">\n            <span class=\"carousel-control-next-icon\"></span>\n        </a>\n    </div>\n\n    <mat-card-content>\n        <h6 class=\"item-heading\">\n            Standard Double room with view\n        </h6>\n        <mat-card-subtitle>2 guests/room</mat-card-subtitle>\n        <mat-card-subtitle>1 double bed</mat-card-subtitle>\n        <hr>\n        <div class=\"item-content\">\n            <i class=\"material-icons\">restaurant</i>\n            <p>&nbsp;&nbsp;Breakfast not included</p>\n        </div>\n        <div class=\"item-content\">\n            <i class=\"material-icons\">attach_money</i>\n            <p>&nbsp;&nbsp;Non-refundable</p>\n        </div>\n        <div class=\"row\">\n            <div class=\"col item-content text-color\">\n                <i class=\"material-icons\">wifi</i>\n                <p>&nbsp;&nbsp;Free wifi</p>\n            </div>\n            <div class=\"col text-right\">\n                <p class=\"text-danger\">&nbsp;&nbsp;2 room(s) left !</p>\n            </div>\n        </div>\n    </mat-card-content>\n    <hr>\n    <div class=\"row\">\n        <div class=\"col\">\n            <p class=\"price text-color\">$119</p>\n        </div>\n        <div class=\"col text-right\">\n            <button mat-raised-button color=\"primary\" (click)=\"goToPage('HOTELDETAIL')\">Choose</button>\n        </div>\n    </div>\n</mat-card>"
 
 /***/ }),
 
@@ -1527,6 +2148,9 @@ module.exports = "<mat-card class=\"find-hotel-card\">\n  <!-- <img mat-card-ima
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FindHotelItemComponent", function() { return FindHotelItemComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/utilities/system.constants */ "./src/app/utilities/system.constants.ts");
+/* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1537,11 +2161,43 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var FindHotelItemComponent = /** @class */ (function () {
-    function FindHotelItemComponent() {
+    function FindHotelItemComponent(utility, router) {
+        this.utility = utility;
+        this.router = router;
         this.chooseHotel = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        // super(utility, router);
     }
     FindHotelItemComponent.prototype.ngOnInit = function () {
+    };
+    FindHotelItemComponent.prototype.pushPage = function (pageCode, stackStatus) {
+        if (stackStatus === void 0) { stackStatus = null; }
+        try {
+            console.log('Push page: ', pageCode);
+            var myself = this;
+            myself.utility.pushStackPage(pageCode, stackStatus);
+            myself.router.navigate(['/' + pageCode]);
+        }
+        catch (error) {
+            // Nothing
+        }
+    };
+    FindHotelItemComponent.prototype.goToPage = function (pageCode) {
+        try {
+            var targetPage = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"][pageCode];
+            console.log(targetPage);
+            if (targetPage) {
+                this.pushPage(targetPage, {
+                    params: {},
+                    pageCode: src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].HOME
+                });
+            }
+        }
+        catch (error) {
+        }
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
@@ -1553,10 +2209,118 @@ var FindHotelItemComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./find-hotel-item.component.html */ "./src/app/templates/find-hotel-item/find-hotel-item.component.html"),
             styles: [__webpack_require__(/*! ./find-hotel-item.component.css */ "./src/app/templates/find-hotel-item/find-hotel-item.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_2__["UtilityService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], FindHotelItemComponent);
     return FindHotelItemComponent;
 }());
+
+
+
+/***/ }),
+
+/***/ "./src/app/templates/finded-hotel-item/finded-hotel-item.component.css":
+/*!*****************************************************************************!*\
+  !*** ./src/app/templates/finded-hotel-item/finded-hotel-item.component.css ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".find-hotel-card {\n    margin: 1rem;\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n}\n\n.item-heading{\n    margin: 1rem 0;\n}\n\n.item-footer{\n    display: flex;\n    justify-content: space-between;\n}\n\n.item-content{\n    display: flex;\n    color: rgba(0,0,0,.54);\n}\n\n.text-color{\n    color: orange;\n}\n\n.find-hotel-card .mat-card-image{\n    height: 170px;\n}"
+
+/***/ }),
+
+/***/ "./src/app/templates/finded-hotel-item/finded-hotel-item.component.html":
+/*!******************************************************************************!*\
+  !*** ./src/app/templates/finded-hotel-item/finded-hotel-item.component.html ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-card class=\"find-hotel-card\">\n    <!-- <img mat-card-image src=\"./assets/images/room33.jpg\" alt=\"hotel\"> -->\n\n     <img mat-card-image src=\"./assets/images/hotel.jpg\" alt=\"Photo of a Shiba Inu\">\n\n    <mat-card-content>\n        <h5 class=\"item-heading\">\n            Charlotte Hotel\n        </h5>\n        <div class=\"item__rating\">\n          <span class=\"fa fa-star checked mr-1\"></span>\n          <span class=\"fa fa-star checked mr-1\"></span>\n          <span class=\"fa fa-star checked mr-1\"></span>\n          <span class=\"fa fa-star unchecked mr-1\"></span>\n          <span class=\"fa fa-star unchecked mr-1\"></span>\n        </div>\n    </mat-card-content>\n    <div class=\"row\">\n        <div class=\"col\">\n            <p class=\"price text-color\">$119</p>\n        </div>\n        <div class=\"col text-right\">\n            <button mat-raised-button color=\"primary\" (click)=\"goToPage('FINDHOTEL')\">View rooms</button>\n        </div>\n    </div>\n</mat-card>"
+
+/***/ }),
+
+/***/ "./src/app/templates/finded-hotel-item/finded-hotel-item.component.ts":
+/*!****************************************************************************!*\
+  !*** ./src/app/templates/finded-hotel-item/finded-hotel-item.component.ts ***!
+  \****************************************************************************/
+/*! exports provided: FindedHotelItemComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FindedHotelItemComponent", function() { return FindedHotelItemComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/utilities/system.constants */ "./src/app/utilities/system.constants.ts");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var FindedHotelItemComponent = /** @class */ (function (_super) {
+    __extends(FindedHotelItemComponent, _super);
+    function FindedHotelItemComponent(utility, router, _snackBar) {
+        var _this = _super.call(this, utility, router, _snackBar) || this;
+        _this.utility = utility;
+        _this.router = router;
+        _this._snackBar = _snackBar;
+        _this.utility.setDisplayHeaderTitle(false);
+        return _this;
+    }
+    FindedHotelItemComponent.prototype.ngOnInit = function () {
+    };
+    FindedHotelItemComponent.prototype.goToPage = function (pageCode) {
+        try {
+            var targetPage = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"][pageCode];
+            console.log(targetPage);
+            if (targetPage) {
+                this.pushPage(targetPage, {
+                    params: {},
+                    pageCode: src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_1__["PAGE_CODE"].HOME
+                });
+            }
+        }
+        catch (error) {
+        }
+    };
+    FindedHotelItemComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-finded-hotel-item',
+            template: __webpack_require__(/*! ./finded-hotel-item.component.html */ "./src/app/templates/finded-hotel-item/finded-hotel-item.component.html"),
+            styles: [__webpack_require__(/*! ./finded-hotel-item.component.css */ "./src/app/templates/finded-hotel-item/finded-hotel-item.component.css")]
+        }),
+        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_3__["UtilityService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]])
+    ], FindedHotelItemComponent);
+    return FindedHotelItemComponent;
+}(src_app_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]));
 
 
 
@@ -1643,7 +2407,7 @@ module.exports = "img {\n    max-width: 100%;\n    display: block;\n}\n\n.home-h
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"isDisplayHeader\">\n    <div *ngIf=\"isDisplayHomeHeader\">\n        <div class=\"home-header\">\n            <div id=\"overlay\"></div>\n            <img src=\"./assets/images/tivkumb_0.jpg\" alt=\"\" class=\"\">\n        </div>\n        <div class=\"header-text text-white\">\n            <h5>NEC Hotel</h5>\n        </div>\n        <div class=\"header-icon\">\n            <i class=\"fa fa-bars text-white\"></i>\n        </div>\n    </div>\n\n\n    <div class=\"inner-header\" *ngIf=\"isDisplayInnerHeader\">\n        <div class=\"header-title text-white\">\n            <div>\n                <span class=\"text-white\" (click)=\"btnBack_click()\"><i class=\"material-icons header-back-icon\">keyboard_backspace</i></span>\n            </div>\n            <div>\n                <h4>&nbsp;&nbsp;{{title}}</h4>\n            </div>\n        </div>\n        <div class=\"header-star\" *ngIf=\"isDisplayStarRating\">\n            <span class=\"fa fa-star checked\"></span>\n            <span class=\"fa fa-star checked\"></span>\n            <span class=\"fa fa-star checked\"></span>\n            <span class=\"fa fa-star unchecked\"></span>\n            <span class=\"fa fa-star unchecked\"></span>\n        </div>\n        <div class=\"header-processbar\" *ngIf=\"isDisplayProcessBar\">\n            <ul class=\"processbar\">\n                <li class=\"active-fill-in-details\">\n                    <div class=\"processbar-text text-center\">\n                        <p class=\"circle\">01</p>\n                        <p class=\"label\">Book</p>\n                    </div>\n                </li>\n                <p class=\"line\"></p>\n                <li class=\"\">\n                    <div class=\"processbar-text\">\n                        <p class=\"circle\">02</p>\n                        <p class=\"label\">Check out</p>\n                    </div>\n                </li>\n                <p class=\"line\"></p>\n                <li class=\"\">\n                    <div class=\"processbar-text\">\n                        <p class=\"circle\">03</p>\n                        <p class=\"label\">Pay</p>\n                    </div>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>"
+module.exports = "<div *ngIf=\"isDisplayHeader\">\n    <div *ngIf=\"isDisplayHomeHeader\">\n        <div class=\"home-header\">\n            <div id=\"overlay\"></div>\n            <img src=\"./assets/images/tivkumb_0.jpg\" alt=\"\" class=\"\">\n        </div>\n        <div class=\"header-text text-white\" *ngIf=\"isDisplayHeaderTitle\">\n            <h5>TravelInHands</h5>\n        </div>\n        <div class=\"header-title text-white header-text\" *ngIf=\"isDisplayBackButton\">\n            <div >\n                <span class=\"text-white\" (click)=\"btnBack_click()\" ><i class=\"material-icons header-back-icon\">keyboard_backspace</i></span>\n            </div>\n            <div>\n                <h4>&nbsp;&nbsp;{{title}}</h4>\n            </div>\n        </div>\n        <!-- <div class=\"header-icon\">\n            <i class=\"fa fa-bars text-white\"></i>\n        </div> -->\n    </div>\n\n\n    <div class=\"inner-header\" *ngIf=\"isDisplayInnerHeader\">\n        <div class=\"header-title text-white\">\n            <div>\n                <span class=\"text-white\" (click)=\"btnBack_click()\" ><i class=\"material-icons header-back-icon\">keyboard_backspace</i></span>\n            </div>\n            <div>\n                <h4>&nbsp;&nbsp;{{title}}</h4>\n            </div>\n        </div>\n        <div class=\"header-star\" *ngIf=\"isDisplayStarRating\">\n            <span class=\"fa fa-star checked\"></span>\n            <span class=\"fa fa-star checked\"></span>\n            <span class=\"fa fa-star checked\"></span>\n            <span class=\"fa fa-star unchecked\"></span>\n            <span class=\"fa fa-star unchecked\"></span>\n        </div>\n        <div class=\"header-processbar\" *ngIf=\"isDisplayProcessBar\">\n            <ul class=\"processbar\">\n                <li class=\"active-fill-in-details\">\n                    <div class=\"processbar-text text-center\">\n                        <p class=\"circle\">01</p>\n                        <p class=\"label\">Book</p>\n                    </div>\n                </li>\n                <p class=\"line\"></p>\n                <li [ngClass]=\"{'active-fill-in-details': applyCheckOutStatus}\">\n                    <div class=\"processbar-text\">\n                        <p class=\"circle\">02</p>\n                        <p class=\"label\">Check out</p>\n                    </div>\n                </li>\n                <p class=\"line\"></p>\n                <li [ngClass]=\"{'active-fill-in-details': applyPayStatus}\">\n                    <div class=\"processbar-text\">\n                        <p class=\"circle\">03</p>\n                        <p class=\"label\">Pay</p>\n                    </div>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1660,6 +2424,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/utility.service */ "./src/app/services/utility.service.ts");
 /* harmony import */ var src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/utilities/system.constants */ "./src/app/utilities/system.constants.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1672,9 +2437,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent(ultility) {
-        this.ultility = ultility;
+    function HeaderComponent(utility, router) {
+        this.utility = utility;
+        this.router = router;
         this.BACK_PAGE_TYPE = {
             CONFIRM_POPUP: 1,
             DEFINED: 2,
@@ -1686,8 +2453,8 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent.prototype.ngOnInit = function () {
     };
     HeaderComponent.prototype.btnBack_click = function () {
-        var currentPage = this.ultility.getLastPageOfStack();
-        alert(currentPage);
+        var currentPage = this.utility.getLastPageOfStack();
+        // const currentPage = this.utility.popStackPage();
         if (!currentPage) {
             return;
         }
@@ -1698,14 +2465,63 @@ var HeaderComponent = /** @class */ (function () {
         var backType = this.BACK_PAGE_TYPE.DEFINED;
         switch (currentPage) {
             case src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].DEFAULT:
-            case src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].FINDHOTEL:
+            case src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].SIGNUP:
                 _page = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].DEFAULT;
+                this.router.navigate(['/' + _page]);
+                break;
+            case src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].FINDEDHOTELLIST:
+                _page = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].HOME;
+                break;
+            case src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].FINDHOTEL:
+                _page = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].FINDEDHOTELLIST;
+                break;
+            case src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].HOTELDETAIL:
+                console.log('PREV: ' + this.utility.getPreviousLastPageOfStack());
+                if (this.utility.getPreviousLastPageOfStack() === 'HOME') {
+                    _page = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].HOME;
+                }
+                else {
+                    _page = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].FINDHOTEL;
+                }
+                break;
+            case src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].FILLINDETAILS:
+                // this.countBtnBackClick++;
+                // if (this.countBtnBackClick ===  2) {
+                _page = src_app_utilities_system_constants__WEBPACK_IMPORTED_MODULE_2__["PAGE_CODE"].HOTELDETAIL;
+                // }
+                break;
+            default:
+                break;
+        }
+        // alert('currentPage: ' + currentPage);
+        if (isCheck) {
+            if (this.BACK_PAGE_TYPE.DEFINED === backType) {
+                var page = this.utility.popToPageByPageCode(_page);
+                if (page) {
+                    this.router.navigate(['/' + page]);
+                }
+            }
+            else if (this.BACK_PAGE_TYPE.STACK === backType) {
+                var popPage = this.utility.popStackPage();
+                alert('popPage: ' + popPage);
+                if (popPage) {
+                    this.router.navigate(['/' + popPage]);
+                }
+            }
         }
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Boolean)
     ], HeaderComponent.prototype, "isDisplayHeader", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], HeaderComponent.prototype, "isDisplayHeaderTitle", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], HeaderComponent.prototype, "isDisplayBackButton", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Boolean)
@@ -1724,6 +2540,18 @@ var HeaderComponent = /** @class */ (function () {
     ], HeaderComponent.prototype, "isDisplayStarRating", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], HeaderComponent.prototype, "processBarStatus", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], HeaderComponent.prototype, "applyCheckOutStatus", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], HeaderComponent.prototype, "applyPayStatus", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", String)
     ], HeaderComponent.prototype, "title", void 0);
     HeaderComponent = __decorate([
@@ -1732,7 +2560,7 @@ var HeaderComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./header.component.html */ "./src/app/templates/header/header.component.html"),
             styles: [__webpack_require__(/*! ./header.component.css */ "./src/app/templates/header/header.component.css")]
         }),
-        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"]])
+        __metadata("design:paramtypes", [src_app_services_utility_service__WEBPACK_IMPORTED_MODULE_1__["UtilityService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -1826,7 +2654,7 @@ module.exports = ".navbar {\n    width: 100%;\n    background-color: #ffffff;\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar\" *ngIf=\"isDisplayNavbar\">\n    <a class=\"active\" href=\"#\"><i class=\"fa fa-fw fa-search navbar__icon\"></i><br>Search</a> \n    <a href=\"#\"><i class=\"fa fa-list navbar__icon\"></i><br>My Booking</a> \n    <a href=\"#\"><i class=\"fa fa-fw fa-bookmark navbar__icon\"></i><br>Bookmark</a> \n    <a href=\"#\"><i class=\"fa fa-fw fa-cog navbar__icon\"></i><br>Setting</a>\n    <a href=\"#\" routerLink=\"/login\"><i class=\"fa fa-fw fa-user navbar__icon\"></i><br>Account</a>\n</div>\n\n"
+module.exports = "<div class=\"navbar\" *ngIf=\"isDisplayNavbar\">\n    <a class=\"active\" href=\"#\"><i class=\"fa fa-fw fa-search navbar__icon\"></i><br>Search</a>\n    <a><i class=\"fa fa-list navbar__icon\"></i><br>My Booking</a>\n    <!-- <a><i class=\"fa fa-fw fa-bookmark navbar__icon\"></i><br>Bookmark</a>  -->\n    <a><i class=\"fa fa-fw fa-cog navbar__icon\"></i><br>Setting</a>\n    <a routerLink=\"/LOGIN\"><i class=\"fa fa-fw fa-user navbar__icon\"></i><br>Account</a>\n</div>"
 
 /***/ }),
 
@@ -1879,17 +2707,39 @@ var NavbarBottomComponent = /** @class */ (function () {
 /*!***********************************************!*\
   !*** ./src/app/utilities/system.constants.ts ***!
   \***********************************************/
-/*! exports provided: PAGE_CODE */
+/*! exports provided: PAGE_CODE, IMAGE, POPUP_CONFIRM, POPUP_INFO */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PAGE_CODE", function() { return PAGE_CODE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IMAGE", function() { return IMAGE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POPUP_CONFIRM", function() { return POPUP_CONFIRM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POPUP_INFO", function() { return POPUP_INFO; });
 var PAGE_CODE;
 (function (PAGE_CODE) {
-    PAGE_CODE["DEFAULT"] = "HOME";
+    PAGE_CODE["DEFAULT"] = "LOGIN";
+    PAGE_CODE["SIGNUP"] = "SIGNUP";
+    PAGE_CODE["HOME"] = "HOME";
+    PAGE_CODE["FINDEDHOTELLIST"] = "FINDEDHOTELLIST";
+    PAGE_CODE["HOTELDETAIL"] = "HOTELDETAIL";
     PAGE_CODE["FINDHOTEL"] = "FINDHOTEL";
+    PAGE_CODE["HOTELLIST"] = "HOTELLIST";
+    PAGE_CODE["FILLINDETAILS"] = "FILLINDETAILS";
 })(PAGE_CODE || (PAGE_CODE = {}));
+var IMAGE;
+(function (IMAGE) {
+    IMAGE["LOGINLOADING"] = "assets/images/0000_background_login.png";
+})(IMAGE || (IMAGE = {}));
+var POPUP_CONFIRM;
+(function (POPUP_CONFIRM) {
+    POPUP_CONFIRM["YES"] = "0";
+    POPUP_CONFIRM["NO"] = "1";
+})(POPUP_CONFIRM || (POPUP_CONFIRM = {}));
+var POPUP_INFO;
+(function (POPUP_INFO) {
+    POPUP_INFO["OK"] = "0";
+})(POPUP_INFO || (POPUP_INFO = {}));
 
 
 /***/ }),

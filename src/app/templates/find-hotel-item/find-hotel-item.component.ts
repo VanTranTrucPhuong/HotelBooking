@@ -34,7 +34,6 @@ export class FindHotelItemComponent implements OnInit {
   }
 
   public goToPage(pageCode: string) {
-    alert(pageCode);
     try {
       const targetPage = PAGE_CODE[pageCode];
       console.log(targetPage);

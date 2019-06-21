@@ -5,12 +5,14 @@ import { UtilityService } from 'src/app/services/utility.service';
 import { PAGE_CODE } from 'src/app/utilities/system.constants';
 import { MbscScrollerOptions } from './../../../lib/mobiscroll/js/mobiscroll.angular.min.js';
 import { MatSnackBar } from '@angular/material/snack-bar';
+// import { } from 'cordova-plugin-keyboard';
 
 // Declare mobiscroll
 const guestValues: any = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const roomValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 declare const $;
+declare let Keyboard: any;
 
 @Component({
   selector: 'app-home',
@@ -43,7 +45,7 @@ export class HomeComponent extends AppComponent implements OnInit {
 
   private hotelListRecent = [
     // tslint:disable-next-line:max-line-length
-    { name: 'California', price: '200 USD', description: 'Some example text', image: './assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg' },
+    { name: 'NewYork City', price: '200 USD', description: 'Some example text', image: './assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg' },
     { name: 'White Palace', price: '170 USD', description: 'Some example text', image: './assets/images/hotel.jpg' },
     { name: 'King Hotel', price: '150 USD', description: 'Some example text', image: './assets/images/tivkumb_0.jpg' },
     { name: 'NEC Hotel', price: '1200 USD', description: 'Some example text', image: './assets/images/room.jpg' }
@@ -68,6 +70,8 @@ export class HomeComponent extends AppComponent implements OnInit {
 
 
   public getDateRangePicker() {
+    // Keyboard.hide();
+    console.log();
     let diffDate: any;
     $('input[name="datefilter"]').daterangepicker({
       autoUpdateInput: false,

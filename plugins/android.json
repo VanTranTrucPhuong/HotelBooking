@@ -10,6 +10,9 @@
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.example.hello"
     },
+    "cordova-plugin-keyboard": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.example.hello"
     }

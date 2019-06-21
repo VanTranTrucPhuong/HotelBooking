@@ -14,6 +14,7 @@
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
 		4480A1CCEF4A47A6B34CB244 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FD2EBD18AD42DE958520BC /* CDVDevice.m */; };
+		CC1503FF8894484D88B45F8F /* CDVKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A763BEE20DF47A0A6159DEC /* CDVKeyboard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "HelloWorld/config.xml"; sourceTree = "<group>"; };
 		94FD2EBD18AD42DE958520BC /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		5829B4273C2B4C7E83BAC4CD /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0A763BEE20DF47A0A6159DEC /* CDVKeyboard.m */ = {isa = PBXFileReference; name = "CDVKeyboard.m"; path = "cordova-plugin-keyboard/CDVKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		5A0A74D5C23843C8BF12338D /* CDVKeyboard.h */ = {isa = PBXFileReference; name = "CDVKeyboard.h"; path = "cordova-plugin-keyboard/CDVKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 			children = (
 				94FD2EBD18AD42DE958520BC /* CDVDevice.m */,
 				5829B4273C2B4C7E83BAC4CD /* CDVDevice.h */,
+				0A763BEE20DF47A0A6159DEC /* CDVKeyboard.m */,
+				5A0A74D5C23843C8BF12338D /* CDVKeyboard.h */,
 			);
 			name = Plugins;
 			path = "HelloWorld/Plugins";
@@ -294,6 +299,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				4480A1CCEF4A47A6B34CB244 /* CDVDevice.m in Sources */,
+				CC1503FF8894484D88B45F8F /* CDVKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

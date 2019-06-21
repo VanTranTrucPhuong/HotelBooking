@@ -47,9 +47,10 @@ export class LoginComponent extends AppComponent implements OnInit {
   }
 
   private checkValidation(): Boolean {
+    // tslint:disable-next-line:prefer-const
     let validate;
     let isValidate = false;
-    var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (!regEmail.test(this.userId) || !this.userId || this.userId.length < 0) {
       isValidate = true;

@@ -12,7 +12,6 @@ import { MatSnackBar } from '@angular/material';
 })
 export class FindedHotelItemComponent extends AppComponent implements OnInit {
 
-  
   constructor(protected utility: UtilityService, protected router: Router, protected _snackBar: MatSnackBar) {
     super(utility, router, _snackBar);
     this.utility.setDisplayHeaderTitle(false);
@@ -22,7 +21,6 @@ export class FindedHotelItemComponent extends AppComponent implements OnInit {
   }
 
   public goToPage(pageCode: string) {
-    alert(pageCode);
     try {
       const targetPage = PAGE_CODE[pageCode];
       console.log(targetPage);

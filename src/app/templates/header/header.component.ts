@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ViewChildren } from '@angular/core';
 import { UtilityService } from 'src/app/services/utility.service';
 import { PAGE_CODE } from 'src/app/utilities/system.constants';
 import { Router } from '@angular/router';
@@ -61,16 +61,18 @@ export class HeaderComponent implements OnInit {
         _page = PAGE_CODE.FINDEDHOTELLIST;
         break;
       case PAGE_CODE.HOTELDETAIL:
-        console.log("PREV: " + this.utility.getPreviousLastPageOfStack());
-        if (this.utility.getPreviousLastPageOfStack() === "HOME") {
+        console.log('PREV: ' + this.utility.getPreviousLastPageOfStack());
+        if (this.utility.getPreviousLastPageOfStack() === 'HOME') {
           _page = PAGE_CODE.HOME;
-        }
-        else {
+        } else {
           _page = PAGE_CODE.FINDHOTEL;
         }
         break;
       case PAGE_CODE.FILLINDETAILS:
+        // this.countBtnBackClick++;
+        // if (this.countBtnBackClick ===  2) {
         _page = PAGE_CODE.HOTELDETAIL;
+        // }
         break;
       default:
         break;

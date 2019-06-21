@@ -47,7 +47,8 @@
                         <p>Please fill in contact details</p>
                     </div>
                     <div class="col text-right">
-                        <button mat-stroked-button color="primary" data-toggle="modal" data-target="#myModal">Fill in</button>
+                        <button mat-stroked-button color="primary" data-toggle="modal" data-target="#myModal">Fill
+                            in</button>
                     </div>
                 </div>
                 <div class="row mt-2">
@@ -78,7 +79,7 @@
             <!-- End total price -->
 
             <!-- Button  -->
-            <button mat-raised-button color="primary" class="btn-common btn-continue" (click)="FillInContinue()" [disabled]="btnContinueStatus">Continue</button>
+            <button mat-raised-button color="primary" class="btn-common btn-continue" (click)="FillInContinue()" [disabled]="btnContinueStatus">{{buttonTitle}}</button>
             <!-- End Button -->
         </div>
         <!-- End book detail -->
@@ -131,7 +132,19 @@
 
 <!-- Contact Form -->
 <ng-template #Payment>
-
+    <div class="container-fluid">
+        <p>Implement payment step</p>
+        <!-- Button  -->
+        <div class="row payment-button-group">
+            <div class="col">
+                <button mat-raised-button color="primary" class="btn-common btn-check-info" (click)="checkInfo()">Check Information</button>
+            </div>
+            <div class="col">
+                <button mat-raised-button color="primary" class="btn-common btn-check-info" (click)="confirmPayment()">Confirm</button>
+            </div>
+        </div>
+        <!-- End Button -->
+    </div>
 </ng-template>
 <!-- End contact form -->
 
@@ -160,11 +173,11 @@
                     <div class="field d-flex justify-content-between">
                         <mat-form-field class="country-code">
                             <span matPrefix>+ &nbsp;</span>
-                            <input matInput  maxlength="2" placeholder="Country code" #countryCode >
+                            <input matInput maxlength="2" placeholder="Country code" #countryCode>
                             <mat-hint align="end">{{countryCode.value.length}} / 2</mat-hint>
                         </mat-form-field>
                         <mat-form-field class="telephone">
-                            <input matInput  maxlength="8" placeholder="Telephone" #telephone>
+                            <input matInput maxlength="8" placeholder="Telephone" #telephone>
                             <mat-hint align="end">{{telephone.value.length}} / 8</mat-hint>
                         </mat-form-field>
                     </div>
