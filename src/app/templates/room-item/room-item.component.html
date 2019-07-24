@@ -1,0 +1,65 @@
+<mat-card class="find-hotel-card">
+    <!-- <img mat-card-image src="./assets/images/room33.jpg" alt="hotel"> -->
+
+    <div [id]="roomItem.roomID" class="carousel slide" data-ride="carousel" mat-card-image>
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li [attr.data-target]="'#' + roomItem.roomID" data-slide-to="0" class="active"></li>
+            <li [attr.data-target]="'#' + roomItem.roomID" data-slide-to="1"></li>
+            <li [attr.data-target]="'#' + roomItem.roomID" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/images/room33.jpg" alt="hotel">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/images/room.jpg" alt="hotel">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/images/room33.jpg" alt="hotel">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" [attr.href]="'#' + roomItem.roomID" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" [attr.href]="'#' + roomItem.roomID" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <mat-card-content>
+        <h6 class="item-heading">
+            {{roomItem.roomType}}
+        </h6>
+        <ng-container *ngFor="let item of roomItem.roomTypeDescription">
+            <mat-card-subtitle>{{item}}</mat-card-subtitle>
+        </ng-container>
+        <hr>
+        <div class="item-content">
+            <i class="material-icons">restaurant</i>
+            <p>&nbsp;&nbsp;Breakfast not included</p>
+        </div>
+        <div class="row">
+            <div class="col item-content text-color">
+                <i class="material-icons">wifi</i>
+                <p>&nbsp;&nbsp;Free wifi</p>
+            </div>
+            <div class="col text-right">
+                <p class="text-danger">&nbsp;&nbsp;2 room(s) left !</p>
+            </div>
+        </div>
+    </mat-card-content>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <p class="price text-color">$ {{roomItem.roomPrice}}</p>
+        </div>
+        <div class="col text-right">
+            <button class="btn-color" mat-raised-button color="primary" (click)="goToPage('HOTELDETAIL')">Choose</button>
+        </div>
+    </div>
+</mat-card>

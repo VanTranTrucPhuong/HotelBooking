@@ -1,0 +1,49 @@
+.find-hotel-card {
+    margin: 1rem;
+}
+
+.item-heading {
+    margin: 1rem 0;
+}
+
+.item-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-content {
+    display: flex;
+    color: rgba(0, 0, 0, .54);
+}
+
+.text-color {
+    color: orange;
+}
+
+.find-hotel-card .mat-card-image {
+    height: 175px;
+}
+
+
+/* Carousel */
+
+.carousel-inner {
+    overflow: hidden;
+}
+
+.carousel-inner .carousel-item img {
+    width: 100%;
+    display: inline-block;
+    height: 175px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+
+/* End carousel */

@@ -14,7 +14,7 @@ declare var $: any;
 })
 export class FillInDetailsComponent extends AppComponent implements OnInit {
   private originContactStatus = true;
-  private bookCheckoutStatus = true;
+  public bookCheckoutStatus = true;
   private countContinueBtnClick = 0;
   // Information's guest
   private _fullName: string;

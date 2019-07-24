@@ -1,6 +1,6 @@
 <div class="login-card container-fluid">
     <div class="login-header">
-        <mat-card-title class="login-title">Welcome</mat-card-title>
+        <mat-card-title class="login-title">Welcome TravelInHands</mat-card-title>
         <br>
         <mat-card-subtitle>Sign in to continue</mat-card-subtitle>
     </div>
@@ -23,22 +23,27 @@
             <mat-form-field class="login-field">
                 <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" #password>
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
             </mat-form-field>
             <!-- End Password -->
         </form>
-        <div class="forgot-password">
+        <!-- <div class="forgot-password">
             <a href="#" class="forgotpw-text">Forgot Password?</a>
-        </div>
+        </div> -->
     </mat-card-content>
-    <mat-card-actions>
+    <mat-card-actions class="mt-5">
         <button mat-raised-button color="primary" class="btn-login" (click)="btnLogin_click(userID.value, password.value)">Login</button>
     </mat-card-actions>
 
     <!-- SignUp -->
     <div class="sign-up-text">
-        <mat-card-subtitle>New to ...Travel?&nbsp;&nbsp;<a class="signup-text" (click)="goToPageSignUp('SIGNUP')">Signup</a></mat-card-subtitle>
+        <mat-card-subtitle>New to ... Travel?&nbsp;&nbsp;<a class="signup-text text-primary" (click)="goToPageSignUp('SIGNUP')">Signup</a></mat-card-subtitle>
     </div>
     <!-- End SignUp -->
+    <ul>
+        <li *ngFor="let item of items | async">
+            <pre>{{ item.email }}</pre>
+        </li>
+    </ul>
 </div>

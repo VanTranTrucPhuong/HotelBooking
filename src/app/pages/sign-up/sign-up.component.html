@@ -1,62 +1,61 @@
 <div class="signup-card container-fluid">
-  <!-- <div class="signup-header">
+    <!-- <div class="signup-header">
     <i class="material-icons back-icon">keyboard_backspace</i>
     <h4 class="signup-title">&nbsp;&nbsp;Sign Up</h4>
   </div> -->
-  <mat-card-content>
-    <form action="">
-      <!-- Name -->
-      <div class="name-field">
-        <mat-form-field class="firstname">
-          <input matInput placeholder="Firstname">
-        </mat-form-field>
-        <mat-form-field class="surname">
-          <input matInput placeholder="Surname">
-        </mat-form-field>
-      </div>
-      <!-- End Name -->
+    <mat-card-content>
+        <form action="">
+            <!-- Name -->
+            <div class="name-field">
+                <mat-form-field class="firstname">
+                    <input matInput placeholder="Firstname" #firstName>
+                </mat-form-field>
+                <mat-form-field class="surname">
+                    <input matInput placeholder="Surname" #surName>
+                </mat-form-field>
+            </div>
+            <!-- End Name -->
 
-      <!-- Email -->
-      <mat-form-field class="signup-field">
-        <input matInput placeholder="Email" [formControl]="emailFormControl">
-        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-          Please enter a valid email address
-        </mat-error>
-        <mat-error *ngIf="emailFormControl.hasError('required')">
-          Email is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
-      <!-- End Email -->
+            <!-- Email -->
+            <mat-form-field class="signup-field">
+                <input matInput placeholder="Email" [formControl]="emailFormControl" #email>
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <!-- End Email -->
 
-      <!-- Phonenumber -->
-      <mat-form-field class="signup-field">
-        <input matInput maxlength="10" placeholder="Phonenumber">
-      </mat-form-field>
-      <!-- End Phonenumber -->
+            <!-- Phonenumber -->
+            <mat-form-field class="signup-field">
+                <input matInput maxlength="10" placeholder="Phonenumber" #phoneNumber>
+            </mat-form-field>
+            <!-- End Phonenumber -->
 
-      <!-- Password -->
-      <mat-form-field class="signup-field">
-        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="hide">
+            <!-- Password -->
+            <mat-form-field class="signup-field">
+                <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" #password>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
-      </mat-form-field>
-      <mat-form-field class="signup-field">
-        <input matInput placeholder="Renter your password" [type]="hide ? 'password' : 'text'">
-      </mat-form-field>
-      <!-- End Password -->
-    </form>
+            </mat-form-field>
+            <mat-form-field class="signup-field">
+                <input matInput placeholder="Renter your password" [type]="hide ? 'password' : 'text'" #confirmPassword>
+            </mat-form-field>
+            <!-- End Password -->
+        </form>
 
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button color="primary" class="btn-signup">Sign up</button>
-  </mat-card-actions>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" class="btn-signup" (click)="btnSignUp_click(firstName.value, surName.value,  email.value, phoneNumber.value, password.value, confirmPassword.value)">Sign up</button>
+    </mat-card-actions>
 
-  <!-- SignUp -->
-  <div class="login-text">
-    <mat-card-subtitle>Alredy have an account?&nbsp;<a href="#" class="signup-text" routerLink="/LOGIN">Login</a>
-    </mat-card-subtitle>
-  </div>
-  <!-- End SignUp -->
+    <!-- SignUp -->
+    <div class="login-text">
+        <mat-card-subtitle>Alredy have an account?&nbsp;<a href="#" class="signup-text" routerLink="/LOGIN">Login</a>
+        </mat-card-subtitle>
+    </div>
+    <!-- End SignUp -->
 </div>

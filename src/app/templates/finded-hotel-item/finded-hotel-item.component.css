@@ -3,24 +3,54 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.item-heading{
+.item-heading {
     margin: 1rem 0;
 }
 
-.item-footer{
+.item-footer {
     display: flex;
     justify-content: space-between;
 }
 
-.item-content{
+.item-content {
     display: flex;
-    color: rgba(0,0,0,.54);
+    color: rgba(0, 0, 0, .54);
 }
 
-.text-color{
+.text-color {
     color: orange;
 }
 
-.find-hotel-card .mat-card-image{
+.find-hotel-card .mat-card-image {
     height: 170px;
+}
+
+.location__icon {
+    font-size: 20px;
+}
+
+.image-card-hotel>img {
+    width: 230px;
+    height: 150px;
+}
+
+
+/* star */
+
+.star {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #d3d3d3;
+}
+
+.full {
+    color: orange;
+}
+
+.half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: orange;
 }

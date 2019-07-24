@@ -6,18 +6,18 @@ import { HotelDetailComponent } from './pages/hotel-detail/hotel-detail.componen
 import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { FooterComponent } from './templates/footer/footer.component';
-import { FindHotelItemComponent } from './templates/find-hotel-item/find-hotel-item.component';
+import { RoomItemComponent } from './templates/room-item/room-item.component';
 import { HeaderComponent } from './templates/header/header.component';
-import { FindHotelComponent } from './pages/find-hotel/find-hotel.component';
 import { FillInDetailsComponent } from './pages/fill-in-details/fill-in-details.component';
 import { FindedHotelItemComponent } from './templates/finded-hotel-item/finded-hotel-item.component';
 import { FindedHotelListComponent } from './pages/finded-hotel-list/finded-hotel-list.component';
+import { RoomListComponent } from './pages/room-list/room-list.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'HOME', component: HomeComponent },
   { path: 'FINDEDHOTELLIST', component: FindedHotelListComponent },
-  { path: 'FINDHOTEL', component: FindHotelComponent},
+  { path: 'ROOMLIST', component: RoomListComponent},
   { path: 'HOTELDETAIL', component: HotelDetailComponent},
   { path: 'LOGIN', component: LoginComponent},
   { path: 'SIGNUP', component: SignUpComponent},

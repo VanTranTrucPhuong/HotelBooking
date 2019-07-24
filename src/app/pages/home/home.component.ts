@@ -1,18 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { AppComponent } from './../../app.component';
 import { Router } from '@angular/router';
 import { UtilityService } from 'src/app/services/utility.service';
 import { PAGE_CODE } from 'src/app/utilities/system.constants';
-import { MbscScrollerOptions } from './../../../lib/mobiscroll/js/mobiscroll.angular.min.js';
 import { MatSnackBar } from '@angular/material/snack-bar';
-// import { } from 'cordova-plugin-keyboard';
-
-// Declare mobiscroll
-const guestValues: any = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const roomValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+import { } from 'plugins/cordova-plugin-keyboard/www/keyboard.js';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { stringify } from '@angular/compiler/src/util';
+import { Observable, Subscription } from 'rxjs';
+import { tap, catchError } from 'rxjs/operators';
+import { HotelManagementService } from 'src/app/services/hotel-management.service';
+import { FirebaseService } from 'src/app/services/firebase/firebase.service';
 
 declare const $;
 declare let Keyboard: any;
+declare global {
+  interface Window { Keyboard: any; }
+}
+declare const myTest: any;
+declare const inputNumber: any;
+declare const configAlgolia: any;
 
 @Component({
   selector: 'app-home',
@@ -20,31 +27,22 @@ declare let Keyboard: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent extends AppComponent implements OnInit {
-  scrollerOptions: MbscScrollerOptions = {
-    theme: 'ios',
-    wheels: [
-      [{
-        circular: false,
-        data: guestValues,
-        label: 'Guest'
-      },
-      {
-        circular: false,
-        data: roomValues,
-        label: 'Room'
-      }],
-    ],
-    showLabel: true,
-    formatValue: (data) => {
-      return data[0] + ' guests - ' + data[1] + ' rooms';
-    }
-  };
+  @Output() searchEvent = new EventEmitter<any>();
+  public isEnableButtonSearch: boolean = true;
+  public search: string;
+
+  // Date Range
+  dateRangeDisp = { 'begin': Date, 'end': Date };
+
   // Declare variable of DateRangePicker
   public duration: any = '';
+  public beginDate: any;
+  public endDate: any;
+  public hotelList = [];
 
-
-  private hotelListRecent = [
-    // tslint:disable-next-line:max-line-length
+  subDanhSachPhim: Subscription;
+  
+  public hotelListRecent = [
     { name: 'NewYork City', price: '200 USD', description: 'Some example text', image: './assets/images/Mandarin-Oriental-Barcelona-5-star-luxury-hotel-accomodation-on-famous-street-passeige-de-gracia-in-the-centre-of-the-city.jpg' },
     { name: 'White Palace', price: '170 USD', description: 'Some example text', image: './assets/images/hotel.jpg' },
     { name: 'King Hotel', price: '150 USD', description: 'Some example text', image: './assets/images/tivkumb_0.jpg' },
@@ -54,7 +52,9 @@ export class HomeComponent extends AppComponent implements OnInit {
   constructor(
     protected utility: UtilityService,
     protected router: Router,
-    protected _snackbar: MatSnackBar
+    protected _snackbar: MatSnackBar,
+    private afDB: AngularFireDatabase,
+    private hotelManagementService: HotelManagementService
   ) {
     super(utility, router, _snackbar);
     utility.setDisplayHeader(true);
@@ -66,32 +66,32 @@ export class HomeComponent extends AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    inputNumber($('.input-number'));
+    configAlgolia();
+    console.log(window.location);
+    
   }
 
 
-  public getDateRangePicker() {
-    // Keyboard.hide();
-    console.log();
+  convertTime(str) {
+    var date = new Date(str),
+      month = ("0" + (date.getMonth() + 1)).slice(-2),
+      day = ("0" + date.getDate()).slice(-2);
+    return [month, day, date.getFullYear()].join("/");
+  }
+
+  saveDate(event: any) {
     let diffDate: any;
-    $('input[name="datefilter"]').daterangepicker({
-      autoUpdateInput: false,
-      locale: {
-        cancelLabel: 'Clear'
-      }
-    });
-    $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
-      $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-      const startDate = new Date(picker.startDate).getTime();
-      const endDate = new Date(picker.endDate).getTime();
-      diffDate = (endDate - startDate) / (24 * 3600 * 1000);
-      // tslint:disable-next-line:radix
-      this.duration = parseInt(diffDate);
-      $('#duration').val(this.duration + ' nights');
-    });
-    $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
-      $(this).val('');
-      $('#duration').val('');
-    });
+    // look at how the date is emitted from save
+    console.log(event.target.value.begin);
+    console.log(event.target.value.end);
+
+    this.beginDate = new Date(this.convertTime(event.target.value.begin)).getTime();
+    this.endDate = new Date(this.convertTime(event.target.value.end)).getTime();
+    diffDate = (this.endDate - this.beginDate) / (24 * 3600 * 1000);
+    this.duration = diffDate + ' night(s)';
+    // change in view
+    this.dateRangeDisp = event.target.value;
   }
   // public isDisplayHeader(): boolean {
   //   return this.utility.isDisplayHeader();
@@ -105,16 +105,7 @@ export class HomeComponent extends AppComponent implements OnInit {
   //   return this.utility.isDisplayInnerHeader();
   // }
 
-  public goToFindHotel() {
-    this.router.navigate(['/find-hotel']);
-  }
-
-  public goToDetail() {
-    this.router.navigate(['/HOTELDETAIL']);
-  }
-
   public goToPage(pageCode: string) {
-    // alert(pageCode);
     try {
       const targetPage = PAGE_CODE[pageCode];
       console.log(targetPage);
@@ -131,4 +122,16 @@ export class HomeComponent extends AppComponent implements OnInit {
 
   // ngOnDestroy() {
   // }
+
+  // Search Hotel
+  sendSearch() {
+    console.log('SendSearch', this.search);
+    this.hotelManagementService.setSearchFormData({ distination: this.search, checkInDate: '', checkOutDate: '', duration: this.duration, noOfGuest: '' });
+    this.goToPage('FINDEDHOTELLIST');
+  }
+
+  ngOnDestroy(){
+    //Transfer different component
+    console.log("ngOnDestroy");
+  }
 }

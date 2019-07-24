@@ -1,18 +1,34 @@
 <mat-card class="find-hotel-card">
     <!-- <img mat-card-image src="./assets/images/room33.jpg" alt="hotel"> -->
 
-     <img mat-card-image src="./assets/images/hotel.jpg" alt="Photo of a Shiba Inu">
+    <img mat-card-image src="{{hotelItem?.hotelImagePath}}" alt="Hotel Image">
+
 
     <mat-card-content>
         <h5 class="item-heading">
-            Charlotte Hotel
+            {{hotelItem.hotelName}}
         </h5>
-        <div class="item__rating">
-          <span class="fa fa-star checked mr-1"></span>
-          <span class="fa fa-star checked mr-1"></span>
-          <span class="fa fa-star checked mr-1"></span>
-          <span class="fa fa-star unchecked mr-1"></span>
-          <span class="fa fa-star unchecked mr-1"></span>
+        <div class="row d-flex ">
+            <div class="d-flex">
+                <div class="item__rating mx-3">
+                    <!-- <span class="fa fa-star checked mr-1"></span>
+                    <span class="fa fa-star checked mr-1"></span>
+                    <span class="fa fa-star checked mr-1"></span>
+                    <span class="fa fa-star unchecked mr-1"></span>
+                    <span class="fa fa-star unchecked mr-1"></span> -->
+                    <ng-template #temp let-fill="fill">
+                        <span class="star" [class.full]="fill === 100">
+                          <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+                        </span>
+                    </ng-template>
+
+                    <ngb-rating [(rate)]="hotelItem.starRating" [starTemplate]="temp" [readonly]="true" max="5"></ngb-rating>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <i class="material-icons location__icon">location_on</i>
+                <p class="m-0">{{hotelItem.hotelCity}}</p>
+            </div>
         </div>
     </mat-card-content>
     <div class="row">
@@ -20,7 +36,8 @@
             <p class="price text-color">$119</p>
         </div>
         <div class="col text-right">
-            <button mat-raised-button color="primary" (click)="goToPage('FINDHOTEL')">View rooms</button>
+            <!-- (click)="goToPage('FINDHOTEL')" -->
+            <button class="btn-color" mat-raised-button color="primary" (click)="chooseHotel()">View rooms</button>
         </div>
     </div>
 </mat-card>

@@ -5,6 +5,10 @@ import { AppComponent } from 'src/app/app.component';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material';
 import { PAGE_CODE } from 'src/app/utilities/system.constants';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabase } from 'angularfire2/database'
+import { Observable } from 'rxjs';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-login',
@@ -14,8 +18,17 @@ import { PAGE_CODE } from 'src/app/utilities/system.constants';
 export class LoginComponent extends AppComponent implements OnInit {
   public userId: string;
   public password: string;
+  // Set up hide password
+  public hide = true;
 
-  constructor(protected utility: UtilityService, protected router: Router, protected _snackBar: MatSnackBar) {
+  constructor(
+    protected utility: UtilityService, 
+    protected router: Router, 
+    protected _snackBar: MatSnackBar,
+    protected user: UserService,
+    protected afAuth: AngularFireAuth, 
+    private afDB:AngularFireDatabase
+    ) {
     super(utility, router, _snackBar);
     this.utility.setDisplayNavbar(false);
     this.utility.setDisplayHeader(false);
@@ -25,6 +38,8 @@ export class LoginComponent extends AppComponent implements OnInit {
     Validators.required,
     Validators.email,
   ]);
+
+  public items: Observable<any[]>;
 
   ngOnInit() {
   }
@@ -37,9 +52,13 @@ export class LoginComponent extends AppComponent implements OnInit {
       if (this.checkValidation()) {
         return;
       } else {
+        this.login();
         // send to API
         // if result success
-       this.goToPage('HOME');
+        // this.goToPage('HOME');
+
+
+
       }
     } catch (exception) {
       // do nothing
@@ -65,7 +84,6 @@ export class LoginComponent extends AppComponent implements OnInit {
   }
 
   public goToPage(pageCode: string) {
-    // alert(pageCode);
     try {
       const targetPage = PAGE_CODE[pageCode];
       console.log(targetPage);
@@ -81,7 +99,6 @@ export class LoginComponent extends AppComponent implements OnInit {
   }
 
   public goToPageSignUp(pageCode: string) {
-    // alert(pageCode);
     try {
       const targetPage = PAGE_CODE[pageCode];
       console.log(targetPage);
@@ -95,6 +112,28 @@ export class LoginComponent extends AppComponent implements OnInit {
       // Nothing
     }
   }
+
+  public login(){    
+    if(this.userId.trim() != "" && this.password.trim() != ""){
+      this.user.login();
+      this.afAuth.auth.signInWithEmailAndPassword(this.userId, this.password).then(auth =>{
+        console.log('You are logged in', auth);
+        this.afDB.object("/users/" + auth.uid).valueChanges().subscribe(data=>{
+          // this.loading.dismiss();
+          let userData: any = data;
+          console.log("JSON: ", JSON.stringify(userData));
+          localStorage.setItem("userObj", JSON.stringify(userData));
+          // this.navCtrl.setRoot(MenuPage);
+          this.goToPage('HOME');
+        })        
+      }).catch(error =>{
+        console.log(error.message);
+        this.openSnackBar(error.message, 'OK')
+        // this.loading.dismiss();
+      })
+    }
+  }
+
 
 
 }

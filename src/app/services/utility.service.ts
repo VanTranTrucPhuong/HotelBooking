@@ -122,7 +122,7 @@ export class UtilityService {
   }
 
 
-  private popStackData(): StackData {
+  public popStackData(): StackData {
     const rs: StackData = this.stackMapping.get(this.stackPage.length - 1);
     this.stackMapping.delete(this.stackPage.length - 1);
     return rs;

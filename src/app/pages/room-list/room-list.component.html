@@ -1,0 +1,12 @@
+<div class="find-hotel-content container-fluid mt-2">
+    <div class="title">
+        <span>All room ({{ roomList.length }})</span>
+    </div>
+    <div class="item">
+        <div class="row">
+            <ng-container *ngFor='let roomItem of roomList'>
+                <app-room-item [roomItem]="roomItem"></app-room-item>
+            </ng-container>
+        </div>
+    </div>
+</div>

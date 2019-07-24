@@ -1,6 +1,6 @@
 <div class="home container mx-auto container-custom">
     <div class="card home__find-hotel">
-        <form action="" class="form">
+        <form class="form">
             <!--  Details -->
             <div class="form-group">
                 <div class="grid">
@@ -10,12 +10,13 @@
                                     class="form__icon fa fa-map-pin"></i>&nbsp;&nbsp;Destination</label>
                             <div id="custom-search-input">
                                 <div class="input-group px-2">
-                                    <input type="text" class="form-control input-search" placeholder="NewYork" />
-                                    <span class="input-group-btn">
+                                    <!-- <input type="text" class="form-control input-search" placeholder="NewYork" [(ngModel)]="search" name="search" /> -->
+                                    <input type="search" class="form-control input-search" id="address-input" placeholder="Where are we going?" [(ngModel)]="search" name="search" />
+                                    <!-- <span class="input-group-btn">
                                         <button class="btn btn-search btn-lg" type="button">
                                             <a><i class="fa fa-search icon-search"></i></a>
                                         </button>
-                                    </span>
+                                    </span> -->
                                 </div>
                             </div>
                         </div>
@@ -26,34 +27,36 @@
                                 <div class="col-8 col-md-6 p-0 field__date">
                                     <label class="form__label"><i
                                             class="form__icon fa fa-calendar"></i>&nbsp;&nbsp;Check-in date</label>
-                                    <input type="text" name="datefilter" (focus)="getDateRangePicker()" class="form-control px-2" />
+                                    <input matInput [satDatepicker]="picker2" class="form-control px-2 form__date" [value]="dateRangeDisp" (dateChange)="saveDate($event)" />
+                                    <sat-datepicker #picker2 [rangeMode]="true" [closeAfterSelection]="true"></sat-datepicker>
+                                    <sat-datepicker-toggle matSuffix [for]="picker2" (onfocusout)="onFocusOut()"></sat-datepicker-toggle>
                                 </div>
                                 <div class="col-3 col-md-6 p-0 field__duration">
                                     <label class="form__label">Duration</label>
-                                    <input type="text" class="form-control px-1" id="duration" disabled />
+                                    <input type="text" class="form-control px-1 text-center" disabled [(ngModel)]="duration" [ngModelOptions]="{standalone: true}" />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-1-4 col-1-4-sm">
                         <div class="controls">
-                            <label class="form__label"><i class="form__icon fa fa-tags"></i>&nbsp;&nbsp;Total guests &
-                                Rooms</label>
-                            <div id="custom-search-input">
-                                <div class="input-group px-2">
-                                    <input mbsc-scroller [mbsc-options]="scrollerOptions" type="text" class="form-control mobiscroll" placeholder="2 guests & 1 rooms" />
+                            <label class="form__label"><i class="form__icon fa fa-tags"></i>&nbsp;&nbsp;Total guest(s)</label>
+                            <div>
+                                <div class="input-group">
+                                    <!-- <input type="text" class="form-control" placeholder="2 guest(s)" />
                                     <span class="input-group-btn">
                                         <button class="btn btn-info btn-lg" type="button">
                                             <a><i class="fa fa-sort"></i></a>
                                         </button>
-                                    </span>
+                                    </span> -->
+                                    <span class="input-number-decrement">–</span><input class="input-number form-control" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-1-4 col-1-4-sm">
                         <div class="controls">
-                            <button mat-raised-button color="primary" class="btn-find-hotel" (click)="goToPage('FINDEDHOTELLIST')">Find hotel</button>
+                            <button [disabled]="!isEnableButtonSearch" mat-raised-button color="primary" class="btn-find-hotel" (click)="sendSearch()">Find hotel</button>
                         </div>
                     </div>
                 </div>

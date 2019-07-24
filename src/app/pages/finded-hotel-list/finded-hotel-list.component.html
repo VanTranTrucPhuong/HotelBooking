@@ -1,13 +1,12 @@
 <div class="find-hotel-content container-fluid mt-2">
-  <div class="title">
-      <span class="title-h">Search result (99 hotels)</span>
-  </div>
-  <div class="item">
-      <div class="row">
-          <app-finded-hotel-item></app-finded-hotel-item>
-          <app-finded-hotel-item></app-finded-hotel-item>
-          <app-finded-hotel-item></app-finded-hotel-item>
-          <app-finded-hotel-item></app-finded-hotel-item>
-      </div>
-  </div>
+    <div class="title">
+        <span class="title-h">Search result ({{searchItemCount}} hotels)</span>
+    </div>
+    <div class="item">
+        <div class="row">
+            <ng-container #listHotel *ngFor="let hotelItem of hotelList | filterBy: ['hotelCity']: titleSearch ">
+                <app-finded-hotel-item [hotelItem]="hotelItem" (eventChooseHotel)="chooseHotel($event)"></app-finded-hotel-item>
+            </ng-container>
+        </div>
+    </div>
 </div>

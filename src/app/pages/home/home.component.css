@@ -1,5 +1,9 @@
+*:focus {
+    outline: 0 !important;
+}
+
 #custom-search-input {
-    border: solid 1px #E4E4E4;
+    border: solid 1px #ced4da;
     border-radius: 6px;
     background-color: #fff;
 }
@@ -38,6 +42,15 @@
 
 .form-control {
     padding: unset;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.form__date {
+    border: 1px solid #ced4da!important;
 }
 
 .form__label {
@@ -141,17 +154,89 @@ h2.heading {
     margin: 25px auto;
 }
 
-
-/* Mobiscroll */
-
-.form-control[readonly].mobiscroll {
-    background-color: unset;
-    opacity: 1;
-}
-
-.mbsc-sc-whl-gr-3d .mbsc-sc-whl {
-    margin: 0 2rem!important;
+.right .calendar-table {
+    display: none;
 }
 
 
-/* End mobiscroll */
+/* Saturn Picker */
+
+sat-datepicker-toggle.mat-datepicker-toggle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.mat-datepicker-toggle {
+    outline: none!important;
+}
+
+.mat-datepicker-toggle-active {
+    color: #545dff;
+}
+
+
+/* Input number guests */
+
+
+/* * {
+    box-sizing: border-box
+} */
+
+.input-number {
+    width: 80px;
+    padding: 0 12px;
+    vertical-align: top;
+    text-align: center;
+    outline: none
+}
+
+.input-number,
+.input-number-decrement,
+.input-number-increment {
+    /* border: 1px solid #ccc; */
+    height: 40px;
+    user-select: none;
+}
+
+.input-number-decrement,
+.input-number-increment {
+    display: inline-block;
+    width: 45px;
+    line-height: 38px;
+    background: #f1f1f1;
+    color: #444;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    background: #ddd
+}
+
+.input-number-decrement {
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.input-number-increment {
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+}
+
+
+/* icon location */
+
+.ap-input-icon {
+    display: none!important;
+}
+
+
+/* button.ap-input-icon.ap-icon-pin {
+    display: none!important;
+} */
+
+.input-search::-webkit-search-decoration,
+.input-search::-webkit-search-cancel-button,
+.input-search::-webkit-search-results-button,
+.input-search::-webkit-search-results-decoration {
+    display: none;
+}
